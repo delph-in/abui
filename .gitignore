@@ -1,0 +1,13 @@
+# For the time being, ignore everything except the choices file
+*.tdl
+*.tab
+*.vpm
+*.mtr
+*.lsp
+METADATA
+test_sentences
+ace/
+lkb/
+pet/
+repp/
+tsdb/
