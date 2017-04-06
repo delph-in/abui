@@ -5,6 +5,7 @@
 *.mtr
 *.lsp
 METADATA
+README
 test_sentences
 ace/
 lkb/
