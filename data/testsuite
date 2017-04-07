@@ -96,7 +96,7 @@ sleep person
 Source: {a:200}
 Vetted: {t}
 Judgment: g
-Phenomena: {number, pn}
+Phenomena: {pn}
 na taa
 1SG sleep
 'I am lying [in bed]/sleeping.'
@@ -105,7 +105,7 @@ na taa
 Source: {author}
 Vetted: {f}
 Judgment: g
-Phenomena: {number, pn}
+Phenomena: {pn}
 ni taa
 1PL.E sleep
 'We (except you) are lying [in bed]/sleeping.'
@@ -114,7 +114,7 @@ ni taa
 Source: {author}
 Vetted: {f}
 Judgment: g
-Phenomena: {number, pn}
+Phenomena: {pn}
 pi taa
 1PL.I sleep
 'We (including you) are lying [in bed]/sleeping.'
@@ -123,7 +123,7 @@ pi taa
 Source: {author}
 Vetted: {f}
 Judgment: g
-Phenomena: {number, pn}
+Phenomena: {pn}
 a taa
 2SG sleep
 'You are lying [in bed]/sleeping.'
@@ -132,7 +132,7 @@ a taa
 Source: {author}
 Vetted: {f}
 Judgment: g
-Phenomena: {number, pn}
+Phenomena: {pn}
 ri taa
 2PL sleep
 'Y'all are lying [in bed]/sleeping.'
@@ -141,7 +141,7 @@ ri taa
 Source: {author}
 Vetted: {f}
 Judgment: g
-Phenomena: {number, pn}
+Phenomena: {pn}
 di taa
 3 sleep
 'He/she/it/they are lying [in bed]/sleeping.'
