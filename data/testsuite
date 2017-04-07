@@ -4,7 +4,7 @@ Lines: <orth-seg gloss translat>
 Author: Guy Emerson, Travis Nguyen
 Date: April 7, 2017
 Source a: https://openaccess.leidenuniv.nl/bitstream/handle/1887/11998/A%20grammar%20of%20Abui.pdf?sequence=1
-Source b: https://www.researchgate.net/publication/41017857_Annotations_to_a_text_in_the_Abui_language_Alor
+Source b: Benny Maley (native speaker of Abui) 
 
 ################################################################################
 # Word order
@@ -15,135 +15,135 @@ Source b: https://www.researchgate.net/publication/41017857_Annotations_to_a_tex
 # Transitive verbs
 
 #1 Grammatical (SOV)
-Source: {a:129}
-Vetted: {t}
+Source: {a:241}
+Vetted: {f}
 Judgment: g
 Phenomena: {word order}
-Simon nala nee
-Simon what eat
-'Simon eats something.'
+ama sieng nee
+person rice eat
+'People eat rice.'
 
 #2 Ungrammatical (SVO)
-Source: {c}
+Source: {author}
 Vetted: {f}
 Judgment: u
 Phenomena: {word order}
-Simon nee nala
-Simon eat what
-'Simon eats something.'
+ama nee sieng
+person eat rice
+'People eat rice.'
 
-#3 Ungrammatical (OSV)
-Source: {c}
+#3 Grammatical (SOV reading is nonsensical; there is no OSV reading)
+Source: {author}
 Vetted: {f}
-Judgment: u
+Judgment: g
 Phenomena: {word order}
-nala Simon nee
-what Simon eat
-'Simon eats something.'
+sieng ama nee
+rice person eat
+'Rice eat people.'
 
 #4 Ungrammatical (OVS)
-Source: {c}
+Source: {author}
 Vetted: {f}
 Judgment: u
 Phenomena: {word order}
-nala nee Simon
-what eat Simon
-'Simon eats something.'
+sieng nee ama
+rice eat person
+'People eat rice.'
 
 #5 Ungrammatical (VSO)
-Source: {c}
+Source: {author}
 Vetted: {f}
 Judgment: u
 Phenomena: {word order}
-nee Simon nala
-what Simon eat
-'Simon eats something.'
+nee ama sieng
+eat person rice
+'People eat rice.'
 
 #6 Ungrammatical (VOS)
-Source: {c}
+Source: {author}
 Vetted: {f}
 Judgment: u
 Phenomena: {word order}
-nee nala Simon
-what eat Simon
-'Simon eats something.'
+nee sieng ama
+eat rice person
+'People eat rice.'
 
 # Intransitive verbs
 
 #7 Grammatical (SV)
-Source: {c}
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {word order}
-Simon taa
-Simon sleep
-'Simon is sleeping.'
+ama taa
+person sleep
+'People are sleeping.'
 
 #8 Ungrammatical (VS)
-Source: {c}
+Source: {author}
 Vetted: {f}
 Judgment: u
 Phenomena: {word order}
-taa Simon
-sleep Simon
-'Simon is sleeping.'
+taa ama
+sleep person
+'People are sleeping.'
 
 ################################################################################
 # Pronouns
 ################################################################################
 
-#7 Grammatical (first-person singular)
+#9 Grammatical (first-person singular)
 Source: {a:200}
 Vetted: {t}
 Judgment: g
 Phenomena: {number, pn}
 na taa
-1SG sleep.CNT
+1SG sleep
 'I am lying [in bed]/sleeping.'
 
-#8 Grammatical (first-person plural exclusive)
-Source: {c}
+#10 Grammatical (first-person plural exclusive)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {number, pn}
 ni taa
-1PL.E sleep.CNT
+1PL.E sleep
 'We (except you) are lying [in bed]/sleeping.'
 
-#9 Grammatical (first-person plural inclusive)
-Source: {c}
+#11 Grammatical (first-person plural inclusive)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {number, pn}
 pi taa
-1PL.I sleep.CNT
+1PL.I sleep
 'We (including you) are lying [in bed]/sleeping.'
 
-#10 Grammatical (second-person singular)
-Source: {c}
+#12 Grammatical (second-person singular)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {number, pn}
 a taa
-2SG sleep.CNT
+2SG sleep
 'You are lying [in bed]/sleeping.'
 
-#11 Grammatical (second-person plural)
-Source: {c}
+#13 Grammatical (second-person plural)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {number, pn}
 ri taa
-2PL sleep.CNT
+2PL sleep
 'Y'all are lying [in bed]/sleeping.'
 
-#12 Grammatical (third-person)
-Source: {c}
+#14 Grammatical (third-person)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {number, pn}
 di taa
-3 sleep.CNT
+3 sleep
 'He/she/it/they are lying [in bed]/sleeping.'
 
 ################################################################################
@@ -156,8 +156,8 @@ di taa
 # The rest of the NP
 ################################################################################
 
-#X Grammatical (noun DEM verb)
-Source: {c}
+#15 Grammatical (noun DEM verb)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {det}
@@ -165,8 +165,8 @@ kaai hu taa
 dog SPC sleep
 'A dog (you do not know about) sleeps.'
 
-#X Ungrammatical (DEM noun verb)
-Source: {c}
+#16 Ungrammatical (DEM noun verb)
+Source: {author}
 Vetted: {f}
 Judgment: u
 Phenomena: {det}
@@ -174,8 +174,8 @@ hu kaai taa
 SPC dog sleep
 'A dog (you do not know about) sleeps.'
 
-#X Grammatical (noun verb)
-Source: {c}
+#17 Grammatical (noun verb)
+Source: {author}
 Vetted: {f}
 Judgment: g
 Phenomena: {det}
