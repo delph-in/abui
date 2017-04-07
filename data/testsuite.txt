@@ -1,6 +1,6 @@
 Language: abui
 Language code: abz
-Lines: <orth-seg gloss translat>
+Lines: orth-seg gloss translat
 Author: Guy Emerson, Travis Nguyen
 Date: April 7, 2017
 Source a: https://openaccess.leidenuniv.nl/bitstream/handle/1887/11998/A%20grammar%20of%20Abui.pdf?sequence=1
