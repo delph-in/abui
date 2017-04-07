@@ -1,0 +1,184 @@
+Language: abui
+Language code: abz
+Lines: <orth-seg gloss translat>
+Author: Guy Emerson, Travis Nguyen
+Date: April 7, 2017
+Source a: https://openaccess.leidenuniv.nl/bitstream/handle/1887/11998/A%20grammar%20of%20Abui.pdf?sequence=1
+Source b: https://www.researchgate.net/publication/41017857_Annotations_to_a_text_in_the_Abui_language_Alor
+
+################################################################################
+# Word order
+################################################################################
+
+# Abui does not have ditransitive verbs.
+
+# Transitive verbs
+
+#1 Grammatical (SOV)
+Source: {a:129}
+Vetted: {t}
+Judgment: g
+Phenomena: {word order}
+Simon nala nee
+Simon what eat
+'Simon eats something.'
+
+#2 Ungrammatical (SVO)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+Simon nee nala
+Simon eat what
+'Simon eats something.'
+
+#3 Ungrammatical (OSV)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+nala Simon nee
+what Simon eat
+'Simon eats something.'
+
+#4 Ungrammatical (OVS)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+nala nee Simon
+what eat Simon
+'Simon eats something.'
+
+#5 Ungrammatical (VSO)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+nee Simon nala
+what Simon eat
+'Simon eats something.'
+
+#6 Ungrammatical (VOS)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+nee nala Simon
+what eat Simon
+'Simon eats something.'
+
+# Intransitive verbs
+
+#7 Grammatical (SV)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {word order}
+Simon taa
+Simon sleep
+'Simon is sleeping.'
+
+#8 Ungrammatical (VS)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+taa Simon
+sleep Simon
+'Simon is sleeping.'
+
+################################################################################
+# Pronouns
+################################################################################
+
+#7 Grammatical (first-person singular)
+Source: {a:200}
+Vetted: {t}
+Judgment: g
+Phenomena: {number, pn}
+na taa
+1SG sleep.CNT
+'I am lying [in bed]/sleeping.'
+
+#8 Grammatical (first-person plural exclusive)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {number, pn}
+ni taa
+1PL.E sleep.CNT
+'We (except you) are lying [in bed]/sleeping.'
+
+#9 Grammatical (first-person plural inclusive)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {number, pn}
+pi taa
+1PL.I sleep.CNT
+'We (including you) are lying [in bed]/sleeping.'
+
+#10 Grammatical (second-person singular)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {number, pn}
+a taa
+2SG sleep.CNT
+'You are lying [in bed]/sleeping.'
+
+#11 Grammatical (second-person plural)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {number, pn}
+ri taa
+2PL sleep.CNT
+'Y'all are lying [in bed]/sleeping.'
+
+#12 Grammatical (third-person)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {number, pn}
+di taa
+3 sleep.CNT
+'He/she/it/they are lying [in bed]/sleeping.'
+
+################################################################################
+# Case
+################################################################################
+
+# Abui has no case inflections of NPs.
+
+################################################################################
+# The rest of the NP
+################################################################################
+
+#X Grammatical (noun DEM verb)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {det}
+kaai hu taa
+dog SPC sleep
+'A dog (you do not know about) sleeps.'
+
+#X Ungrammatical (DEM noun verb)
+Source: {c}
+Vetted: {f}
+Judgment: u
+Phenomena: {det}
+hu kaai taa
+SPC dog sleep
+'A dog (you do not know about) sleeps.'
+
+#X Grammatical (noun verb)
+Source: {c}
+Vetted: {f}
+Judgment: g
+Phenomena: {det}
+kaai taa
+dog sleep
+'A dog is sleeping.'
