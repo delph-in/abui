@@ -1,0 +1,154 @@
+Guy Emerson, Travis Nguyen
+Prof. Emily Bender
+LING 567
+April 7, 2017
+
+Lab 2 Write-Up
+
+In the "General Information" section of the customization system, the name of the language was set as "Abui" and the ISO code as "abz".
+
+Word order in Abui is SOV.
+
+Here are a few examples:
+
+Source: {a:241}
+Vetted: {f}
+Judgment: g
+Phenomena: {word order}
+ama sieng nee
+person rice eat
+'People eat rice.'
+
+Source: {author}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+ama nee sieng
+person eat rice
+'People eat rice.'
+
+Note that the following example is grammatical; however, it does not have the reading 'People eat rice.'
+
+Source: {author}
+Vetted: {f}
+Judgment: g
+Phenomena: {word order}
+sieng ama nee
+rice person eat
+'Rice eat people.'
+
+In order to model this, "SOV" was selected in the "Word Order" section of the customization system.
+
+The pronoun system of Abui consists of the following pronouns, which can occur as subjects:
+
+* first-person singular, na
+* first-person plural exclusive, ni
+* first-person plural inclusive, pi
+* second-person singular, a
+* second-person plural, ri
+* third person, di
+
+Note that Abui does not distinguish between a third-person singular and a third-person plural pronoun.
+
+Here are a few examples of pronoun usage:
+
+Source: {author}
+Vetted: {f}
+Judgment: g
+Phenomena: {pn}
+ni taa
+1PL.E sleep
+'We (except you) are lying [in bed]/sleeping.'
+
+Source: {author}
+Vetted: {f}
+Judgment: g
+Phenomena: {pn}
+ri taa
+2PL sleep
+'Y'all are lying [in bed]/sleeping.'
+
+Source: {author}
+Vetted: {f}
+Judgment: g
+Phenomena: {pn}
+di taa
+3 sleep
+'He/she/it/they are lying [in bed]/sleeping.'
+
+In order to model the pronouns, two steps were taken:
+
+(1) In the "Number" section of the customization system, two numbers were added: "sg" (singular) and "pl" (plural).
+(2) In the "Person" section of the customization system, the following radio buttons were selected: "First, second, and third" for the values of person distinguished in the language, and "inclusive and exclusive in the plural" for the subtypes that the language distinguishes in the first person.
+
+However, the customization system only allows us to specify feature values for types, and not lexical entries. As person and number on pronouns do not interact with other parts of the grammar (there is no subject verb agreement), we decided to leave these features until we edit the tdl.
+
+Abui lacks gender; as a result, nothing in the "Gender" section of the customization system was specified.
+
+Moreover, Abui is not a direct-inverse language; nothing in the "Dir-inv" section of the customization system was specified as well.
+
+As for properties of Abui that are not covered by the starter grammar or customization system, we covered a few, including Noun-Det ordering and intransitive and transitive verbs. 
+
+Here are a few examples of Noun-Det ordering:
+
+Source: {author}
+Vetted: {f}
+Judgment: g
+Phenomena: {det}
+kaai hu taa
+dog SPC sleep
+'A dog (you do not know about) sleeps.'
+
+Source: {author}
+Vetted: {f}
+Judgment: u
+Phenomena: {det}
+hu kaai taa
+SPC dog sleep
+'A dog (you do not know about) sleeps.'
+
+In the "Word Order" section of the customization system, we specified that the language has determiners and follows the order of Noun-Det. We also specified that the language does not have auxiliary verbs.
+
+Moreover, here are a few examples of intransitive verbs:
+
+Source: {author}
+Vetted: {f}
+Judgment: g
+Phenomena: {word order}
+ama taa
+person sleep
+'People are sleeping.'
+
+Source: {author}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+taa ama
+sleep person
+'People are sleeping.'
+
+Note that intransitive verbs follow the word order SV.
+
+Here are a few examples of transitive verbs:
+
+Source: {a:241}
+Vetted: {f}
+Judgment: g
+Phenomena: {word order}
+ama sieng nee
+person rice eat
+'People eat rice.'
+
+Source: {author}
+Vetted: {f}
+Judgment: u
+Phenomena: {word order}
+ama nee sieng
+person eat rice
+'People eat rice.'
+
+Note that transitive verbs follow the word order SOV.
+
+Our grammar covers 100% of our testsuite. As for overgeneralization, the grammar has an overall coverage of 0%. Our grammar perfectly models all of the phenomena that our testsuite includes.
+
+Lastly, the customization system is unable to cope with all demonstratives in Abui. According to the grammar, Abui has two types of demonstratives: deictic demonstratives and anaphoric demonstratives. Deictic demonstratives occur before the noun and anaphoric demonstratives occur after the noun, and the two types can co-occur. The customization system only allows for one determiner in an NP. Moving forward, we will have to forego one of the types of demonstratives for the remainder of this project or treat one type of demonstrative as something other than a determiner. We decided to treat the anaphoric demonstratives as determiners because one of their functions is to specify definiteness, while the deictic demonstratives only specfy spatial location.
