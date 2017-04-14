@@ -144,7 +144,7 @@ Judgment: g
 Phenomena: {pn}
 di taa
 3 sleep
-'He/she/it/they are lying [in bed]/sleeping.'
+'They are lying [in bed]/sleeping.'
 
 ################################################################################
 # Case
@@ -382,3 +382,334 @@ Phenomena: {neg}
 naha na lol
 NEG 1SG walk
 'I do not walk'
+
+################################################################################
+# Possessives
+################################################################################
+
+# Alienable nouns
+
+#38 1SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ne-fala foka
+1SG.AL-house be.big
+'My house is big'
+
+#39 Ungrammatical 1SG after noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+fala-ne foka
+house-1SG.AL be.big
+'My house is big'
+
+#40 Ungrammatical inalienable 1SG with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+na-fala foka
+1SG.INAL-house be.big
+'My house is big'
+
+#41 2SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+e-fala foka
+2SG.AL-house be.big
+'Your (sg) house is big'
+
+#42 Ungrammatical inalienable 2SG with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+a-fala foka
+2SG.INAL-house be.big
+'Your (sg) house is big'
+
+#43 DISTR
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+te-fala foka
+DISTR.AL-house be.big
+'Our (each of us) houses are big'
+
+#44 Ungrammatical inalienable DISTR with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ta-fala foka
+DISTR.INAL-house be.big
+'Our (each of us) houses are big'
+
+#45 3.II
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+he-fala foka
+3.II.AL-house be.big
+'Their house is big'
+
+#46 Ungrammatical inalienable 3.II with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ha-fala foka
+3.II.INAL-house be.big
+'Their house is big'
+
+#47 Ungrammatical 3.I without agent in clause
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+de-fala foka
+3.I.AL-house be.big
+'Their house is big'
+
+#48 3.II with noun
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ya he-fala foka
+mother 3.II.AL-house be.big
+'Mother's house is big'
+
+#49 Ungrammatical 3.II with possessor noun after possessed noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+he-fala ya foka
+3.II.AL-house mother be.big
+'Mother's house is big'
+
+#50 3.I (coreference)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ya de-fala ong
+mother 3.I.AL-house make
+'Mother is building her own house'
+
+#51 Ungrammatical inalienable 3.I with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ya da-fala ong
+mother 3.I.INAL-house make
+'Mother is building her own house'
+
+# Inalienable nouns
+
+#52 Ungrammatical inalienable noun without possession
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+min foka
+nose be.big
+'The nose is big'
+
+#53 1SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+na-min foka
+1SG.INAL-nose be.big
+'My nose is big'
+
+#54 Ungrammatical 1SG after noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+min-na foka
+nose-1SG.INAL be.big
+'My nose is big'
+
+#55 Ungrammatical alienable 1SG with inalienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ne-min foka
+1SG.AL-nose be.big
+'My nose is big'
+
+#56 2SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+a-min foka
+2SG.INAL-nose be.big
+'Your (sg) nose is big'
+
+#57 Ungrammatical alienable 2SG with inalienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+e-min foka
+2SG.AL-nose be.big
+'Your (sg) nose is big'
+
+#58 DISTR
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ta-min foka
+DISTR.INAL-nose be.big
+'Our (each of us) noses are big'
+
+#59 Ungrammatical alienable DISTR with inalienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+te-min foka
+DISTR.AL-nose be.big
+'Our (each of us) noses are big'
+
+#60 3.II
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ha-min foka
+3.II.INAL-nose be.big
+'Their nose is big'
+
+#61 Ungrammatical alienable 3.II with inalienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+he-min foka
+3.II.AL-nose be.big
+'Their nose is big'
+
+#63 Ungrammatical 3.I without agent in clause
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+da-min foka
+3.I.INAL-nose be.big
+'Their nose is big'
+
+#64 3.II with noun
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ya ha-min foka
+mother 3.II.INAL-nose be.big
+'Mother's nose is big'
+
+#65 Ungrammatical 3.II with possessor noun after possessed noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ha-min ya foka
+3.II.INAL-nose mother be.big
+'Mother's nose is big'
+
+#66 3.I (coreference)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ya da-min lang
+mother 3.I.INAL-nose wash
+'Mother is washing her own nose'
+
+#67 Ungrammatical inalienable 3.I with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ya de-min lang
+mother 3.I.AL-nose wash
+'Mother is washing her own nose'
+
+# Underspecified alienability
+
+#68 1PL.E alienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ni-fala foka
+1PL.E.AL-house be.big
+'Our (excl.) house is big'
+
+#69 1PL.E inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ni-min foka
+1PL.E.INAL-nose be.big
+'Our (excl.) noses are big'
+
+#70 1PL.I alienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+pi-fala foka
+1PL.I.AL-house be.big
+'Our (incl.) house is big'
+
+#71 1PL.I inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+pi-min foka
+1PL.I.INAL-nose be.big
+'Our (incl.) noses are big'
+
+#72 2PL alienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ri-fala foka
+2PL.AL-house be.big
+'Y'all's house is big'
+
+#73 2PL inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ri-min foka
+2PL.INAL-nose be.big
+'Y'all's noses are big'
+
+################################################################################
+# Agreement constructions
+################################################################################
+
+# ...
