@@ -712,4 +712,74 @@ ri-min foka
 # Agreement constructions
 ################################################################################
 
-# ...
+#74 Grammatical (third person pronoun di agrees with preceding noun in terms of person)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+ya di sieng nee
+mother 3A rice eat
+'Mother is eating rice'
+
+#75 Ungrammatical (third person pronoun di does not agree with preceding pronoun in terms of person)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+no di sieng nee
+1SG 3A rice eat
+'I am eating rice'
+
+#76 Grammatical (bound marker agrees with object in terms of person)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+maama moku ha-fanga
+father child 3II.PAT-say
+'Father orders the child'
+
+#77 Ungrammatical (bound marker does not agree with object in terms of person)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+maama moku na-fanga
+father child 1SG.PAT-say
+'Father orders the child'
+
+#78 Grammatical (bound marker expresses object in terms of person)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+maama na-fanga
+father 1SG.PAT-say
+'Father orders me'
+
+#79 Grammatical (U-U_REC transitive construction)
+Source: a:248
+Vetted: t
+Judgment: g
+Phenomena: {agr}
+bataa moku ho-fak
+wood child 3II.REC-fall
+'A tree breaks on a child'
+
+#80 Ungrammatical (inanimate participant cannot be referenced by the third person pronoun di)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+bataa di moku ho-fak
+wood 3A child 3II.REC-fall
+'A tree breaks on a child'
+
+#81 Grammatical (U_REL-U_LOC transitive construction)
+Source: a:249
+Vetted: t
+Judgment: g
+Phenomena: {agr}
+o-ne-beei
+2SG.REC-1SG.LOC-be.angry
+'You feel angry with me'
