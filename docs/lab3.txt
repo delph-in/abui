@@ -1,0 +1,326 @@
+=== Phenomena ===
+
+= Tense/aspect =
+
+Tense is not grammaticalised in Abui, although there are adverbs indicating time.
+
+Aspect is marked with a number of suffixes.
+Using an aspect marker is optional, for example:
+
+#19 No aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+na lol
+1SG walk
+'I walk'
+
+If an aspect marker does appear, it must be a suffix, not a prefix:
+
+#20 Perfective
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+na lol-i
+1SG walk-PFV
+'I have walked'
+
+#20.1 Ungrammatical order of aspect marker and verb
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+na i-lol
+1SG PFV-walk
+'I have walked'
+
+Multiple aspect markers can co-occur.
+Kratochvil (2007) claims that up to three markers can occur together,
+although there are constraints on the order of the markers,
+and which markers can co-occur.
+In our testsuite, we have documented the orders for three of these markers --
+perfective '-i', durative '-a', and perfect '-u'.
+Of the six possible combinations of two of these,
+only two combinations are attested.
+One grammatical and one ungrammatical example are given here:
+
+#29 Grammatical combination (PRF-PFV)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+na lol-u-i
+1SG walk-PRF-PFV
+'I walked'
+
+#30 Ungrammatical combination (PFV-PRF)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+na lol-i-u
+1SG walk-PFV-PRF
+'I walked'
+
+
+= Negation =
+
+Negation is marked with the particle "naha",
+which must appear immediately after the verb:
+
+#35 Negation after verb
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+na lol naha
+1SG walk NEG
+'I do not walk'
+
+#36 Ungrammatical negation before verb
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+na naha lol
+1SG NEG walk
+'I do not walk'
+
+#37 Ungrammatical negation before verb
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+naha na lol
+NEG 1SG walk
+'I do not walk'
+
+
+= Valence changing rules =
+
+The grammar does not document any valence changing rules.
+Several verbs are given which can appear with more than argument structure,
+but there is no indication that one structure is the `basic' one.
+There are no additional morphemes, other than agreement markers.
+
+
+= Possessives =
+
+Abui has two sets of prefixes which indicate possessives.
+One set of prefixes are used for 'alienable' nouns and one set for 'inalienable' nouns,
+but in both cases, the possessive marker must appear immediately before the possessed noun.
+For example, a different prefix is used for "my house" and "my nose":
+
+#38 1SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ne-fala foka
+1SG.AL-house be.big
+'My house is big'
+
+#39 Ungrammatical 1SG after noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+fala-ne foka
+house-1SG.AL be.big
+'My house is big'
+
+#40 Ungrammatical inalienable 1SG with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+na-fala foka
+1SG.INAL-house be.big
+'My house is big'
+
+#53 1SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+na-min foka
+1SG.INAL-nose be.big
+'My nose is big'
+
+#54 Ungrammatical 1SG after noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+min-na foka
+nose-1SG.INAL be.big
+'My nose is big'
+
+#55 Ungrammatical alienable 1SG with inalienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ne-min foka
+1SG.AL-nose be.big
+'My nose is big'
+
+In addition, 'inalienable' nouns may not appear without a possessor:
+
+#52 Ungrammatical inalienable noun without possession
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+min foka
+nose be.big
+'The nose is big'
+
+There is a strong semantic association with the two sets of nouns,
+since "inalienable" nouns include many body parts.
+However, some body parts are "alienable",
+and "enemy" is also an "inalienable" noun.
+
+For third person possessors, a possessor noun may optionally appear before the prefix:
+
+#48 3.II with noun
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ya he-fala foka
+mother 3.II.AL-house be.big
+'Mother's house is big'
+
+#49 Ungrammatical 3.II with possessor noun after possessed noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+he-fala ya foka
+3.II.AL-house mother be.big
+'Mother's house is big'
+
+
+= Agreement =
+
+The same set of prefixes used for possessives are also used for "undergoer" agreement.
+Kratochvil does not use the term "object", because some transitive verbs occur with two undergoer arguments.
+Undergoer arguments stand in contrast to agent arguments.
+What we analysed in lab 2 as pronouns are perhaps better described as agent markers,
+as they can co-occur with agent NPs, appearing immediately after the NP.
+Undergoer agreement markers appear immediately before the verb.
+
+#76 Grammatical (bound marker agrees with object in terms of person)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+maama moku ha-fanga
+father child 3II.PAT-say
+'Father orders the child'
+
+#77 Ungrammatical (bound marker does not agree with object in terms of person)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+maama moku na-fanga
+father child 1SG.PAT-say
+'Father orders the child'
+
+#78 Grammatical (bound marker expresses object in terms of person)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+maama na-fanga
+father 1SG.PAT-say
+'Father orders me'
+
+There are three kinds of undergoer agreement markers:
+"locative" (identical in form to the alienable possessive markers)
+"patient" (identical in form to the inalienable possessive markers)
+"recipient" (a distinct set of markers for the verbal domain)
+
+Different contructions require different agreement markers.
+Verbs may appear in multiple constructions,
+and the set of verbs which can appear in construction
+seems at least partly cluster along semantic lines.
+
+Some constructions allow two agreement markers.
+Several combinations of agreement markers are possible, but not all.
+One example:
+
+#81 Grammatical (U_REL-U_LOC transitive construction)
+Source: a:249
+Vetted: t
+Judgment: g
+Phenomena: {agr}
+o-ne-beei
+2SG.REC-1SG.LOC-be.angry
+'You feel angry with me'
+
+
+= Argument optionality =
+
+The grammar does not explicitly say whether arguments are optional or not.
+There is at least one example in the grammar that seems to show an optional agent,
+although this has been taken from  a longer text, where an agent may be present:
+
+de-   kanai         do  baab   -i   ba  nee
+3I.AL-canari.nut PRX strike.CPL-PFV LNK eat
+‘he was crushing the canari nuts for himself and ate (them)’
+
+Kratochvil also says:
+``In questions and imperative constructions, A arguments (NP/PRO_A) may be omitted.''
+This might suggest that they may not be omitted in other contexts.
+
+
+=== Revised choices ===
+
+We have added a lexical type for each pronoun/agent marker,
+rather than using the same type for all of them.
+
+
+=== New choices ===
+
+= Tense/aspect =
+
+We added a type for each kind of aspect.
+We added a suffix position class for the aspect markers,
+and a lexical rule type and instance for each marker.
+This will currently undergenerate,
+but a more careful analysis would be needed
+to correctly model the full set of allowable combinations.
+
+= Negation =
+
+We added the negation particle as an adverb appearing after the VP.
+Kratochvil claims that only one negation particle can appear in serial verb constructions,
+which suggests that negation must be at the clause level rather than at the lexical level.
+There are also some particles which can appear after negation.
+These phenomena were out of the scope of this lab,
+but they suggest that attaching to the VP is the right analysis.
+
+= Agreement =
+
+We added a prefix position class for the undergoer agreement markers.
+We added a lexical rule type and instance for each marker.
+This will currently undergenerate,
+but a more careful analysis would be needed
+to correctly model the full set of allowable combinations.
+Labelling a clause as "transitive" is not specific enough for Abui.
+
+= Argument optionality =
+
+At present, the data does not seem completely clear.
+We are tentatively going with the analysis that
+object NPs can be dropped only if agreement is present,
+and subject NPs cannot be dropped.
+
+= Possessives =
+
+This is not covered in the customisation system.

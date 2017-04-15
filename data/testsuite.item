@@ -19,63 +19,64 @@
 19@author@@@1@det,pn@hu di taa@@@@0@3@SPC 3 sleep'They are sleeping'@guy emerson, travis nguyen@april 7, 2017
 20@author@@@1@tam@na lol@@@@1@2@1SG walk'I walk'@guy emerson, travis nguyen@april 7, 2017
 21@author@@@1@tam@na lol-i@@@@1@2@1SG walk-PFV'I have walked'@guy emerson, travis nguyen@april 7, 2017
-22@author@@@1@tam@na lol-e@@@@1@2@1SG walk-IPFV'I am (already) walking'@guy emerson, travis nguyen@april 7, 2017
-23@author@@@1@tam@na lol-a@@@@1@2@1SG walk-DUR'I am walking'@guy emerson, travis nguyen@april 7, 2017
-24@author@@@1@tam@na lol-o@@@@1@2@1SG walk-PUNCT'I (just) walk'@guy emerson, travis nguyen@april 7, 2017
-25@author@@@1@tam@na lol-u@@@@1@2@1SG walk-PRF'I walked'@guy emerson, travis nguyen@april 7, 2017
-26@author@@@1@tam@na lol-se@@@@1@2@1SG walk-INCP.I'I am about to walk'@guy emerson, travis nguyen@april 7, 2017
-27@author@@@1@tam@na lol-te@@@@1@2@1SG walk-INCP.C'I am to have finished walking''@guy emerson, travis nguyen@april 7, 2017
-28@author@@@1@tam@na lol-si@@@@1@2@1SG walk-PHSL.I'I have just started walking'@guy emerson, travis nguyen@april 7, 2017
-29@author@@@1@tam@na lol-ti@@@@1@2@1SG walk-PHSL.C'I have just finished walking'@guy emerson, travis nguyen@april 7, 2017
-30@author@@@1@tam@na lol-u-i@@@@1@2@1SG walk-PRF-PFV'I walked'@guy emerson, travis nguyen@april 7, 2017
-31@author@@@1@tam@na lol-i-u@@@@0@2@1SG walk-PFV-PRF'I walked'@guy emerson, travis nguyen@april 7, 2017
-32@author@@@1@tam@na lol-u-a@@@@0@2@1SG walk-PRF-DUR'I was walking'@guy emerson, travis nguyen@april 7, 2017
-33@author@@@1@tam@na lol-a-u@@@@0@2@1SG walk-DUR-PRF'I was walking'@guy emerson, travis nguyen@april 7, 2017
-34@author@@@1@tam@na lol-i-a@@@@1@2@1SG walk-PFV-DUR'I was walking'@guy emerson, travis nguyen@april 7, 2017
-35@author@@@1@tam@na lol-a-i@@@@0@2@1SG walk-DUR-PFV'I was walking'@guy emerson, travis nguyen@april 7, 2017
-36@author@@@1@neg@na lol naha@@@@1@3@1SG walk NEG'I do not walk'@guy emerson, travis nguyen@april 7, 2017
-37@author@@@1@neg@na naha lol@@@@0@3@1SG NEG walk'I do not walk'@guy emerson, travis nguyen@april 7, 2017
-38@author@@@1@neg@naha na lol@@@@0@3@NEG 1SG walk'I do not walk'@guy emerson, travis nguyen@april 7, 2017
-39@author@@@1@poss@ne-fala foka@@@@1@2@1SG.AL-house be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
-40@author@@@1@poss@fala-ne foka@@@@0@2@house-1SG.AL be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
-41@author@@@1@poss@na-fala foka@@@@0@2@1SG.INAL-house be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
-42@author@@@1@poss@e-fala foka@@@@1@2@2SG.AL-house be.big'Your (sg) house is big'@guy emerson, travis nguyen@april 7, 2017
-43@author@@@1@poss@a-fala foka@@@@0@2@2SG.INAL-house be.big'Your (sg) house is big'@guy emerson, travis nguyen@april 7, 2017
-44@author@@@1@poss@te-fala foka@@@@1@2@DISTR.AL-house be.big'Our (each of us) houses are big'@guy emerson, travis nguyen@april 7, 2017
-45@author@@@1@poss@ta-fala foka@@@@0@2@DISTR.INAL-house be.big'Our (each of us) houses are big'@guy emerson, travis nguyen@april 7, 2017
-46@author@@@1@poss@he-fala foka@@@@1@2@3.II.AL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
-47@author@@@1@poss@ha-fala foka@@@@0@2@3.II.INAL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
-48@author@@@1@poss@de-fala foka@@@@0@2@3.I.AL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
-49@author@@@1@poss@ya he-fala foka@@@@1@3@mother 3.II.AL-house be.big'Mother's house is big'@guy emerson, travis nguyen@april 7, 2017
-50@author@@@1@poss@he-fala ya foka@@@@0@3@3.II.AL-house mother be.big'Mother's house is big'@guy emerson, travis nguyen@april 7, 2017
-51@author@@@1@poss@ya de-fala ong@@@@1@3@mother 3.I.AL-house make'Mother is building her own house'@guy emerson, travis nguyen@april 7, 2017
-52@author@@@1@poss@ya da-fala ong@@@@0@3@mother 3.I.INAL-house make'Mother is building her own house'@guy emerson, travis nguyen@april 7, 2017
-53@author@@@1@poss@min foka@@@@0@2@nose be.big'The nose is big'@guy emerson, travis nguyen@april 7, 2017
-54@author@@@1@poss@na-min foka@@@@1@2@1SG.INAL-nose be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
-55@author@@@1@poss@min-na foka@@@@0@2@nose-1SG.INAL be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
-56@author@@@1@poss@ne-min foka@@@@0@2@1SG.AL-nose be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
-57@author@@@1@poss@a-min foka@@@@1@2@2SG.INAL-nose be.big'Your (sg) nose is big'@guy emerson, travis nguyen@april 7, 2017
-58@author@@@1@poss@e-min foka@@@@0@2@2SG.AL-nose be.big'Your (sg) nose is big'@guy emerson, travis nguyen@april 7, 2017
-59@author@@@1@poss@ta-min foka@@@@1@2@DISTR.INAL-nose be.big'Our (each of us) noses are big'@guy emerson, travis nguyen@april 7, 2017
-60@author@@@1@poss@te-min foka@@@@0@2@DISTR.AL-nose be.big'Our (each of us) noses are big'@guy emerson, travis nguyen@april 7, 2017
-61@author@@@1@poss@ha-min foka@@@@1@2@3.II.INAL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
-62@author@@@1@poss@he-min foka@@@@0@2@3.II.AL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
-63@author@@@1@poss@da-min foka@@@@0@2@3.I.INAL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
-64@author@@@1@poss@ya ha-min foka@@@@1@3@mother 3.II.INAL-nose be.big'Mother's nose is big'@guy emerson, travis nguyen@april 7, 2017
-65@author@@@1@poss@ha-min ya foka@@@@0@3@3.II.INAL-nose mother be.big'Mother's nose is big'@guy emerson, travis nguyen@april 7, 2017
-66@author@@@1@poss@ya da-min lang@@@@1@3@mother 3.I.INAL-nose wash'Mother is washing her own nose'@guy emerson, travis nguyen@april 7, 2017
-67@author@@@1@poss@ya de-min lang@@@@0@3@mother 3.I.AL-nose wash'Mother is washing her own nose'@guy emerson, travis nguyen@april 7, 2017
-68@author@@@1@poss@ni-fala foka@@@@1@2@1PL.E.AL-house be.big'Our (excl.) house is big'@guy emerson, travis nguyen@april 7, 2017
-69@author@@@1@poss@ni-min foka@@@@1@2@1PL.E.INAL-nose be.big'Our (excl.) noses are big'@guy emerson, travis nguyen@april 7, 2017
-70@author@@@1@poss@pi-fala foka@@@@1@2@1PL.I.AL-house be.big'Our (incl.) house is big'@guy emerson, travis nguyen@april 7, 2017
-71@author@@@1@poss@pi-min foka@@@@1@2@1PL.I.INAL-nose be.big'Our (incl.) noses are big'@guy emerson, travis nguyen@april 7, 2017
-72@author@@@1@poss@ri-fala foka@@@@1@2@2PL.AL-house be.big'Y'all's house is big'@guy emerson, travis nguyen@april 7, 2017
-73@author@@@1@poss@ri-min foka@@@@1@2@2PL.INAL-nose be.big'Y'all's noses are big'@guy emerson, travis nguyen@april 7, 2017
-74@author@@@1@agr@ya di sieng nee@@@@1@4@mother 3A rice eat'Mother is eating rice'@guy emerson, travis nguyen@april 7, 2017
-75@author@@@1@agr@no di sieng nee@@@@0@4@1SG 3A rice eat'I am eating rice'@guy emerson, travis nguyen@april 7, 2017
-76@author@@@1@agr@maama moku ha-fanga@@@@1@3@father child 3II.PAT-say'Father orders the child'@guy emerson, travis nguyen@april 7, 2017
-77@author@@@1@agr@maama moku na-fanga@@@@0@3@father child 1SG.PAT-say'Father orders the child'@guy emerson, travis nguyen@april 7, 2017
-78@author@@@1@agr@maama na-fanga@@@@1@2@father 1SG.PAT-say'Father orders me'@guy emerson, travis nguyen@april 7, 2017
-79@a:248@@@1@agr@bataa moku ho-fak@@@@1@3@wood child 3II.REC-fall'A tree breaks on a child'@guy emerson, travis nguyen@april 7, 2017
-80@author@@@1@agr@bataa di moku ho-fak@@@@0@4@wood 3A child 3II.REC-fall'A tree breaks on a child'@guy emerson, travis nguyen@april 7, 2017
-81@a:249@@@1@agr@o-ne-beei@@@@1@1@2SG.REC-1SG.LOC-be.angry'You feel angry with me'@guy emerson, travis nguyen@april 7, 2017
+22@author@@@1@tam@na i-lol@@@@1@2@1SG PFV-walk'I have walked'@guy emerson, travis nguyen@april 7, 2017
+23@author@@@1@tam@na lol-e@@@@1@2@1SG walk-IPFV'I am (already) walking'@guy emerson, travis nguyen@april 7, 2017
+24@author@@@1@tam@na lol-a@@@@1@2@1SG walk-DUR'I am walking'@guy emerson, travis nguyen@april 7, 2017
+25@author@@@1@tam@na lol-o@@@@1@2@1SG walk-PUNCT'I (just) walk'@guy emerson, travis nguyen@april 7, 2017
+26@author@@@1@tam@na lol-u@@@@1@2@1SG walk-PRF'I walked'@guy emerson, travis nguyen@april 7, 2017
+27@author@@@1@tam@na lol-se@@@@1@2@1SG walk-INCP.I'I am about to walk'@guy emerson, travis nguyen@april 7, 2017
+28@author@@@1@tam@na lol-te@@@@1@2@1SG walk-INCP.C'I am to have finished walking''@guy emerson, travis nguyen@april 7, 2017
+29@author@@@1@tam@na lol-si@@@@1@2@1SG walk-PHSL.I'I have just started walking'@guy emerson, travis nguyen@april 7, 2017
+30@author@@@1@tam@na lol-ti@@@@1@2@1SG walk-PHSL.C'I have just finished walking'@guy emerson, travis nguyen@april 7, 2017
+31@author@@@1@tam@na lol-u-i@@@@1@2@1SG walk-PRF-PFV'I walked'@guy emerson, travis nguyen@april 7, 2017
+32@author@@@1@tam@na lol-i-u@@@@0@2@1SG walk-PFV-PRF'I walked'@guy emerson, travis nguyen@april 7, 2017
+33@author@@@1@tam@na lol-u-a@@@@0@2@1SG walk-PRF-DUR'I was walking'@guy emerson, travis nguyen@april 7, 2017
+34@author@@@1@tam@na lol-a-u@@@@0@2@1SG walk-DUR-PRF'I was walking'@guy emerson, travis nguyen@april 7, 2017
+35@author@@@1@tam@na lol-i-a@@@@1@2@1SG walk-PFV-DUR'I was walking'@guy emerson, travis nguyen@april 7, 2017
+36@author@@@1@tam@na lol-a-i@@@@0@2@1SG walk-DUR-PFV'I was walking'@guy emerson, travis nguyen@april 7, 2017
+37@author@@@1@neg@na lol naha@@@@1@3@1SG walk NEG'I do not walk'@guy emerson, travis nguyen@april 7, 2017
+38@author@@@1@neg@na naha lol@@@@0@3@1SG NEG walk'I do not walk'@guy emerson, travis nguyen@april 7, 2017
+39@author@@@1@neg@naha na lol@@@@0@3@NEG 1SG walk'I do not walk'@guy emerson, travis nguyen@april 7, 2017
+40@author@@@1@poss@ne-fala foka@@@@1@2@1SG.AL-house be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
+41@author@@@1@poss@fala-ne foka@@@@0@2@house-1SG.AL be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
+42@author@@@1@poss@na-fala foka@@@@0@2@1SG.INAL-house be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
+43@author@@@1@poss@e-fala foka@@@@1@2@2SG.AL-house be.big'Your (sg) house is big'@guy emerson, travis nguyen@april 7, 2017
+44@author@@@1@poss@a-fala foka@@@@0@2@2SG.INAL-house be.big'Your (sg) house is big'@guy emerson, travis nguyen@april 7, 2017
+45@author@@@1@poss@te-fala foka@@@@1@2@DISTR.AL-house be.big'Our (each of us) houses are big'@guy emerson, travis nguyen@april 7, 2017
+46@author@@@1@poss@ta-fala foka@@@@0@2@DISTR.INAL-house be.big'Our (each of us) houses are big'@guy emerson, travis nguyen@april 7, 2017
+47@author@@@1@poss@he-fala foka@@@@1@2@3.II.AL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
+48@author@@@1@poss@ha-fala foka@@@@0@2@3.II.INAL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
+49@author@@@1@poss@de-fala foka@@@@0@2@3.I.AL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
+50@author@@@1@poss@ya he-fala foka@@@@1@3@mother 3.II.AL-house be.big'Mother's house is big'@guy emerson, travis nguyen@april 7, 2017
+51@author@@@1@poss@he-fala ya foka@@@@0@3@3.II.AL-house mother be.big'Mother's house is big'@guy emerson, travis nguyen@april 7, 2017
+52@author@@@1@poss@ya de-fala ong@@@@1@3@mother 3.I.AL-house make'Mother is building her own house'@guy emerson, travis nguyen@april 7, 2017
+53@author@@@1@poss@ya da-fala ong@@@@0@3@mother 3.I.INAL-house make'Mother is building her own house'@guy emerson, travis nguyen@april 7, 2017
+54@author@@@1@poss@min foka@@@@0@2@nose be.big'The nose is big'@guy emerson, travis nguyen@april 7, 2017
+55@author@@@1@poss@na-min foka@@@@1@2@1SG.INAL-nose be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
+56@author@@@1@poss@min-na foka@@@@0@2@nose-1SG.INAL be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
+57@author@@@1@poss@ne-min foka@@@@0@2@1SG.AL-nose be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
+58@author@@@1@poss@a-min foka@@@@1@2@2SG.INAL-nose be.big'Your (sg) nose is big'@guy emerson, travis nguyen@april 7, 2017
+59@author@@@1@poss@e-min foka@@@@0@2@2SG.AL-nose be.big'Your (sg) nose is big'@guy emerson, travis nguyen@april 7, 2017
+60@author@@@1@poss@ta-min foka@@@@1@2@DISTR.INAL-nose be.big'Our (each of us) noses are big'@guy emerson, travis nguyen@april 7, 2017
+61@author@@@1@poss@te-min foka@@@@0@2@DISTR.AL-nose be.big'Our (each of us) noses are big'@guy emerson, travis nguyen@april 7, 2017
+62@author@@@1@poss@ha-min foka@@@@1@2@3.II.INAL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
+63@author@@@1@poss@he-min foka@@@@0@2@3.II.AL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
+64@author@@@1@poss@da-min foka@@@@0@2@3.I.INAL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
+65@author@@@1@poss@ya ha-min foka@@@@1@3@mother 3.II.INAL-nose be.big'Mother's nose is big'@guy emerson, travis nguyen@april 7, 2017
+66@author@@@1@poss@ha-min ya foka@@@@0@3@3.II.INAL-nose mother be.big'Mother's nose is big'@guy emerson, travis nguyen@april 7, 2017
+67@author@@@1@poss@ya da-min lang@@@@1@3@mother 3.I.INAL-nose wash'Mother is washing her own nose'@guy emerson, travis nguyen@april 7, 2017
+68@author@@@1@poss@ya de-min lang@@@@0@3@mother 3.I.AL-nose wash'Mother is washing her own nose'@guy emerson, travis nguyen@april 7, 2017
+69@author@@@1@poss@ni-fala foka@@@@1@2@1PL.E.AL-house be.big'Our (excl.) house is big'@guy emerson, travis nguyen@april 7, 2017
+70@author@@@1@poss@ni-min foka@@@@1@2@1PL.E.INAL-nose be.big'Our (excl.) noses are big'@guy emerson, travis nguyen@april 7, 2017
+71@author@@@1@poss@pi-fala foka@@@@1@2@1PL.I.AL-house be.big'Our (incl.) house is big'@guy emerson, travis nguyen@april 7, 2017
+72@author@@@1@poss@pi-min foka@@@@1@2@1PL.I.INAL-nose be.big'Our (incl.) noses are big'@guy emerson, travis nguyen@april 7, 2017
+73@author@@@1@poss@ri-fala foka@@@@1@2@2PL.AL-house be.big'Y'all's house is big'@guy emerson, travis nguyen@april 7, 2017
+74@author@@@1@poss@ri-min foka@@@@1@2@2PL.INAL-nose be.big'Y'all's noses are big'@guy emerson, travis nguyen@april 7, 2017
+75@author@@@1@agr@ya di sieng nee@@@@1@4@mother 3A rice eat'Mother is eating rice'@guy emerson, travis nguyen@april 7, 2017
+76@author@@@1@agr@no di sieng nee@@@@0@4@1SG 3A rice eat'I am eating rice'@guy emerson, travis nguyen@april 7, 2017
+77@author@@@1@agr@maama moku ha-fanga@@@@1@3@father child 3II.PAT-say'Father orders the child'@guy emerson, travis nguyen@april 7, 2017
+78@author@@@1@agr@maama moku na-fanga@@@@0@3@father child 1SG.PAT-say'Father orders the child'@guy emerson, travis nguyen@april 7, 2017
+79@author@@@1@agr@maama na-fanga@@@@1@2@father 1SG.PAT-say'Father orders me'@guy emerson, travis nguyen@april 7, 2017
+80@a:248@@@1@agr@bataa moku ho-fak@@@@1@3@wood child 3II.REC-fall'A tree breaks on a child'@guy emerson, travis nguyen@april 7, 2017
+81@author@@@1@agr@bataa di moku ho-fak@@@@0@4@wood 3A child 3II.REC-fall'A tree breaks on a child'@guy emerson, travis nguyen@april 7, 2017
+82@a:249@@@1@agr@o-ne-beei@@@@1@1@2SG.REC-1SG.LOC-be.angry'You feel angry with me'@guy emerson, travis nguyen@april 7, 2017

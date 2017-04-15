@@ -223,6 +223,15 @@ na lol-i
 1SG walk-PFV
 'I have walked'
 
+#20.1 Ungrammatical order of aspect marker and verb
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+na i-lol
+1SG PFV-walk
+'I have walked'
+
 #21 Imperfective
 Source: author
 Vetted: f
