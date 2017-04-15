@@ -324,3 +324,9 @@ and subject NPs cannot be dropped.
 = Possessives =
 
 This is not covered in the customisation system.
+
+
+=== Testsuite coverage ===
+
+We have 52% coverage (25 correct parses), and 3% overgeneration (1 incorrect parse).
+The one incorrect parse is overgenerating an inalienable noun without a possessor.
