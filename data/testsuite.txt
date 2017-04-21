@@ -792,3 +792,342 @@ Phenomena: {agr}
 o-ne-beei
 2SG.REC-1SG.LOC-be.angry
 'You feel angry with me'
+
+################################################################################
+# Matrix yes-no questions
+################################################################################
+
+#X Grammatical (word order remains the same)
+Source: a:244
+Vetted: t
+Judgment: g
+Phenomena: {}
+aha raha ho-kariang?
+2SG king 3II.REC-work
+'Do you work for the king?'
+
+#X Ungrammatical (word order does not change for yes-no questions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+aha ho-kariang raha?
+2SG 3II.REC-work king
+'Do you work for the king?'
+
+#X Ungrammatical (word order does not change for yes-no questions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+ho-kariang aha raha?
+3II.REC-work 2SG king
+'Do you work for the king?'
+
+#X Ungrammatical (word order does not change for yes-no questions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+ho-kariang raha aha?
+3II.REC-work king 2SG
+'Do you work for the king?'
+
+#X Ungrammatical (word order does not change for yes-no questions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+raha aha ho-kariang?
+king 2SG 3II.REC-work
+'Do you work for the king?'
+
+#X Ungrammatical (word order does not change for yes-no questions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+raha ho-kariang aha?
+king 3II.REC-work 2SG
+'Do you work for the king?'
+
+################################################################################
+# Matrix wh questions
+################################################################################
+
+#X Grammatical (wh question using what; wh-in-situ; subject)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {}
+nala e-l takei?
+what 2SG.LOC-give bite
+'What bit you?'
+
+#X Grammatical (wh question using who; wh-in-situ; subject)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {}
+maa e-l takei?
+who 2SG.LOC-give bite
+'Who bit you?'
+
+#X Grammatical (wh question using what; wh-in-situ; object; zero copula)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {}
+a-ne nala?
+2SG.INAL-name what
+'What is your name?'
+
+#X Grammatical (wh question using who; wh-in-situ; object; zero copula)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {}
+a-ne maa?
+2SG.INAL-name who
+'What is your name?'
+
+#X Grammatical (wh question using what; wh-in-situ; object; transitive verb)
+Source: a:128
+Vetted: t
+Judgment: g
+Phenomena: {}
+a nala ong?
+2SG what make
+'What are you doing/making?'
+
+#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {}
+a ong nala?
+2SG make what
+'What are you doing/making?'
+
+#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {}
+nala a ong?
+what 2SG make
+'What are you doing/making?'
+
+#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {}
+nala ong a?
+what make 2SG
+'What are you doing/making?'
+
+#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {}
+ong a nala?
+make 2SG what
+'What are you doing/making?'
+
+#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {}
+ong nala a?
+make what 2SG
+'What are you doing/making?'
+
+################################################################################
+# Coordination
+################################################################################
+
+#X Grammatical ('e' used for nominal coordination; list of two items)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+faling e kawen
+axe and machete
+'axes and swords'
+
+#X Grammatical ('e' used for nominal coordination; list of three items)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+faling kawen e tideng
+axe machete and whetstone
+'axe, swords, and whetstones'
+
+# is this actually ungrammatical? can this be used for emphasis?
+#X Ungrammatical ('e' should only appear before the penultimate item in the list)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+faling e kawen e tideng
+axe and machete and whetstone
+'axes, swords, and whetstones'
+
+# this may also be analyzed as a list compound
+# however, the items in a list compound have a fixed order
+#X Grammatical (items may be separated by intonational pauses)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+faling kawen
+axe machete
+'axe and machete'
+
+# Ungrammatical ('e' can only be used for nominal coordination)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+tafaa di bang e yaa melang mi-a-d-i
+drum 3A carry and go village be.in-be.at-hold-PFV
+'He carried drums to the village'
+
+#X Grammatical ('ba' used to link NP to other constituent)
+# ba section 4.5
+
+# Grammatical ('ba' used to link two verbs)
+Source: a:126
+Vetted: t
+Judgment: u
+Phenomena: {}
+tafaa di bang ba yaa melang mi-a-d-i
+drum 3A carry LNK go village be.in-be.at-hold-PFV
+'He carried drums to the village' 
+
+# Ungrammatical ('ba' cannot be used as coordination conjunction marker)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+kuya ba yoikoi
+bird LNK turtle
+'bird and turtle'
+
+#X Grammatical ('ya' used to link two non-intersective NPs)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {}
+kuya ya yoikoi
+bird SEQ turtle
+'bird and turtle'
+
+#X Grammatical ('ya' used to link two non-intersective VPs)
+Source: a:127
+Vetted: t
+Judgment: g
+Phenomena: {}
+tafaa di bang ya yaa melang mi-a-d-i
+drum 3A carry SEQ go village be.in-be.at-hold-PFV
+'He carried drums and then went to the village'
+
+#X Grammatical (coordination of two disjoint NPs)
+Source: a:127
+Vetted: t
+Judgment: g
+Phenomena: {}
+maama re ni-ya
+father or 1PL.E.AL-mother
+'father or our (excluding you) mother'
+
+#X Grammatical (coordination of two disjoint VPs)
+Source: a:127
+Vetted: t
+Judgment: g
+Phenomena: {}
+a la taa re a me?
+2SG be.MD lie or 2SG come
+'Do you sleep (there) or do you return?'
+
+################################################################################
+# Agreement in coordinated NPs
+################################################################################
+
+# Abui has no agreement in coordinated NPs.
+
+################################################################################
+# Attributive adjectives
+################################################################################
+
+################################################################################
+# Adverbs
+################################################################################
+
+# Grammatical (intransitive verb; adverb occurs between A argument and verb)
+Source: a:125
+Vetted: t
+Judgment: g
+Phenomena: {}
+na wan firei no-kan-d-i
+1SG already run.ICP 1SG.REC-be.good.CPL-hold-PFV
+
+# Ungrammatical (intransitive verb; adverb must occur between A argument and verb)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+na firei wan no-kan-d-i
+1SG run.iCP already 1SG.REC-be.good.CPL-hold-PFV
+
+#X Grammatical (transitive verb; adverb occurs between A argument and U argument)
+Source: a:125
+Vetted: f
+Judgment: g
+Phenomena: {}
+na el kopi buut-i
+1SG before coffee consume-PFV
+'I had coffee before'
+
+#X Ungrammatical (transitive verb; adverb must occur between A and U arguments)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+na kopi el buut-i
+1SG kopi before consume-PFV
+'I had coffee before'
+
+#X Grammatical (transitive verb; adverb occurs between A and U arguments, A = U)
+Source: a:125
+Vetted: f
+Judgment: g
+Phenomena: {}
+moku fila yal di tadei da-yongfi
+child be.young now 3A lie.CPL 3I.PAT-forget.CPL
+
+#X Ungrammatical (transitive verb; adverb must occur between A and U arguments, A = U)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+moku fila di yal tadei da-yongfi
+child be.young 3A now lie.CPL 3I.PAT-forget.CPL
+
+################################################################################
+# Embedded clauses
+################################################################################
+
+################################################################################
+# Non-verbal predicates
+################################################################################
+
+# N N
+# N ADJ
+# Postpositions act like verbs
+# No reason to treat postpositions separate from verbs
+
