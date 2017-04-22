@@ -802,7 +802,7 @@ Source: a:244
 Vetted: t
 Judgment: g
 Phenomena: {}
-aha raha ho-kariang?
+a raha ho-kariang?
 2SG king 3II.REC-work
 'Do you work for the king?'
 
@@ -811,7 +811,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {}
-aha ho-kariang raha?
+a ho-kariang raha?
 2SG 3II.REC-work king
 'Do you work for the king?'
 
@@ -820,7 +820,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {}
-ho-kariang aha raha?
+ho-kariang a raha?
 3II.REC-work 2SG king
 'Do you work for the king?'
 
@@ -829,7 +829,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {}
-ho-kariang raha aha?
+ho-kariang raha a?
 3II.REC-work king 2SG
 'Do you work for the king?'
 
@@ -838,7 +838,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {}
-raha aha ho-kariang?
+raha a ho-kariang?
 king 2SG 3II.REC-work
 'Do you work for the king?'
 
@@ -847,7 +847,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {}
-raha ho-kariang aha?
+raha ho-kariang a?
 king 3II.REC-work 2SG
 'Do you work for the king?'
 
@@ -860,8 +860,8 @@ Source: a:129
 Vetted: t
 Judgment: g
 Phenomena: {wh}
-nala e-l takei?
-what 2SG.LOC-give bite
+nala e-l-takei?
+what 2SG.LOC-give-bite
 'What bit you?'
 
 #X Grammatical (wh question using who; wh-in-situ; subject)
@@ -869,8 +869,8 @@ Source: a:129
 Vetted: t
 Judgment: g
 Phenomena: {wh}
-maa e-l takei?
-who 2SG.LOC-give bite
+maa e-l-takei?
+who 2SG.LOC-give-bite
 'Who bit you?'
 
 #X Grammatical (wh question using what; wh-in-situ; object; zero copula)
@@ -1036,7 +1036,7 @@ Vetted: t
 Judgment: g
 Phenomena: {crd}
 di tur-i ya mi me
-3A scoop.CPL-PFV SEQ take come
+3A scoop-PFV SEQ take come
 'She scooped up and brought it (towards DC)' 
 
 #X Grammatical (serial verb constructions are contiguous constructions)
@@ -1062,8 +1062,8 @@ Source: author
 Vetted: f
 Judgment: g 
 Phenomena: {crd}
-moku di kuya he-l tahai naha
-child 3A bird 3II.LOC-give search NEG
+moku di kuya he-l-tahai naha
+child 3A bird 3II.LOC-give-search NEG
 'A child does not look for a bird'
 
 #X Ungrammatical (the negator may not intervene between the two verbs)
@@ -1147,7 +1147,7 @@ na kopi el buut-i
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {adv}
+Phenomena: {adv, crd}
 moku yal di tadei da-yongfi
 child now 3A lie 3I.PAT-forget
 'The child is now asleep'
@@ -1156,7 +1156,7 @@ child now 3A lie 3I.PAT-forget
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {adv}
+Phenomena: {adv, crd}
 moku di yal tadei da-yongfi
 child 3A now lie 3I.PAT-forget
 'The child is now asleep'
@@ -1170,8 +1170,8 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {emb-d}
-kaai taa ama h-ieng lak-a
-dog sleep person 3II.PAT-see mark-DUR
+kaai taa ama h-ieng-lak-a
+dog sleep person 3II.PAT-see-mark-DUR
 'People know that the dog is sleeping'
 
 ################################################################################
@@ -1229,5 +1229,5 @@ Vetted: t
 Judgment: g
 Phenomena: {cop}
 di pelang tah-a
-3A canoe put.on.CPL-DUR
+3A canoe put.on-DUR
 'He is on a canoe'
