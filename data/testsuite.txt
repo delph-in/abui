@@ -1205,16 +1205,7 @@ kaai akan-i
 dog black-put
 'The dog is black'
 
-#124 Grammatical (adjective combines with generic root verb to be used as head of VP)
-Source: a:110
-Vetted: t
-Judgment: g
-Phenomena: {cop}
-kaai akan-i
-dog black-put
-'The black dog is black'
-
-#125 Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
+#124 Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
 Source: author
 Vetted: f
 Judgment: u
@@ -1223,7 +1214,7 @@ kaai akan
 dog black
 'The dog is black'
 
-#126 Grammatical (predicate; zero copula)
+#125 Grammatical (predicate; zero copula)
 Source: author
 Vetted: f
 Judgment: g
@@ -1232,7 +1223,7 @@ moku fila
 child be.young
 'A child is young'
 
-#127 Grammatical (adposition; zero copula)
+#126 Grammatical (adposition; zero copula)
 Source: a:105
 Vetted: t
 Judgment: g

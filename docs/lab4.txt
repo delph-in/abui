@@ -48,6 +48,9 @@ a raha ho-kariang naha?
 2SG king 3II.REC-work NEG
 'Do you not work for the king?'
 
+We did not need to do anything to model these sentences, as there is no change in the syntax.
+
+-------------------
 Matrix wh questions
 -------------------
 
@@ -109,6 +112,9 @@ Phenomena: {wh}
 a nala ong?
 2SG what make
 'What are you doing/making?'
+
+We have added the question words as a separate nominal type which cannot take determiners.
+(The grammar does not explicitly say that they can't, but this seems like a reasonable assumption, and this would be the conservative approach)
 
 ------------
 Coordination
@@ -278,11 +284,28 @@ moku di kuya he-l naha tahai
 child 3A bird 3II.LOC-give NEG search
 'A child does not look for a bird'
 
+To model the above, we have added four coordination strategies.
+Of these, only on strategy is for nouns only:
+'e' - monosyndeton appearing before the noun
+
+The other three can appear with nouns or VPs:
+'ya' - polysyndeton appearing before the coordinand
+'re' - polysyndeton appearing before the coordinand
+asyndeton
+
+We conservatively chose polysndeton for 'ya' and 're' because we couldn't find any instances with more than two coordinands.
+
 ----------------------------
 Agreement in coordinated NPs
 ----------------------------
 
-Abui does not have agreement in coordinated NPs.
+Abui has trivial agreement in coordinated NPs, since there is no distinction between 3rd sigular and 3rd plural.
+We could not find any instances of coordination with agent pronouns (we are currently still analysing the agent markers as pronouns in the customization system).
+So, we have analysed the parents of all coordination rules to be 3rd person.
+We would have to change this analysis if pronouns can in fact be coordinated, either with other pronouns or with NPs.
+
+Alienability does not seem relevant, as that only affects possession of nouns, which appears as a prefix on the noun.
+We would have to change this analysis if it is possible for one prefix to be used to possess a coordinated phrase.
 
 ----------------------
 Attributive adjectives
@@ -309,6 +332,8 @@ Phenomena: {adj}
 akan kaai kalieta
 black dog be.old
 'The black dog is old'
+
+We give the analysis of adjectives after we have discussed non-verbal predicates.
 
 -------
 Adverbs
@@ -375,19 +400,132 @@ child now 3A lie 3I.PAT-forget
 Embedded clauses
 ----------------
 
-(Guy to fill this in)
+The grammar does not document embedded clauses for verbs like "think", "say", "believe", "ask", etc.
+In one of the sample texts, there is a sentence which could be analysed as an embedded clause.
+In our testsuite, we have included a simplified sentence along the same lines:
+
+# Grammatical (embedded clause)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+kaai taa ama h-ieng-lak-a
+dog sleep person 3II.PAT-see-mark-DUR
+'People know that the dog is sleeping'
+
+Here, we have the clause "kaai taa" (the dog is sleeping),
+which is referred to in the second clause "ama h-ieng-lak-a" (people know it).
+Note that there is 3rd person object agreement on "know" (a compound verb glossed as "see mark").
+
+There is no overt conjuction or complementiser.
+In the sample text, the author notes that there was a pause between the two clauses.
+
+The first clause could be modelled as an embedded clause,
+taken as an argument by the verb "ieng lak" (know).
+
+However, we could also model this as two matrix clauses,
+where the second clause has a dropped argument,
+and anaphorically refers to the first clause.
+This would be consistent with having an object agreement marker.
+
+We could not find any other instances of embedded clauses.
 
 ---------------------
 Non-verbal predicates
 ---------------------
 
-(Guy to fill this in)
+There is no copula in Abui, either for nouns or adjectives.
+In both cases, the item being using predicatively comes after the subject NP.
+For example:
+
+#122 Grammatical (NP as a predicate)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+ne-feela mayol
+1SG.AL-friend woman
+'My friend is a woman'
+
+#125 Grammatical (predicate; zero copula)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+moku fila
+child be.young
+'A child is young'
+
+Adjectives differ from other verbs because they can also appear predicatively.
+The above example "moku fila" could also mean "a young child".
+For other verbs, an additional relative clause marker would be necessary.
+We have not documented relative clauses in the testsuite,
+but this is to clarify that they should be treated separately from other intransitive verbs.
+
+We modelled the adjectives in the customization system
+by adding an adjective type that can is both attributive and predicative,
+that appears after the noun when it is attributive,
+and that appears impossibly with a copula when it is predicative.
+
+There is also a small irregular class of adjectives,
+which have require an '-i' suffix when appearing predicatively,
+but not when appearing attributively:
+
+#113 Grammatical (adjective comes after the noun it modifies)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {adj}
+kaai akan kalieta
+dog black be.old
+'The black dog is old'
+
+#123 Grammatical (adjective combines with generic root verb to be used as head of VP)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+kaai akan-i
+dog black-put
+'The dog is black'
+
+#124 Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+kaai akan
+dog black
+'The dog is black'
+
+To model these adjectives, we added a second adjective type,
+which can only appear attributively,
+and we added a lexical rule that adds the '-i' but otherwise does nothing,
+and intend to edit the tdl.
+The documentation for adjective modification is incomplete,
+and although there is an option for changing the syntactic behaviour,
+when we tried to use this, the customization system said our choices were invalid.
+
+There does not appear to be a separate class of adpositions in Abui.
+To express spatial relationships, there are a small number of "positional verbs", e.g.:
+
+#126 Grammatical (adposition; zero copula)
+Source: a:105
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+di pelang tah-a
+3A canoe put.on-DUR
+'He is on a canoe'
+
+We have modelled these as transitive verbs.
 
 -------------------------------------------
 Other changes to the lexicon and morphology
 -------------------------------------------
 
-While working on this assignment, we realized that there were some verbs that required a suffix (i.e., the verb cannot appear as a bare verb stem; if nothing else attaches as a suffix to it, it must obligatory take the perfective aspect marker `-i`) due to phonological constraints and decided to create two verb types.
+We have added an ALIENABLE semantic feature to nouns, and created two subtypes of noun, which set the value to be + or -.
+Although we are not currently modelling posessives, this feature will be necessary to do so.
 
 ------
 tsdb()
