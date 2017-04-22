@@ -859,7 +859,7 @@ king 3II.REC-work 2SG
 Source: a:129
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wh}
 nala e-l takei?
 what 2SG.LOC-give bite
 'What bit you?'
@@ -868,7 +868,7 @@ what 2SG.LOC-give bite
 Source: a:129
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wh}
 maa e-l takei?
 who 2SG.LOC-give bite
 'Who bit you?'
@@ -877,7 +877,7 @@ who 2SG.LOC-give bite
 Source: a:129
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wh}
 a-ne nala?
 2SG.INAL-name what
 'What is your name?'
@@ -886,7 +886,7 @@ a-ne nala?
 Source: a:129
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wh}
 a-ne maa?
 2SG.INAL-name who
 'What is your name?'
@@ -895,7 +895,7 @@ a-ne maa?
 Source: a:128
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wh}
 a nala ong?
 2SG what make
 'What are you doing/making?'
@@ -904,7 +904,7 @@ a nala ong?
 Source: author
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {wh, wo}
 a ong nala?
 2SG make what
 'What are you doing/making?'
@@ -913,7 +913,7 @@ a ong nala?
 Source: author
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {wh, wo}
 nala a ong?
 what 2SG make
 'What are you doing/making?'
@@ -922,7 +922,7 @@ what 2SG make
 Source: author
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {wh, wo}
 nala ong a?
 what make 2SG
 'What are you doing/making?'
@@ -931,7 +931,7 @@ what make 2SG
 Source: author
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {wh, wo}
 ong a nala?
 make 2SG what
 'What are you doing/making?'
@@ -940,7 +940,7 @@ make 2SG what
 Source: author
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {wh, wo}
 ong nala a?
 make what 2SG
 'What are you doing/making?'
@@ -953,106 +953,127 @@ make what 2SG
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {}
-faling e kawen
-axe and machete
-'axes and swords'
+Phenomena: {crd}
+faling e kawen foka
+axe and machete be.big
+'axes and swords are big'
 
 #X Grammatical ('e' used for nominal coordination; list of three items)
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {}
-faling kawen e tideng
-axe machete and whetstone
-'axe, swords, and whetstones'
+Phenomena: {crd}
+faling kawen e tideng foka
+axe machete and whetstone be.big
+'axes, swords, and whetstones are big'
 
-# is this actually ungrammatical? can this be used for emphasis?
-#X Ungrammatical ('e' should only appear before the penultimate item in the list)
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {}
-faling e kawen e tideng
-axe and machete and whetstone
-'axes, swords, and whetstones'
-
-# this may also be analyzed as a list compound
-# however, the items in a list compound have a fixed order
 #X Grammatical (items may be separated by intonational pauses)
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {}
-faling kawen
-axe machete
-'axe and machete'
+Phenomena: {crd}
+faling kawen foka
+axe machete be.big
+'an axe and machete are big'
 
 # Ungrammatical ('e' can only be used for nominal coordination)
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {}
-tafaa di bang e yaa melang mi-a-d-i
-drum 3A carry and go village be.in-be.at-hold-PFV
-'He carried drums to the village'
-
-#X Grammatical ('ba' used to link NP to other constituent)
-# ba section 4.5
-
-# Grammatical ('ba' used to link two verbs)
-Source: a:126
-Vetted: t
-Judgment: u
-Phenomena: {}
-tafaa di bang ba yaa melang mi-a-d-i
-drum 3A carry LNK go village be.in-be.at-hold-PFV
-'He carried drums to the village' 
-
-# Ungrammatical ('ba' cannot be used as coordination conjunction marker)
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {}
-kuya ba yoikoi
-bird LNK turtle
-'bird and turtle'
+Phenomena: {crd}
+na lol e taa
+1SG walk and sleep
+'I walk and sleep'
 
 #X Grammatical ('ya' used to link two non-intersective NPs)
 Source: author
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {crd}
 kuya ya yoikoi
 bird SEQ turtle
 'bird and turtle'
 
 #X Grammatical ('ya' used to link two non-intersective VPs)
-Source: a:127
-Vetted: t
+Source: author
+Vetted: f
 Judgment: g
-Phenomena: {}
-tafaa di bang ya yaa melang mi-a-d-i
-drum 3A carry SEQ go village be.in-be.at-hold-PFV
-'He carried drums and then went to the village'
+Phenomena: {crd}
+na lol ya taa
+1SG walk SEQ sleep
+'I walk and (then) sleep'
 
 #X Grammatical (coordination of two disjoint NPs)
-Source: a:127
-Vetted: t
+Source: author
+Vetted: f
 Judgment: g
-Phenomena: {}
-maama re ni-ya
-father or 1PL.E.AL-mother
-'father or our (excluding you) mother'
+Phenomena: {crd}
+maama re ya
+father or mother
+'father or mother'
+
+#X Grammatical (coordination of two disjoint sentences)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+a taa re a me?
+2SG lie or 2SG come
+'Are you sleeping or are you coming?'
 
 #X Grammatical (coordination of two disjoint VPs)
-Source: a:127
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+a taa re me?
+2SG lie or come
+'Are you sleeping or coming?'
+
+#X Grammatical (serial verb construction; no conjunctions)
+Source: a:
 Vetted: t
 Judgment: g
-Phenomena: {}
-a la taa re a me?
-2SG be.MD lie or 2SG come
-'Do you sleep (there) or do you return?'
+Phenomena: {crd}
+di tur-i ya mi me
+3A scoop.CPL-PFV SEQ take come
+'She scooped up and brought it (towards DC)' 
+
+#X Grammatical (serial verb constructions are contiguous constructions)
+Source: a:349
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+afeida moku me yai paneng
+yesterday kid come song make
+'Yesterday, the child came to sing'
+
+#X Ungrammatical (serial verb sontructions must be contiguous constructions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+moku me yai afeida paneng
+kid come yesterday song make
+'Yesterday, the child came to sing'
+
+#X Grammatical (verbs in SVCs share negation)
+Source: author
+Vetted: f
+Judgment: g 
+Phenomena: {crd}
+moku di kuya he-l tahai naha
+child 3A bird 3II.LOC-give search NEG
+'A child does not look for a bird'
+
+#X Ungrammatical (the negator may not intervene between the two verbs)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+moku di kuya he-l naha tahai
+child 3A bird 3II.LOC-give NEG search
+'A child does not look for a bird'
 
 ################################################################################
 # Agreement in coordinated NPs
@@ -1064,31 +1085,51 @@ a la taa re a me?
 # Attributive adjectives
 ################################################################################
 
+#X Grammatical (adjective comes after the noun it modifies)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {adj}
+kaai akan kalieta
+dog black be.old
+'The black dog is old'
+
+#X Ungrammatical (adjective cannot come before the noun it modifies)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+akan kaai kalieta
+black dog be.old
+'The black dog is old'
+
 ################################################################################
 # Adverbs
 ################################################################################
 
 # Grammatical (intransitive verb; adverb occurs between A argument and verb)
-Source: a:125
-Vetted: t
+Source: author
+Vetted: f
 Judgment: g
-Phenomena: {}
-na wan firei no-kan-d-i
-1SG already run.ICP 1SG.REC-be.good.CPL-hold-PFV
+Phenomena: {adv}
+na wan taa
+1SG already sleep
+'I am already sleeping'
 
 # Ungrammatical (intransitive verb; adverb must occur between A argument and verb)
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {}
-na firei wan no-kan-d-i
-1SG run.iCP already 1SG.REC-be.good.CPL-hold-PFV
+Phenomena: {adv}
+na taa wan
+1SG sleep already
+'I am already sleeping'
 
 #X Grammatical (transitive verb; adverb occurs between A argument and U argument)
 Source: a:125
 Vetted: f
 Judgment: g
-Phenomena: {}
+Phenomena: {adv}
 na el kopi buut-i
 1SG before coffee consume-PFV
 'I had coffee before'
@@ -1097,37 +1138,96 @@ na el kopi buut-i
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {}
+Phenomena: {adv}
 na kopi el buut-i
 1SG kopi before consume-PFV
 'I had coffee before'
 
 #X Grammatical (transitive verb; adverb occurs between A and U arguments, A = U)
-Source: a:125
+Source: author
 Vetted: f
 Judgment: g
-Phenomena: {}
-moku fila yal di tadei da-yongfi
-child be.young now 3A lie.CPL 3I.PAT-forget.CPL
+Phenomena: {adv}
+moku yal di tadei da-yongfi
+child now 3A lie 3I.PAT-forget
+'The child is now asleep'
 
 #X Ungrammatical (transitive verb; adverb must occur between A and U arguments, A = U)
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {}
-moku fila di yal tadei da-yongfi
-child be.young 3A now lie.CPL 3I.PAT-forget.CPL
+Phenomena: {adv}
+moku di yal tadei da-yongfi
+child 3A now lie 3I.PAT-forget
+'The child is now asleep'
 
 ################################################################################
 # Embedded clauses
 ################################################################################
 
+#X Grammatical (embedded clause)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+kaai taa ama h-ieng lak-a
+dog sleep person 3II.PAT-see mark-DUR
+'People know that the dog is sleeping'
+
 ################################################################################
 # Non-verbal predicates
 ################################################################################
 
-# N N
-# N ADJ
-# Postpositions act like verbs
-# No reason to treat postpositions separate from verbs
+#X Grammatical (NP as a predicate)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+ne-feela mayol
+1SG.AL-friend woman
+'My friend is a woman'
 
+# Grammatical (adjective combines with generic root verb to be used as head of VP)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+kaai akan-i
+dog black-put
+'The dog is black'
+
+# Grammatical (adjective combines with generic root verb to be used as head of VP)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+kaai akan-i
+dog black-put
+'The black dog is black'
+
+# Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+kaai akan
+dog black
+'The dog is black'
+
+# Grammatical (predicate; zero copula)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+moku fila
+child be.young
+'A child is young'
+
+#X Grammatical (adposition; zero copula)
+Source: a:105
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+di pelang tah-a
+3A canoe put.on.CPL-DUR
+'He is on a canoe'
