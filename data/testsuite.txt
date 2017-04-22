@@ -797,7 +797,7 @@ o-ne-beei
 # Matrix yes-no questions
 ################################################################################
 
-#X Grammatical (word order remains the same)
+#82 Grammatical (yes-no question; word order remains the same)
 Source: a:244
 Vetted: t
 Judgment: g
@@ -806,7 +806,16 @@ a raha ho-kariang?
 2SG king 3II.REC-work
 'Do you work for the king?'
 
-#X Ungrammatical (word order does not change for yes-no questions)
+#83 Grammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+a raha ho-kariang naha?
+2SG king 3II.REC-work NEG
+'Do you not work for the king?'
+
+#84 Ungrammatical (yes-no question; word order should not change)
 Source: author
 Vetted: f
 Judgment: u
@@ -815,7 +824,7 @@ a ho-kariang raha?
 2SG 3II.REC-work king
 'Do you work for the king?'
 
-#X Ungrammatical (word order does not change for yes-no questions)
+#85 Ungrammatical (yes-no question; word order should not change)
 Source: author
 Vetted: f
 Judgment: u
@@ -824,7 +833,7 @@ ho-kariang a raha?
 3II.REC-work 2SG king
 'Do you work for the king?'
 
-#X Ungrammatical (word order does not change for yes-no questions)
+#86 Ungrammatical (yes-no question; word order should not change)
 Source: author
 Vetted: f
 Judgment: u
@@ -833,7 +842,7 @@ ho-kariang raha a?
 3II.REC-work king 2SG
 'Do you work for the king?'
 
-#X Ungrammatical (word order does not change for yes-no questions)
+#87 Ungrammatical (yes-no question; word order should not change)
 Source: author
 Vetted: f
 Judgment: u
@@ -842,7 +851,7 @@ raha a ho-kariang?
 king 2SG 3II.REC-work
 'Do you work for the king?'
 
-#X Ungrammatical (word order does not change for yes-no questions)
+#88 Ungrammatical (yes-no question; word order should not change)
 Source: author
 Vetted: f
 Judgment: u
@@ -855,7 +864,7 @@ king 3II.REC-work 2SG
 # Matrix wh questions
 ################################################################################
 
-#X Grammatical (wh question using what; wh-in-situ; subject)
+#89 Grammatical (wh question using what; wh-in-situ; subject)
 Source: a:129
 Vetted: t
 Judgment: g
@@ -864,7 +873,7 @@ nala e-l-takei?
 what 2SG.LOC-give-bite
 'What bit you?'
 
-#X Grammatical (wh question using who; wh-in-situ; subject)
+#90 Grammatical (wh question using who; wh-in-situ; subject)
 Source: a:129
 Vetted: t
 Judgment: g
@@ -873,7 +882,7 @@ maa e-l-takei?
 who 2SG.LOC-give-bite
 'Who bit you?'
 
-#X Grammatical (wh question using what; wh-in-situ; object; zero copula)
+#91 Grammatical (wh question using what; wh-in-situ; object; zero copula)
 Source: a:129
 Vetted: t
 Judgment: g
@@ -882,7 +891,7 @@ a-ne nala?
 2SG.INAL-name what
 'What is your name?'
 
-#X Grammatical (wh question using who; wh-in-situ; object; zero copula)
+#92 Grammatical (wh question using who; wh-in-situ; object; zero copula)
 Source: a:129
 Vetted: t
 Judgment: g
@@ -891,7 +900,7 @@ a-ne maa?
 2SG.INAL-name who
 'What is your name?'
 
-#X Grammatical (wh question using what; wh-in-situ; object; transitive verb)
+#93 Grammatical (wh question using what; wh-in-situ; object; transitive verb)
 Source: a:128
 Vetted: t
 Judgment: g
@@ -900,7 +909,7 @@ a nala ong?
 2SG what make
 'What are you doing/making?'
 
-#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+#94 Ungrammatical (word order is not modified for wh questions; transitive verb)
 Source: author
 Vetted: t
 Judgment: u
@@ -909,7 +918,7 @@ a ong nala?
 2SG make what
 'What are you doing/making?'
 
-#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+#95 Ungrammatical (word order is not modified for wh questions; transitive verb)
 Source: author
 Vetted: t
 Judgment: u
@@ -918,7 +927,7 @@ nala a ong?
 what 2SG make
 'What are you doing/making?'
 
-#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+#96 Ungrammatical (word order is not modified for wh questions; transitive verb)
 Source: author
 Vetted: t
 Judgment: u
@@ -927,7 +936,7 @@ nala ong a?
 what make 2SG
 'What are you doing/making?'
 
-#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+#97 Ungrammatical (word order is not modified for wh questions; transitive verb)
 Source: author
 Vetted: t
 Judgment: u
@@ -936,7 +945,7 @@ ong a nala?
 make 2SG what
 'What are you doing/making?'
 
-#X Ungrammatical (word order is not modified for wh questions; transitive verb)
+#98 Ungrammatical (word order is not modified for wh questions; transitive verb)
 Source: author
 Vetted: t
 Judgment: u
@@ -949,7 +958,7 @@ make what 2SG
 # Coordination
 ################################################################################
 
-#X Grammatical ('e' used for nominal coordination; list of two items)
+#99 Grammatical ('e' used for nominal coordination; list of two items)
 Source: author
 Vetted: f
 Judgment: g
@@ -958,7 +967,7 @@ faling e kawen foka
 axe and machete be.big
 'axes and swords are big'
 
-#X Grammatical ('e' used for nominal coordination; list of three items)
+#100 Grammatical ('e' used for nominal coordination; list of three items)
 Source: author
 Vetted: f
 Judgment: g
@@ -967,16 +976,16 @@ faling kawen e tideng foka
 axe machete and whetstone be.big
 'axes, swords, and whetstones are big'
 
-#X Grammatical (items may be separated by intonational pauses)
+#101 Grammatical (items may be separated by intonational pauses)
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {crd}
 faling kawen foka
 axe machete be.big
-'an axe and machete are big'
+'an axe [and] machete are big'
 
-# Ungrammatical ('e' can only be used for nominal coordination)
+#102 Ungrammatical ('e' can only be used for nominal coordination)
 Source: author
 Vetted: f
 Judgment: u
@@ -985,16 +994,16 @@ na lol e taa
 1SG walk and sleep
 'I walk and sleep'
 
-#X Grammatical ('ya' used to link two non-intersective NPs)
+#103 Grammatical ('ya' used to link two non-intersective NPs)
 Source: author
 Vetted: t
 Judgment: g
 Phenomena: {crd}
-kuya ya yoikoi
-bird SEQ turtle
-'bird and turtle'
+kuya ya yoikoi foka
+bird SEQ turtle be.big
+'a bird and turtle are big'
 
-#X Grammatical ('ya' used to link two non-intersective VPs)
+#104 Grammatical ('ya' used to link two non-intersective VPs)
 Source: author
 Vetted: f
 Judgment: g
@@ -1003,16 +1012,16 @@ na lol ya taa
 1SG walk SEQ sleep
 'I walk and (then) sleep'
 
-#X Grammatical (coordination of two disjoint NPs)
+#105 Grammatical (coordination of two disjoint NPs)
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {crd}
-maama re ya
-father or mother
-'father or mother'
+maama re ya foka
+father or mother be.big
+'father or mother is big'
 
-#X Grammatical (coordination of two disjoint sentences)
+#106 Grammatical (coordination of two disjoint sentences)
 Source: author
 Vetted: f
 Judgment: g
@@ -1021,7 +1030,7 @@ a taa re a me?
 2SG lie or 2SG come
 'Are you sleeping or are you coming?'
 
-#X Grammatical (coordination of two disjoint VPs)
+#107 Grammatical (coordination of two disjoint VPs)
 Source: author
 Vetted: f
 Judgment: g
@@ -1030,7 +1039,7 @@ a taa re me?
 2SG lie or come
 'Are you sleeping or coming?'
 
-#X Grammatical (serial verb construction; no conjunctions)
+#108 Grammatical (serial verb construction; no conjunctions)
 Source: a:
 Vetted: t
 Judgment: g
@@ -1039,7 +1048,7 @@ di tur-i ya mi me
 3A scoop-PFV SEQ take come
 'She scooped up and brought it (towards DC)' 
 
-#X Grammatical (serial verb constructions are contiguous constructions)
+#109 Grammatical (serial verb constructions are contiguous constructions)
 Source: a:349
 Vetted: t
 Judgment: g
@@ -1048,7 +1057,7 @@ afeida moku me yai paneng
 yesterday kid come song make
 'Yesterday, the child came to sing'
 
-#X Ungrammatical (serial verb sontructions must be contiguous constructions)
+#110 Ungrammatical (serial verb contructions must be contiguous constructions)
 Source: author
 Vetted: f
 Judgment: u
@@ -1057,7 +1066,7 @@ moku me yai afeida paneng
 kid come yesterday song make
 'Yesterday, the child came to sing'
 
-#X Grammatical (verbs in SVCs share negation)
+#111 Grammatical (verbs in SVCs share negation)
 Source: author
 Vetted: f
 Judgment: g 
@@ -1066,7 +1075,7 @@ moku di kuya he-l-tahai naha
 child 3A bird 3II.LOC-give-search NEG
 'A child does not look for a bird'
 
-#X Ungrammatical (the negator may not intervene between the two verbs)
+#112 Ungrammatical (the negator may not intervene between the two verbs)
 Source: author
 Vetted: f
 Judgment: u
@@ -1085,7 +1094,7 @@ child 3A bird 3II.LOC-give NEG search
 # Attributive adjectives
 ################################################################################
 
-#X Grammatical (adjective comes after the noun it modifies)
+#113 Grammatical (adjective comes after the noun it modifies)
 Source: a:110
 Vetted: t
 Judgment: g
@@ -1094,7 +1103,7 @@ kaai akan kalieta
 dog black be.old
 'The black dog is old'
 
-#X Ungrammatical (adjective cannot come before the noun it modifies)
+#114 Ungrammatical (adjective cannot come before the noun it modifies)
 Source: author
 Vetted: f
 Judgment: u
@@ -1107,7 +1116,7 @@ black dog be.old
 # Adverbs
 ################################################################################
 
-# Grammatical (intransitive verb; adverb occurs between A argument and verb)
+#115 Grammatical (intransitive verb; adverb occurs between A argument and verb)
 Source: author
 Vetted: f
 Judgment: g
@@ -1116,7 +1125,7 @@ na wan taa
 1SG already sleep
 'I am already sleeping'
 
-# Ungrammatical (intransitive verb; adverb must occur between A argument and verb)
+#116 Ungrammatical (intransitive verb; adverb must occur between A argument and verb)
 Source: author
 Vetted: f
 Judgment: g
@@ -1125,7 +1134,7 @@ na taa wan
 1SG sleep already
 'I am already sleeping'
 
-#X Grammatical (transitive verb; adverb occurs between A argument and U argument)
+#117 Grammatical (transitive verb; adverb occurs between A argument and U argument)
 Source: a:125
 Vetted: f
 Judgment: g
@@ -1134,7 +1143,7 @@ na el kopi buut-i
 1SG before coffee consume-PFV
 'I had coffee before'
 
-#X Ungrammatical (transitive verb; adverb must occur between A and U arguments)
+#118 Ungrammatical (transitive verb; adverb must occur between A and U arguments)
 Source: author
 Vetted: f
 Judgment: u
@@ -1143,7 +1152,7 @@ na kopi el buut-i
 1SG kopi before consume-PFV
 'I had coffee before'
 
-#X Grammatical (transitive verb; adverb occurs between A and U arguments, A = U)
+#119 Grammatical (transitive verb; adverb occurs between A and U arguments, A = U)
 Source: author
 Vetted: f
 Judgment: g
@@ -1152,7 +1161,7 @@ moku yal di tadei da-yongfi
 child now 3A lie 3I.PAT-forget
 'The child is now asleep'
 
-#X Ungrammatical (transitive verb; adverb must occur between A and U arguments, A = U)
+#120 Ungrammatical (transitive verb; adverb must occur between A and U arguments, A = U)
 Source: author
 Vetted: f
 Judgment: g
@@ -1165,7 +1174,7 @@ child 3A now lie 3I.PAT-forget
 # Embedded clauses
 ################################################################################
 
-#X Grammatical (embedded clause)
+#121 Grammatical (embedded clause)
 Source: author
 Vetted: f
 Judgment: g
@@ -1178,7 +1187,7 @@ dog sleep person 3II.PAT-see-mark-DUR
 # Non-verbal predicates
 ################################################################################
 
-#X Grammatical (NP as a predicate)
+#122 Grammatical (NP as a predicate)
 Source: author
 Vetted: f
 Judgment: g
@@ -1187,7 +1196,7 @@ ne-feela mayol
 1SG.AL-friend woman
 'My friend is a woman'
 
-# Grammatical (adjective combines with generic root verb to be used as head of VP)
+#123 Grammatical (adjective combines with generic root verb to be used as head of VP)
 Source: a:110
 Vetted: t
 Judgment: g
@@ -1196,7 +1205,7 @@ kaai akan-i
 dog black-put
 'The dog is black'
 
-# Grammatical (adjective combines with generic root verb to be used as head of VP)
+#124 Grammatical (adjective combines with generic root verb to be used as head of VP)
 Source: a:110
 Vetted: t
 Judgment: g
@@ -1205,7 +1214,7 @@ kaai akan-i
 dog black-put
 'The black dog is black'
 
-# Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
+#125 Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
 Source: author
 Vetted: f
 Judgment: u
@@ -1214,7 +1223,7 @@ kaai akan
 dog black
 'The dog is black'
 
-# Grammatical (predicate; zero copula)
+#126 Grammatical (predicate; zero copula)
 Source: author
 Vetted: f
 Judgment: g
@@ -1223,7 +1232,7 @@ moku fila
 child be.young
 'A child is young'
 
-#X Grammatical (adposition; zero copula)
+#127 Grammatical (adposition; zero copula)
 Source: a:105
 Vetted: t
 Judgment: g

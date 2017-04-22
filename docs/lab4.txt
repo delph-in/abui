@@ -1,0 +1,401 @@
+Guy Emerson, Travis Nguyen
+Prof. Emily Menon Bender
+LING 567
+April 21, 2017
+
+--------------
+Lab 4 Write-Up
+--------------
+
+In Lab 4, we covered new phenomena in our test suite, including matrix yes-no questions, matrix wh questions, coordination, agreement in coordinated NPs, attributive adjectives, adverbs, embedded clauses, and non-verbal predicates. We also ran the test suite in the tsdb() and documented the generation and overgeneration results.
+
+-----------------------
+Matrix yes-no questions
+-----------------------
+
+In Abui, matrix clause yes-no questions are handled by changing the intonation of a declarative statement. Moreover, word order does not change, nor is there a sentence-final question particle.
+
+Here is an example of a yes-no question in Abui:
+
+#X Grammatical (yes-no question; word order remains the same)
+Source: a:244
+Vetted: t
+Judgment: g
+Phenomena: {}
+a raha ho-kariang?
+2SG king 3II.REC-work
+'Do you work for the king?'
+
+Here is an example of a non-grammatical yes-no question in Abui:
+
+#X Ungrammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+ho-kariang a raha?
+3II.REC-work 2SG king
+'Do you work for the king?'
+
+Additionally, a yes-no question that includes negation does not undergo any sort of change in word order; the negation marker `naha` follows the verb of the sentence, as usual:
+
+#X Grammatical (yes-no question with negation; word order remains the same)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+a raha ho-kariang naha?
+2SG king 3II.REC-work NEG
+'Do you not work for the king?'
+
+Matrix wh questions
+-------------------
+
+Abui is a wh-in-situ language. Per the rules of the assignment, we covered two wh words: `nala` ("what") and `maa` ("who").
+
+Here is an example of `nala` ("what") as the subject:
+
+#X Grammatical (wh question using what; wh-in-situ; subject)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+nala e-l takei?
+what 2SG.LOC-give bite
+'What bit you?'
+
+Here is an example of `nala` ("what") as the object in a non-verbal predicate:
+
+#X Grammatical (wh question using what; wh-in-situ; object; zero copula)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+a-ne nala?
+2SG.INAL-name what
+'What is your name?'
+
+Next, we discuss `maa` ("who"). Here is an example of the wh word as the subject:
+
+#X Grammatical (wh question using who; wh-in-situ; subject)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+maa e-l takei?
+who 2SG.LOC-give bite
+'Who bit you?'
+
+Here is an example of `maa` ("who") as the object in a non-verbal predicate:
+
+#X Grammatical (wh question using who; wh-in-situ; object; zero copula)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+a-ne maa?
+2SG.INAL-name who
+'What is your name?'
+
+Note that "Who is your name?" as well as "What is your name?" are culturally and linguistically acceptable ways to ask for someone's name in the Abui language community.
+
+Lastly, here is an example of `nala` ("what") as the object of a transitive verb:
+
+#X Grammatical (wh question using what; wh-in-situ; object; transitive verb)
+Source: a:128
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+a nala ong?
+2SG what make
+'What are you doing/making?'
+
+------------
+Coordination
+------------
+
+In Abui, there are several methods of coordination.
+
+The first coordinator that we discuss is `e` (and). It is only used for nominal coordination.
+
+Here is a grammatical sentence using `e` to coordinate two nouns:
+
+#X Grammatical ('e' used for nominal coordination; list of two items)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+faling e kawen foka
+axe and machete be.big
+'axes and swords are big'
+
+Here is an ungrammatical sentence using `e` to coordinate two verbs:
+
+# Ungrammatical ('e' can only be used for nominal coordination)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+na lol e taa
+1SG walk and sleep
+'I walk and sleep'
+
+To coordinate three or more nouns, `e` precedes the penultimate nominal in a nominal coordination:
+
+#X Grammatical ('e' used for nominal coordination; list of three items)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+faling kawen e tideng foka
+axe machete and whetstone be.big
+'axes, swords, and whetstones are big'
+
+Nominal coordination can also occur without an overt coordinator. The coordination is indicated by intonational pauses between each item in the list (not indicated in the IGT):
+
+#X Grammatical (items may be separated by intonational pauses)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+faling kawen foka
+axe machete be.big
+'an axe [and] machete are big'
+
+The next coordinator that we cover is `ya`, glossed as "SEQ" (for "sequential") in our resource.
+
+`Ya` can be used to link two non-intersective noun phrases:
+
+#X Grammatical ('ya' used to link two non-intersective NPs)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+kuya ya yoikoi foka
+bird SEQ turtle be.big
+'a bird and turtle are big'
+
+It can also be used to link two non-intersective verb phrases, implying a sequential ordering of events:
+
+#X Grammatical ('ya' used to link two non-intersective VPs)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+na lol ya taa
+1SG walk SEQ sleep
+'I walk and (then) sleep'
+
+Next, the coordinator `re` ("or") coordinates two disjoint parts of speech.
+
+It can coordinate two disjoint noun phrases:
+
+#X Grammatical (coordination of two disjoint NPs)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+maama re ya foka
+father or mother be.big
+'father or mother is big'
+
+It can coordinate two disjoint sentences:
+
+#X Grammatical (coordination of two disjoint sentences)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+a taa re a me?
+2SG lie or 2SG come
+'Are you sleeping or are you coming?'
+
+It can also coordinate two disjoint verbal phrases:
+
+#X Grammatical (coordination of two disjoint VPs)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+a taa re me?
+2SG lie or come
+'Are you sleeping or coming?'
+
+Abui also features verbal serial constructions (VSCs), in which two or more verbs form a monoclausal unit without the use of any coordinator.
+
+The following example features a VSC:
+
+#X Grammatical (serial verb construction; no conjunctions)
+Source: a:
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+di tur-i ya mi me
+3A scoop-PFV SEQ take come
+'She scooped up and brought it (towards DC)'
+
+VSCs are contiguous constructions: that is, no arguments except the constituents can appear in the VSC:
+
+#X Grammatical (serial verb constructions are contiguous constructions)
+Source: a:349
+Vetted: t
+Judgment: g
+Phenomena: {crd}
+afeida moku me yai paneng
+yesterday kid come song make
+'Yesterday, the child came to sing'
+
+#X Ungrammatical (serial verb contructions must be contiguous constructions)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+moku me yai afeida paneng
+kid come yesterday song make
+'Yesterday, the child came to sing'
+
+Note that the two verbs in the previous sentences that make up the VSC are `me` ("come") and `yai paneng` ("sing", lit. "make song").
+
+Moreover, verbs in SVCs share negation:
+
+#X Grammatical (verbs in SVCs share negation)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {crd}
+moku di kuya he-l-tahai naha
+child 3A bird 3II.LOC-give-search NEG
+'A child does not look for a bird'
+
+The negator may not intervene between the verbs that form the VSC:
+
+#X Ungrammatical (the negator may not intervene between the two verbs)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {crd}
+moku di kuya he-l naha tahai
+child 3A bird 3II.LOC-give NEG search
+'A child does not look for a bird'
+
+----------------------------
+Agreement in coordinated NPs
+----------------------------
+
+Abui does not have agreement in coordinated NPs.
+
+----------------------
+Attributive adjectives
+----------------------
+
+In Abui, adjectives come after the noun they modify:
+
+#X Grammatical (adjective comes after the noun it modifies)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {adj}
+kaai akan kalieta
+dog black be.old
+'The black dog is old'
+
+It is ungrammatical for the adjective to come before the noun it modifies:
+
+#X Ungrammatical (adjective cannot come before the noun it modifies)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+akan kaai kalieta
+black dog be.old
+'The black dog is old'
+
+-------
+Adverbs
+-------
+
+In this assignment, we covered a subset of adverbs in Abui. According to our resource, adverbs occur in various positions depending on the transitivity of the verb.
+
+For example, in an intransitive verb, the adverb occurs between the A argument and the verb:
+
+# Grammatical (intransitive verb; adverb occurs between A argument and verb)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+na wan taa
+1SG already sleep
+'I am already sleeping'
+
+It is ungrammatical for the adverb to come at the end of the sentence:
+
+#X Ungrammatical (intransitive verb; adverb must occur between A argument and verb)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+na taa wan
+1SG sleep already
+'I am already sleeping'
+
+For a transitive verb, the adverb occurs between the A and U arguments:
+
+#X Grammatical (transitive verb; adverb occurs between A argument and U argument)
+Source: a:125
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+na el kopi buut-i
+1SG before coffee consume-PFV
+'I had coffee before'
+
+Having the adverb occur outside of the A and U arguments causes the sentence to be ungrammatical:
+
+#X Ungrammatical (transitive verb; adverb must occur between A and U arguments)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+na kopi el buut-i
+1SG kopi before consume-PFV
+'I had coffee before'
+
+Likewise, the adverb occurs between the A and U arguments when A and U both co-index the same entity:
+
+#X Grammatical (transitive verb; adverb occurs between A and U arguments, A = U)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, crd}
+moku yal di tadei da-yongfi
+child now 3A lie 3I.PAT-forget
+'The child is now asleep'
+
+----------------
+Embedded clauses
+----------------
+
+(Guy to fill this in)
+
+---------------------
+Non-verbal predicates
+---------------------
+
+(Guy to fill this in)
+
+-------------------------------------------
+Other changes to the lexicon and morphology
+-------------------------------------------
+
+While working on this assignment, we realized that there were some verbs that required a suffix (i.e., the verb cannot appear as a bare verb stem; if nothing else attaches as a suffix to it, it must obligatory take the perfective aspect marker `-i`) due to phonological constraints and decided to create two verb types.
+
+------
+tsdb()
+------
+
+After loading the grammar and the test suite into the LKB and the tsdb(), we received the following rates for generation and overgeneration:
+
+Generation: 44.2%
+Overgeneration: 8%
+
+The reason for our low coverage is that the test cases in our test suite are not fully covered by the matrix customization system. We will be remediating the issue when we begin to manually edit the TDL file.
