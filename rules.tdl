@@ -1,0 +1,53 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+head-adj-int := head-adj-int-phrase.
+
+decl-head-opt-subj := decl-head-opt-subj-phrase.
+
+basic-head-opt-comp := basic-head-opt-comp-phrase.
+
+adj-head-scop := adj-head-scop-phrase.
+
+; Rule instances for head-modifier structures. Corresponding types
+; are defined in matrix.tdl.  The matrix customization script did
+; not need to add any further constraints, so no corresponding types
+; appear in abui.tdl
+
+head-adj-scop := head-adj-scop-phrase.
+
+comp-head := comp-head-phrase.
+
+subj-head := subj-head-phrase.
+
+head-spec := head-spec-phrase.
+
+bare-np := bare-np-phrase.
+
+n1-top-coord := n1-top-coord-rule.
+
+n1-mid-coord := n1-mid-coord-rule.
+
+n1-bottom-coord := n1-bottom-coord-rule.
+
+n2-top-coord := n2-top-coord-rule.
+
+n2-bottom-coord := n2-bottom-coord-rule.
+
+vp2-top-coord := vp2-top-coord-rule.
+
+vp2-bottom-coord := vp2-bottom-coord-rule.
+
+n3-top-coord := n3-top-coord-rule.
+
+n3-bottom-coord := n3-bottom-coord-rule.
+
+vp3-top-coord := vp3-top-coord-rule.
+
+vp3-bottom-coord := vp3-bottom-coord-rule.
+
+n4-top-coord := n4-top-coord-rule.
+
+n4-bottom-coord := n4-bottom-coord-rule.
+
+vp4-top-coord := vp4-top-coord-rule.
+
+vp4-bottom-coord := vp4-bottom-coord-rule.

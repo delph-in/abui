@@ -1,0 +1,134 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+u_loc_1sg-prefix :=
+%prefix (* ne-)
+u_loc_1sg-lex-rule.
+
+u_rec_1sg-prefix :=
+%prefix (* no-)
+u_rec_1sg-lex-rule.
+
+u_pat_1sg-prefix :=
+%prefix (* na-)
+u_pat_1sg-lex-rule.
+
+u_loc_2sg-prefix :=
+%prefix (* e-)
+u_loc_2sg-lex-rule.
+
+u_rec_2sg-prefix :=
+%prefix (* -o)
+u_rec_2sg-lex-rule.
+
+u_pat_2sg-prefix :=
+%prefix (* a-)
+u_pat_2sg-lex-rule.
+
+u_loc_pat_1pl_excl-prefix :=
+%prefix (* ni-)
+u_loc_pat_1pl_excl-lex-rule.
+
+u_rec_1pl_excl-prefix :=
+%prefix (* nu-)
+u_rec_1pl_excl-lex-rule.
+
+u_loc_pat_1pl_incl-prefix :=
+%prefix (* pi-)
+u_loc_pat_1pl_incl-lex-rule.
+
+u_rec_1pl_incl-prefix1 :=
+%prefix (* pu-)
+u_rec_1pl_incl-lex-rule.
+
+u_rec_1pl_incl-prefix2 :=
+%prefix (* po-)
+u_rec_1pl_incl-lex-rule.
+
+u_loc_pat_2pl-prefix :=
+%prefix (* ri-)
+u_loc_pat_2pl-lex-rule.
+
+u_rec_2pl-prefix1 :=
+%prefix (* ru-)
+u_rec_2pl-lex-rule.
+
+u_rec_2pl-prefix2 :=
+%prefix (* ro-)
+u_rec_2pl-lex-rule.
+
+u_loc_3i-prefix :=
+%prefix (* de-)
+u_loc_3i-lex-rule.
+
+u_rec_3i-prefix :=
+%prefix (* do-)
+u_rec_3i-lex-rule.
+
+u_pat_3i-prefix :=
+%prefix (* da-)
+u_pat_3i-lex-rule.
+
+u_loc_3ii-prefix :=
+%prefix (* he-)
+u_loc_3ii-lex-rule.
+
+u_rec_3ii-prefix :=
+%prefix (* ho-)
+u_rec_3ii-lex-rule.
+
+u_pat_3ii-prefix :=
+%prefix (* ha-)
+u_pat_3ii-lex-rule.
+
+u_loc_distr-prefix :=
+%prefix (* te-)
+u_loc_distr-lex-rule.
+
+u_rec_distr-prefix :=
+%prefix (* to-)
+u_rec_distr-lex-rule.
+
+u_pat_distr-prefix :=
+%prefix (* ta-)
+u_pat_distr-lex-rule.
+
+perfective-suffix :=
+%suffix (* -i)
+perfective-lex-rule.
+
+imperfective-suffix :=
+%suffix (* -e)
+imperfective-lex-rule.
+
+durative-suffix :=
+%suffix (* -a)
+durative-lex-rule.
+
+punctual-suffix :=
+%suffix (* -o)
+punctual-lex-rule.
+
+perfect-suffix :=
+%suffix (* -u)
+perfect-lex-rule.
+
+inceptive_inchoative-suffix :=
+%suffix (* -se)
+inceptive_inchoative-lex-rule.
+
+inceptive_completive-suffix :=
+%suffix (* -te)
+inceptive_completive-lex-rule.
+
+phasal_inchoative-suffix :=
+%suffix (* -si)
+phasal_inchoative-lex-rule.
+
+phasal_completive-suffix :=
+%suffix (* -ti)
+phasal_completive-lex-rule.
+
+irreg-adj-predicative-suffix :=
+%suffix (* -i)
+irreg-adj-predicative-lex-rule.

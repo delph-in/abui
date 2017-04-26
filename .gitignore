@@ -1,14 +1,2 @@
-# For the time being, ignore everything except the choices file
-*.tdl
-*.tab
-*.vpm
-*.mtr
-*.lsp
-METADATA
-README
-test_sentences
-ace/
-lkb/
-pet/
-repp/
-tsdb/
+# Do not automatically add tsdb profiles
+tsdb/home/
