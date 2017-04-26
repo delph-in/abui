@@ -333,7 +333,7 @@ akan kaai kalieta
 black dog be.old
 'The black dog is old'
 
-We give the analysis of adjectives after we have discussed non-verbal predicates.
+We will give the analysis of adjectives after we have discussed non-verbal predicates.
 
 -------
 Adverbs
@@ -413,15 +413,15 @@ kaai taa ama h-ieng-lak-a
 dog sleep person 3II.PAT-see-mark-DUR
 'People know that the dog is sleeping'
 
-Here, we have the clause "kaai taa" (the dog is sleeping),
-which is referred to in the second clause "ama h-ieng-lak-a" (people know it).
+Here, we have the clause `kaai taa` ("the dog is sleeping"),
+which is referred to in the second clause `ama h-ieng lak-a` ("people know it").
 Note that there is 3rd person object agreement on "know" (a compound verb glossed as "see mark").
 
 There is no overt conjuction or complementiser.
 In the sample text, the author notes that there was a pause between the two clauses.
 
 The first clause could be modelled as an embedded clause,
-taken as an argument by the verb "ieng lak" (know).
+taken as an argument by the verb `ieng lak` ("know").
 
 However, we could also model this as two matrix clauses,
 where the second clause has a dropped argument,
@@ -435,7 +435,7 @@ Non-verbal predicates
 ---------------------
 
 There is no copula in Abui, either for nouns or adjectives.
-In both cases, the item being using predicatively comes after the subject NP.
+In both cases, the item being used predicatively comes after the subject NP.
 For example:
 
 #122 Grammatical (NP as a predicate)
@@ -457,7 +457,7 @@ child be.young
 'A child is young'
 
 Adjectives differ from other verbs because they can also appear predicatively.
-The above example "moku fila" could also mean "a young child".
+The above example `moku fila` could also mean "a young child".
 For other verbs, an additional relative clause marker would be necessary.
 We have not documented relative clauses in the testsuite,
 but this is to clarify that they should be treated separately from other intransitive verbs.
@@ -468,7 +468,7 @@ that appears after the noun when it is attributive,
 and that appears impossibly with a copula when it is predicative.
 
 There is also a small irregular class of adjectives,
-which have require an '-i' suffix when appearing predicatively,
+which have require an `-i` suffix when appearing predicatively,
 but not when appearing attributively:
 
 #113 Grammatical (adjective comes after the noun it modifies)
@@ -500,7 +500,7 @@ dog black
 
 To model these adjectives, we added a second adjective type,
 which can only appear attributively,
-and we added a lexical rule that adds the '-i' but otherwise does nothing,
+and we added a lexical rule that adds the `-i` but otherwise does nothing,
 and intend to edit the tdl.
 The documentation for adjective modification is incomplete,
 and although there is an option for changing the syntactic behaviour,
