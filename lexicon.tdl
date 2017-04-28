@@ -131,27 +131,27 @@ fila := adj-adj-lex &
   [ STEM < "fila" >,
     SYNSEM.LKEYS.KEYREL.PRED "_young_a_rel" ].
 
-akan := irreg-adj-adj-lex &
+akan := irreg-adj-lex &
   [ STEM < "akan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_black_a_rel" ].
 
-kul := irreg-adj-adj-lex &
+kul := irreg-adj-lex &
   [ STEM < "kul" >,
     SYNSEM.LKEYS.KEYREL.PRED "_white_a_rel" ].
 
-abet := irreg-adj-adj-lex &
+abet := irreg-adj-lex &
   [ STEM < "abet" >,
     SYNSEM.LKEYS.KEYREL.PRED "_young-male_a_rel" ].
 
-maek := irreg-adj-adj-lex &
+maek := irreg-adj-lex &
   [ STEM < "maek" >,
     SYNSEM.LKEYS.KEYREL.PRED "_young-female_a_rel" ].
 
-san := irreg-adj-adj-lex &
+san := irreg-adj-lex &
   [ STEM < "san" >,
     SYNSEM.LKEYS.KEYREL.PRED "_clean_a_rel" ].
 
-dakun := irreg-adj-adj-lex &
+dakun := irreg-adj-lex &
   [ STEM < "dakun" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dirty_a_rel" ].
 

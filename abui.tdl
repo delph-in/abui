@@ -163,33 +163,24 @@ trans-verb-verb-lex := transitive-verb-lex.
 
 ;;; Adjectives
 
-adj-lex := basic-intersective-adjective-lex.
-
-adj-adj-lex := attr-adj-lex & stative-pred-adj-lex &
-  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
-                       HEAD.PRD - ] ].
-
-irreg-adj-adj-lex := attr-only-adj-lex &
+adj-lex := basic-intersective-adjective-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
-; Basic attributive adjective definition
-
-attr-adj-lex := adj-lex & intersective-mod-lex &
+attrib-adj-lex := adj-lex & intersective-mod-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                               VAL.SPR cons ] ] > ].
 
-attr-only-adj-lex := attr-adj-lex &
-  [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
-                       VAL.SUBJ < > ] ].
-
-; Stative predicate adjective definition
-
-stative-pred-adj-lex := adj-lex &
+predic-adj-lex := adj-lex &
   [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
                                             CAT [ VAL [ SPR < >,
                                                         COMPS < > ],
                                                   HEAD noun ] ] ] >,
                    CONT.HOOK.XARG #xarg ] ].
+
+adj-adj-lex := attrib-adj-lex & predic-adj-lex.
+
+irreg-adj-lex := attrib-adj-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
 
 ;;; Others
 
@@ -326,10 +317,9 @@ phasal_inchoative-lex-rule := asp1-lex-rule-super &
 phasal_completive-lex-rule := asp1-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT phasal_completive ].
 
-irreg-adj-suffix-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR irreg-adj-adj-lex ].
-
-irreg-adj-predicative-lex-rule := irreg-adj-suffix-lex-rule-super.
+irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule & infl-lex-rule & predic-adj-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < >,
+    DTR irreg-adj-lex ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
