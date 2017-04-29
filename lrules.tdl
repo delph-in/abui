@@ -2,6 +2,4 @@
 
 u-agr-lex := u-agr-lex-rule.
 
-foo := foo-bar.
-
-ff := fff.
+pos-lex := pos-lex-rule.

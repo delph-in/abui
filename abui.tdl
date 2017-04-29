@@ -76,12 +76,19 @@ phasal_completive := aspect.
 
 ;;; Nouns
 
+case := *top*.
+poss := case.
+non-poss := case.
+
+noun :+ [ CASE case ].
+
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det ] >,
-                           COMPS < >,
-                           SUBJ < >,
-                           SPEC < > ],
+  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < #spr &
+				   [ LOCAL.CAT.HEAD det ] >,
+			     COMPS < >,
+			     SUBJ < >,
+			     SPEC < > ],
+		       HEAD noun ],
     ARG-ST < #spr > ].
 
 no-spr-noun-lex := noun-lex &
@@ -124,7 +131,8 @@ alienable-noun-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE + ].
 
 inalienable-noun-noun-lex := noun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE - ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
+    INFLECTED prefixed ].
 
 wh-noun-noun-lex := no-spr-noun-lex.
 
@@ -182,8 +190,6 @@ adj-adj-lex := attrib-adj-lex & predic-adj-lex.
 irreg-adj-lex := attrib-adj-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
 
-; TODO adjectives currently allow adverbs as specifiers
-
 ;;; Adverbs
 
 adv-lex := basic-int-adverb-lex &
@@ -191,7 +197,8 @@ adv-lex := basic-int-adverb-lex &
                        HEAD.MOD < [ LOCAL.CAT.HEAD verb ] >,
                        VAL [ COMPS < >,
                              SUBJ < >,
-                             SPR < > ] ] ].
+                             SPR < >,
+			     SPEC < > ] ] ].
 
 ; TODO position of adverb relative to arguments
 
@@ -225,6 +232,10 @@ neg-adv-lex := basic-scopal-adverb-lex &
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
+; Three series of prefixes
+; On nouns, they indicate possession
+; On verbs, they indicate agreement
+
 prefixed := inflected &
   [ PRON-PERNUM pernum,
     PRON-CLASS pron-class ].
@@ -239,6 +250,9 @@ class-iii := class-i-iii &
 class-ii := pron-class.
 
 ;;; Lexical rule types
+
+; These rules add the pernum value to a dummy slot
+; A second rule will use the value appropriately
 
 pron-prefix-lex-rule-super := infl-lex-rule &
   [ SYNSEM #ss,
@@ -329,16 +343,36 @@ iii-distr-lex-rule := pron-prefix-lex-rule-super &
   [ INFLECTED [ PRON-PERNUM 3rd,
                 PRON-CLASS class-iii ] ].
 
+; Rules which use the pernum value from the above
+
 u-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
   [ INFLECTED infl-satisfied,
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM #pn,
     DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM #pn ] ].
 
-poss-lex-rule := const-lex-rule &
+pos-lex-rule := const-lex-rule & same-head-lex-rule & subj-change-only-lex-rule
   [ INFLECTED infl-satisfied,
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE #al,
-    DTR.INFLECTED [ PRON-PERNUM pernum,
-                    PRON-CLASS.NOUN-AL #al ] ].
+    SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #poss & [ PNG.PERNUM #pn ],
+					  CAT.VAL [ SPR < >,
+						    SUBJ < >,
+						    SPEC < >,
+						    COMPS < > ] ] ] >,
+    C-CONT [ HOOK [ INDEX #index,
+		    LTOP #lbl ],
+	     RELS <! arg12-ev-relation & [ PRED "poss_rel",
+					   LBL #lbl,
+					   ARG1 #index,
+					   ARG2 #poss ] !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    DTR pron-prefix-lex-rule-super & [ INFLECTED [ PRON-PERNUM #pn,
+						   PRON-CLASS.NOUN-AL #al ],
+				       SYNSEM.LOCAL [ CAT.VAL.SUBJ < >,
+						      CONT.HOOK [ INDEX #index & [ COG-ST uniq+fam+act,
+										   PNG.ALIENABLE #al ],
+								  LTOP #lbl ] ] ] ].
+
+; Aspect markers
 
 asp1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb-lex ].
@@ -391,6 +425,11 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+
+; Possessives
+
+pos-phrase := basic-head-subj-phrase & head-final & 
+  [ SYNSEM.LOCAL.CAT.HEAD noun ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
