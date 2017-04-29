@@ -1,1 +1,7 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+
+u-agr-lex := u-agr-lex-rule.
+
+foo := foo-bar.
+
+ff := fff.

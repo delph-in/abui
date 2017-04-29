@@ -1,97 +1,97 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-u_loc_1sg-prefix :=
+i-1sg-prefix :=
 %prefix (* ne-)
-u_loc_1sg-lex-rule.
+i-1sg-lex-rule.
 
-u_rec_1sg-prefix :=
+ii-1sg-prefix :=
 %prefix (* no-)
-u_rec_1sg-lex-rule.
+ii-1sg-lex-rule.
 
-u_pat_1sg-prefix :=
+iii-1sg-prefix :=
 %prefix (* na-)
-u_pat_1sg-lex-rule.
+iii-1sg-lex-rule.
 
-u_loc_2sg-prefix :=
+i-2sg-prefix :=
 %prefix (* e-)
-u_loc_2sg-lex-rule.
+i-2sg-lex-rule.
 
-u_rec_2sg-prefix :=
+ii-2sg-prefix :=
 %prefix (* -o)
-u_rec_2sg-lex-rule.
+ii-2sg-lex-rule.
 
-u_pat_2sg-prefix :=
+iii-2sg-prefix :=
 %prefix (* a-)
-u_pat_2sg-lex-rule.
+iii-2sg-lex-rule.
 
-u_loc_pat_1pl_excl-prefix :=
+i-iii-1pl_excl-prefix :=
 %prefix (* ni-)
-u_loc_pat_1pl_excl-lex-rule.
+i-iii-1pl_excl-lex-rule.
 
-u_rec_1pl_excl-prefix :=
+ii-1pl_excl-prefix :=
 %prefix (* nu-)
-u_rec_1pl_excl-lex-rule.
+ii-1pl_excl-lex-rule.
 
-u_loc_pat_1pl_incl-prefix :=
+i-iii-1pl_incl-prefix :=
 %prefix (* pi-)
-u_loc_pat_1pl_incl-lex-rule.
+i-iii-1pl_incl-lex-rule.
 
-u_rec_1pl_incl-prefix1 :=
+ii-1pl_incl-prefix1 :=
 %prefix (* pu-)
-u_rec_1pl_incl-lex-rule.
+ii-1pl_incl-lex-rule.
 
-u_rec_1pl_incl-prefix2 :=
+ii-1pl_incl-prefix2 :=
 %prefix (* po-)
-u_rec_1pl_incl-lex-rule.
+ii-1pl_incl-lex-rule.
 
-u_loc_pat_2pl-prefix :=
+i-iii-2pl-prefix :=
 %prefix (* ri-)
-u_loc_pat_2pl-lex-rule.
+i-iii-2pl-lex-rule.
 
-u_rec_2pl-prefix1 :=
+ii-2pl-prefix1 :=
 %prefix (* ru-)
-u_rec_2pl-lex-rule.
+ii-2pl-lex-rule.
 
-u_rec_2pl-prefix2 :=
+ii-2pl-prefix2 :=
 %prefix (* ro-)
-u_rec_2pl-lex-rule.
+ii-2pl-lex-rule.
 
-u_loc_3i-prefix :=
+i-3i-prefix :=
 %prefix (* de-)
-u_loc_3i-lex-rule.
+i-3i-lex-rule.
 
-u_rec_3i-prefix :=
+ii-3i-prefix :=
 %prefix (* do-)
-u_rec_3i-lex-rule.
+ii-3i-lex-rule.
 
-u_pat_3i-prefix :=
+iii-3i-prefix :=
 %prefix (* da-)
-u_pat_3i-lex-rule.
+iii-3i-lex-rule.
 
-u_loc_3ii-prefix :=
+i-3ii-prefix :=
 %prefix (* he-)
-u_loc_3ii-lex-rule.
+i-3ii-lex-rule.
 
-u_rec_3ii-prefix :=
+ii-3ii-prefix :=
 %prefix (* ho-)
-u_rec_3ii-lex-rule.
+ii-3ii-lex-rule.
 
-u_pat_3ii-prefix :=
+iii-3ii-prefix :=
 %prefix (* ha-)
-u_pat_3ii-lex-rule.
+iii-3ii-lex-rule.
 
-u_loc_distr-prefix :=
+i-distr-prefix :=
 %prefix (* te-)
-u_loc_distr-lex-rule.
+i-distr-lex-rule.
 
-u_rec_distr-prefix :=
+ii-distr-prefix :=
 %prefix (* to-)
-u_rec_distr-lex-rule.
+ii-distr-lex-rule.
 
-u_pat_distr-prefix :=
+iii-distr-prefix :=
 %prefix (* ta-)
-u_pat_distr-lex-rule.
+iii-distr-lex-rule.
 
 perfective-suffix :=
 %suffix (* -i)

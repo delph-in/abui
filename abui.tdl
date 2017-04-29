@@ -225,80 +225,120 @@ neg-adv-lex := basic-scopal-adverb-lex &
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
+prefixed := inflected &
+  [ PRON-PERNUM pernum,
+    PRON-CLASS pron-class ].
+
+pron-class := *top*.
+class-i-iii := pron-class &
+  [ NOUN-AL bool ].
+class-i := class-i-iii &
+  [ NOUN-AL + ].
+class-iii := class-i-iii &
+  [ NOUN-AL - ].
+class-ii := pron-class.
+
 ;;; Lexical rule types
 
-u_agr-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ DTR verb-lex ].
+pron-prefix-lex-rule-super := infl-lex-rule &
+  [ SYNSEM #ss,
+    DTR.SYNSEM #ss & [ LOCAL.CAT.HEAD +nv ],
+    INFLECTED prefixed ].
 
-u_loc_pat-lex-rule := u_agr-lex-rule-super.
+i-1sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1sg,
+                PRON-CLASS class-i ] ].
 
-u_loc-lex-rule := u_loc_pat-lex-rule.
+ii-1sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1sg,
+                PRON-CLASS class-ii ] ].
 
-u_rec-lex-rule := u_agr-lex-rule-super.
+iii-1sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1sg,
+                PRON-CLASS class-iii ] ].
 
-u_pat-lex-rule := u_loc_pat-lex-rule.
+i-2sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 2sg,
+                PRON-CLASS class-i ] ].
 
-u_loc_1sg-lex-rule := u_loc-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+ii-2sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 2sg,
+                PRON-CLASS class-ii ] ].
 
-u_rec_1sg-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+iii-2sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 2sg,
+                PRON-CLASS class-iii ] ].
 
-u_pat_1sg-lex-rule := u_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+i-iii-1pl_excl-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1pl_excl,
+                PRON-CLASS class-i-iii ] ].
 
-u_loc_2sg-lex-rule := u_loc-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+ii-1pl_excl-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1pl_excl,
+                PRON-CLASS class-ii ] ].
 
-u_rec_2sg-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+i-iii-1pl_incl-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1pl_incl,
+                PRON-CLASS class-i-iii ] ].
 
-u_pat_2sg-lex-rule := u_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
+ii-1pl_incl-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1pl_incl,
+                PRON-CLASS class-ii ] ].
 
-u_loc_pat_1pl_excl-lex-rule := u_loc_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
+i-iii-2pl-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 2pl,
+                PRON-CLASS class-i-iii ] ].
 
-u_rec_1pl_excl-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_excl ].
+ii-2pl-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 2pl,
+                PRON-CLASS class-ii ] ].
 
-u_loc_pat_1pl_incl-lex-rule := u_loc_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl_incl ].
+i-3i-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-i ] ].
 
-u_rec_1pl_incl-lex-rule := u_rec-lex-rule.
+ii-3i-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-ii ] ].
 
-u_loc_pat_2pl-lex-rule := u_loc_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+iii-3i-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-iii ] ].
 
-u_rec_2pl-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+i-3ii-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-i ] ].
 
-u_loc_3i-lex-rule := u_loc-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+ii-3ii-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-ii ] ].
 
-u_rec_3i-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+iii-3ii-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-iii ] ].
 
-u_pat_3i-lex-rule := u_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+i-distr-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-i ] ].
 
-u_loc_3ii-lex-rule := u_loc-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+ii-distr-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-ii ] ].
 
-u_rec_3ii-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+iii-distr-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 3rd,
+                PRON-CLASS class-iii ] ].
 
-u_pat_3ii-lex-rule := u_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+u-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
+  [ INFLECTED infl-satisfied,
+    SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM #pn,
+    DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM #pn ] ].
 
-u_loc_distr-lex-rule := u_loc-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
-
-u_rec_distr-lex-rule := u_rec-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
-
-u_pat_distr-lex-rule := u_pat-lex-rule &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
+poss-lex-rule := const-lex-rule &
+  [ INFLECTED infl-satisfied,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE #al,
+    DTR.INFLECTED [ PRON-PERNUM pernum,
+                    PRON-CLASS.NOUN-AL #al ] ].
 
 asp1-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ DTR verb-lex ].
