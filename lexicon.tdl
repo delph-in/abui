@@ -263,9 +263,13 @@ nu := dem-determiner-lex &
   [ STEM < "nu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_nu_q_rel" ].
 
+;;; Verbal particles
+
 naha := neg-adv-lex &
   [ STEM < "naha" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+;;; Coordination
 
 e1 := conj-lex &
   [ STEM < "e" >,
@@ -281,3 +285,17 @@ re3 := conj-lex &
   [ STEM < "re" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "3" ].
+
+;;; Adverbs
+
+wan := adv-lex &
+  [ STEM < "wan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_already_a_rel" ].
+
+el := adv-lex &
+  [ STEM < "el" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_before_a_rel" ].
+
+yal := adv-lex &
+  [ STEM < "yal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_now_a_rel" ].

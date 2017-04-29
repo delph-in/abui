@@ -182,6 +182,19 @@ adj-adj-lex := attrib-adj-lex & predic-adj-lex.
 irreg-adj-lex := attrib-adj-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
 
+; TODO adjectives currently allow adverbs as specifiers
+
+;;; Adverbs
+
+adv-lex := basic-int-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
+                       HEAD.MOD < [ LOCAL.CAT.HEAD verb ] >,
+                       VAL [ COMPS < >,
+                             SUBJ < >,
+                             SPR < > ] ] ].
+
+; TODO position of adverb relative to arguments
+
 ;;; Others
 
 ;;; Determiners
