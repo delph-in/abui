@@ -4,7 +4,8 @@ version=28
 section=general
 language=Abui
 iso-code=abz
-punctuation-chars=keep-all
+punctuation-chars=keep-list
+punctuation-chars-list=#$%&'()*+-/<=>@[]^_`{|}~\
 archive=yes
 email=gete2@cam.ac.uk
 affiliation=University of Cambridge
