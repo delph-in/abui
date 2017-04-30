@@ -98,7 +98,11 @@ irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule 
 Adverbial modifiers
 -------------------
 
-Abui has a small set of adverbs, such as `yal` ("now"), `el` ("before"), `ko` ("soon"), `wan` ("already"). 11 such adverbs are documented in the grammar. They appear before the verb, and a schema of clause structure is given in the grammar. However, slightly different versions of this schema are given (the adverbs are ADV):
+Abui has a small set of adverbs, such as `yal` ("now"), `el` ("before"), `ko` ("soon"), `wan` ("already").
+Eleven such adverbs are documented in the grammar.
+A schema of clause structure is also given,
+but there are slightly different versions (the adverbs are ADV),
+so it is unclear how flexible this schema is:
 
 p264: ADVERBIALS FOCUS NP_A/U PRO_A ADV NP_U DEICT V
 p240: FOCUS ADVERBIALS NP PRO_A ADV NP_U V NEG/APM DEM
@@ -136,12 +140,14 @@ Demonstratives and/or markers of definiteness
 ---------------------------------------------
 
 Two types of "demonstrative" are documented in the grammar: "deictic demonstratives" and "anaphoric demonstratives".
-Deictic demonstratives appear at the very beginning of an NP, while anaphoric demonstrives appear at the very end.
-Deictic demonstratives indicate horizontal and vertical distance from the speaker or addressee, while anaphoric demonstratives indicate definiteness and "discourse location" (proximate, medial, distal) from the speaker or addressee.
-In a previous lab, we decided to treat anaphoric demonstratives as determiners.
+Deictic demonstratives appear at the very beginning of an NP,
+while anaphoric demonstrives appear at the very end.
+Deictic demonstratives indicate horizontal and vertical distance from the speaker or addressee,
+while anaphoric demonstratives indicate definiteness and "discourse location" (proximate, medial, distal) from the speaker or addressee.
+In a previous lab, we decided to treat "anaphoric demonstratives" as determiners.
 Our grammar currently does not cover the "deictic demonstratives".
 
-Anaphoric demonstratives appear after nouns:
+These determiners appear after nouns:
 
 #X Grammatical (noun DEM verb)
 Source: author
@@ -163,7 +169,7 @@ hu kaai taa
 SPC dog sleep
 'A dog (you do not know about) sleeps.'
 
-Moreover, anaphoric demonstratives cannot appear after pronouns:
+Moreover, they cannot appear with pronouns:
 
 #X Ungrammatical (pronoun DEM verb)
 Source: author
@@ -183,7 +189,69 @@ hu di taa
 SPC 3 sleep
 'They are sleeping'
 
-TODO cognitive status
+The grammar breaks down the meaning of these determiners along two dimensions:
+                                    viewpoint
+discourse location              speaker  addressee
+[+PROXIMAL][+DEFINITE]            do        to
+[+MEDIAL]  [+DEFINITE]             o        yo
+[+DISTAL][-DEFINITE][+-SPECIFIC]  hu        nu
+
+It's unclear why [+-SPECIFIC] should be a useful thing to say.
+However, in the prose description, it says that:
+
+The referents of `do` and `to` are "shared information of both speech participants", and are "focused or topical".
+It seems reasonable to model these as [ COG-ST in-foc, SPECI + ].
+
+The referents of `o` and `yo` are "previously mentioned" and "known to both speech participants".
+It seems reasonable to model these as [ COG-ST uniq+fam+act, SPECI + ].
+
+The referents of `hu` and `nu` are not described so directly in the grammar.
+However, there are several examples where it is translated as "some", "a", and "a certain",
+and furthermore `hu` is used to introduce new referents into the discourse,
+which the speaker already knows about but the addressee does not.
+
+ne-mayol     he-fu            hu  na  takei
+1SG.AL-woman 3II.AL-betel.nut SPC 1SG bite
+"I chewed some betel nut of my wife"
+
+`nu` is used when both speaker and addressee know of the referent:
+
+fu        nu     pi       takai
+betel.nut SPC.AD 1PL.INCL bite.CPL
+"we chewed some betel nut"
+
+It seems reasonable to model these as [ COG-ST type-id, SPECI + ].
+
+What is unclear is how to model the second dimension of variation --
+for `do`, `to`, `o`, and `yo`, this indicates who introduced the referent into the discourse:
+
+kaai do
+dog  PRX
+"the dog (I just talked about)"
+
+kaai to
+dog  PRX.AD
+"the dog (you just talked about)"
+
+For `hu` and `nu`, this indicates whether the addressee knows the referent
+(of course, the speaker must know the referent, or else they couldn't speak about it).
+
+An alternative would be to break from the two-dimensional analysis given in the grammar.
+The evidence that `hu` and `nu` alternate in the same way as the others is weaker,
+both from the fact that they do not refer to existing discourse referents,
+and also from the fact that, unlike the other four determiners,
+they cannot also appear as "deictic demonstratives"
+(where they also have an alternation between speaker and hearer viewpoints).
+We could perhaps model these by saying that we have these COG-ST constraints:
+
+`do`/`to`: in-foc
+`o` /`yo`: activ+fam
+`nu`:      uniq-id
+`hu`:      type-id
+
+The grammar currently reflects the former analysis, that cross-classifies these six along two dimensions.
+The second dimension currently does not introduce any semantic features,
+but by cross-classifying the types, it would be straightforward to add some.
 
 --------------------
 Argument optionality
@@ -201,8 +269,10 @@ In Abui, the possessive construction takes the following form, where the possess
 
 (possessor) prefix possessum
 
-The prefix must agree with the possessor in person and number, and must agree with the possessum in "alienability".
-Inalienable nouns must appear in the possessive construction, while for alienable nouns, it is optional.
+The prefix must agree with the possessor in person and number,
+and must agree with the possessum in "alienability".
+Inalienable nouns must appear in the possessive construction,
+while for alienable nouns, it is optional.
 
 The following is a possessive construction using an inalienable noun:
 
@@ -388,7 +458,8 @@ Baseline     53%          8%
 Current      84%         18%     
 
 The higher coverage is due to the analysis of adverbs and possessives.
-On closer inspection, it seems that much of the overgeneration is due to asyndeton coordination: many of these items may in fact be grammatical, just not with the reading we intended.
+On closer inspection, it seems that much of the overgeneration is due to asyndeton coordination:
+many of these items may in fact be grammatical, just not with the reading we intended.
 
 For example:
 

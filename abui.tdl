@@ -201,12 +201,31 @@ adv-lex := basic-int-adverb-lex &
 ;;; Determiners
 ;;; SPEC is non-empty, and already specified by basic-determiner-lex.
 
-determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
-                           COMPS < >,
-                           SUBJ < > ] ].
+determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item & no-icons-lex-item &
+  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
+			     COMPS < >,
+			     SUBJ < > ],
+		   CONT.HOOK.INDEX.SPECI + ] ].
 
-dem-determiner-lex := determiner-lex & no-icons-lex-item.
+speak-dem-lex := determiner-lex.
+addrs-dem-lex := determiner-lex.
+; TODO give these some semantics
+
+prx-dem-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST in-foc ].
+
+med-dem-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
+
+spc-dem-lex := determiner-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+
+prx-sp-dem-lex := prx-dem-lex & speak-dem-lex.
+prx-ad-dem-lex := prx-dem-lex & addrs-dem-lex.
+med-sp-dem-lex := med-dem-lex & speak-dem-lex.
+med-ad-dem-lex := med-dem-lex & addrs-dem-lex.
+spc-sp-dem-lex := spc-dem-lex & speak-dem-lex.
+spc-ad-dem-lex := spc-dem-lex & addrs-dem-lex.
 
 ; Type for negative adverbs.
 ; 
