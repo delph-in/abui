@@ -1,0 +1,130 @@
+1@a:241@@@1@wo@ama sieng nee@@@@1@3@person rice eat'People eat rice.'@guy emerson, travis nguyen@april 7, 2017
+2@author@@@1@wo@ama nee sieng@@@@0@3@person eat rice'People eat rice.'@guy emerson, travis nguyen@april 7, 2017
+3@author@@@1@wo@sieng ama nee@@@@1@3@rice person eat'Rice eat people.'@guy emerson, travis nguyen@april 7, 2017
+4@author@@@1@wo@sieng nee ama@@@@0@3@rice eat person'People eat rice.'@guy emerson, travis nguyen@april 7, 2017
+5@author@@@1@wo@nee ama sieng@@@@0@3@eat person rice'People eat rice.'@guy emerson, travis nguyen@april 7, 2017
+6@author@@@1@wo@nee sieng ama@@@@0@3@eat rice person'People eat rice.'@guy emerson, travis nguyen@april 7, 2017
+7@author@@@1@wo@ama taa@@@@1@2@person sleep'People are sleeping.'@guy emerson, travis nguyen@april 7, 2017
+8@author@@@1@wo@taa ama@@@@0@2@sleep person'People are sleeping.'@guy emerson, travis nguyen@april 7, 2017
+9@{a:200}@@@1@pn@na taa@@@@1@2@1SG sleep'I am lying [in bed]/sleeping.'@guy emerson, travis nguyen@april 7, 2017
+10@author@@@1@pn@ni taa@@@@1@2@1PL.E sleep'We (except you) are lying [in bed]/sleeping.'@guy emerson, travis nguyen@april 7, 2017
+11@author@@@1@pn@pi taa@@@@1@2@1PL.I sleep'We (including you) are lying [in bed]/sleeping.'@guy emerson, travis nguyen@april 7, 2017
+12@author@@@1@pn@a taa@@@@1@2@2SG sleep'You are lying [in bed]/sleeping.'@guy emerson, travis nguyen@april 7, 2017
+13@author@@@1@pn@ri taa@@@@1@2@2PL sleep'Y'all are lying [in bed]/sleeping.'@guy emerson, travis nguyen@april 7, 2017
+14@author@@@1@pn@di taa@@@@1@2@3 sleep'They are lying [in bed]/sleeping.'@guy emerson, travis nguyen@april 7, 2017
+15@author@@@1@det@kaai hu taa@@@@1@3@dog SPC sleep'A dog (you do not know about) sleeps.'@guy emerson, travis nguyen@april 7, 2017
+16@author@@@1@det@hu kaai taa@@@@0@3@SPC dog sleep'A dog (you do not know about) sleeps.'@guy emerson, travis nguyen@april 7, 2017
+17@author@@@1@det@kaai taa@@@@1@2@dog sleep'A dog is sleeping.'@guy emerson, travis nguyen@april 7, 2017
+18@author@@@1@det,pn@di hu taa@@@@0@3@3 SPC sleep'They are sleeping'@guy emerson, travis nguyen@april 7, 2017
+19@author@@@1@det,pn@hu di taa@@@@0@3@SPC 3 sleep'They are sleeping'@guy emerson, travis nguyen@april 7, 2017
+20@author@@@1@tam@na lol@@@@1@2@1SG walk'I walk'@guy emerson, travis nguyen@april 7, 2017
+21@author@@@1@tam@na lol-i@@@@1@2@1SG walk-PFV'I have walked'@guy emerson, travis nguyen@april 7, 2017
+22@author@@@1@tam@na i-lol@@@@1@2@1SG PFV-walk'I have walked'@guy emerson, travis nguyen@april 7, 2017
+23@author@@@1@tam@na lol-e@@@@1@2@1SG walk-IPFV'I am (already) walking'@guy emerson, travis nguyen@april 7, 2017
+24@author@@@1@tam@na lol-a@@@@1@2@1SG walk-DUR'I am walking'@guy emerson, travis nguyen@april 7, 2017
+25@author@@@1@tam@na lol-o@@@@1@2@1SG walk-PUNCT'I (just) walk'@guy emerson, travis nguyen@april 7, 2017
+26@author@@@1@tam@na lol-u@@@@1@2@1SG walk-PRF'I walked'@guy emerson, travis nguyen@april 7, 2017
+27@author@@@1@tam@na lol-se@@@@1@2@1SG walk-INCP.I'I am about to walk'@guy emerson, travis nguyen@april 7, 2017
+28@author@@@1@tam@na lol-te@@@@1@2@1SG walk-INCP.C'I am to have finished walking''@guy emerson, travis nguyen@april 7, 2017
+29@author@@@1@tam@na lol-si@@@@1@2@1SG walk-PHSL.I'I have just started walking'@guy emerson, travis nguyen@april 7, 2017
+30@author@@@1@tam@na lol-ti@@@@1@2@1SG walk-PHSL.C'I have just finished walking'@guy emerson, travis nguyen@april 7, 2017
+31@author@@@1@tam@na lol-u-i@@@@1@2@1SG walk-PRF-PFV'I walked'@guy emerson, travis nguyen@april 7, 2017
+32@author@@@1@tam@na lol-i-u@@@@0@2@1SG walk-PFV-PRF'I walked'@guy emerson, travis nguyen@april 7, 2017
+33@author@@@1@tam@na lol-u-a@@@@0@2@1SG walk-PRF-DUR'I was walking'@guy emerson, travis nguyen@april 7, 2017
+34@author@@@1@tam@na lol-a-u@@@@0@2@1SG walk-DUR-PRF'I was walking'@guy emerson, travis nguyen@april 7, 2017
+35@author@@@1@tam@na lol-i-a@@@@1@2@1SG walk-PFV-DUR'I was walking'@guy emerson, travis nguyen@april 7, 2017
+36@author@@@1@tam@na lol-a-i@@@@0@2@1SG walk-DUR-PFV'I was walking'@guy emerson, travis nguyen@april 7, 2017
+37@author@@@1@neg@na lol naha@@@@1@3@1SG walk NEG'I do not walk'@guy emerson, travis nguyen@april 7, 2017
+38@author@@@1@neg@na naha lol@@@@0@3@1SG NEG walk'I do not walk'@guy emerson, travis nguyen@april 7, 2017
+39@author@@@1@neg@naha na lol@@@@0@3@NEG 1SG walk'I do not walk'@guy emerson, travis nguyen@april 7, 2017
+40@author@@@1@poss@ne-fala foka@@@@1@2@1SG.AL-house be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
+41@author@@@1@poss@fala-ne foka@@@@0@2@house-1SG.AL be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
+42@author@@@1@poss@na-fala foka@@@@0@2@1SG.INAL-house be.big'My house is big'@guy emerson, travis nguyen@april 7, 2017
+43@author@@@1@poss@e-fala foka@@@@1@2@2SG.AL-house be.big'Your (sg) house is big'@guy emerson, travis nguyen@april 7, 2017
+44@author@@@1@poss@a-fala foka@@@@0@2@2SG.INAL-house be.big'Your (sg) house is big'@guy emerson, travis nguyen@april 7, 2017
+45@author@@@1@poss@te-fala foka@@@@1@2@DISTR.AL-house be.big'Our (each of us) houses are big'@guy emerson, travis nguyen@april 7, 2017
+46@author@@@1@poss@ta-fala foka@@@@0@2@DISTR.INAL-house be.big'Our (each of us) houses are big'@guy emerson, travis nguyen@april 7, 2017
+47@author@@@1@poss@he-fala foka@@@@1@2@3.II.AL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
+48@author@@@1@poss@ha-fala foka@@@@0@2@3.II.INAL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
+49@author@@@1@poss@de-fala foka@@@@0@2@3.I.AL-house be.big'Their house is big'@guy emerson, travis nguyen@april 7, 2017
+50@author@@@1@poss@ya he-fala foka@@@@1@3@mother 3.II.AL-house be.big'Mother's house is big'@guy emerson, travis nguyen@april 7, 2017
+51@author@@@1@poss@he-fala ya foka@@@@0@3@3.II.AL-house mother be.big'Mother's house is big'@guy emerson, travis nguyen@april 7, 2017
+52@author@@@1@poss@ya de-fala ong@@@@1@3@mother 3.I.AL-house make'Mother is building her own house'@guy emerson, travis nguyen@april 7, 2017
+53@author@@@1@poss@ya da-fala ong@@@@0@3@mother 3.I.INAL-house make'Mother is building her own house'@guy emerson, travis nguyen@april 7, 2017
+54@author@@@1@poss@min foka@@@@0@2@nose be.big'The nose is big'@guy emerson, travis nguyen@april 7, 2017
+55@author@@@1@poss@na-min foka@@@@1@2@1SG.INAL-nose be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
+56@author@@@1@poss@min-na foka@@@@0@2@nose-1SG.INAL be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
+57@author@@@1@poss@ne-min foka@@@@0@2@1SG.AL-nose be.big'My nose is big'@guy emerson, travis nguyen@april 7, 2017
+58@author@@@1@poss@a-min foka@@@@1@2@2SG.INAL-nose be.big'Your (sg) nose is big'@guy emerson, travis nguyen@april 7, 2017
+59@author@@@1@poss@e-min foka@@@@0@2@2SG.AL-nose be.big'Your (sg) nose is big'@guy emerson, travis nguyen@april 7, 2017
+60@author@@@1@poss@ta-min foka@@@@1@2@DISTR.INAL-nose be.big'Our (each of us) noses are big'@guy emerson, travis nguyen@april 7, 2017
+61@author@@@1@poss@te-min foka@@@@0@2@DISTR.AL-nose be.big'Our (each of us) noses are big'@guy emerson, travis nguyen@april 7, 2017
+62@author@@@1@poss@ha-min foka@@@@1@2@3.II.INAL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
+63@author@@@1@poss@he-min foka@@@@0@2@3.II.AL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
+64@author@@@1@poss@da-min foka@@@@0@2@3.I.INAL-nose be.big'Their nose is big'@guy emerson, travis nguyen@april 7, 2017
+65@author@@@1@poss@ya ha-min foka@@@@1@3@mother 3.II.INAL-nose be.big'Mother's nose is big'@guy emerson, travis nguyen@april 7, 2017
+66@author@@@1@poss@ha-min ya foka@@@@0@3@3.II.INAL-nose mother be.big'Mother's nose is big'@guy emerson, travis nguyen@april 7, 2017
+67@author@@@1@poss@ya da-min lang@@@@1@3@mother 3.I.INAL-nose wash'Mother is washing her own nose'@guy emerson, travis nguyen@april 7, 2017
+68@author@@@1@poss@ya de-min lang@@@@0@3@mother 3.I.AL-nose wash'Mother is washing her own nose'@guy emerson, travis nguyen@april 7, 2017
+69@author@@@1@poss@ni-fala foka@@@@1@2@1PL.E.AL-house be.big'Our (excl.) house is big'@guy emerson, travis nguyen@april 7, 2017
+70@author@@@1@poss@ni-min foka@@@@1@2@1PL.E.INAL-nose be.big'Our (excl.) noses are big'@guy emerson, travis nguyen@april 7, 2017
+71@author@@@1@poss@pi-fala foka@@@@1@2@1PL.I.AL-house be.big'Our (incl.) house is big'@guy emerson, travis nguyen@april 7, 2017
+72@author@@@1@poss@pi-min foka@@@@1@2@1PL.I.INAL-nose be.big'Our (incl.) noses are big'@guy emerson, travis nguyen@april 7, 2017
+73@author@@@1@poss@ri-fala foka@@@@1@2@2PL.AL-house be.big'Y'all's house is big'@guy emerson, travis nguyen@april 7, 2017
+74@author@@@1@poss@ri-min foka@@@@1@2@2PL.INAL-nose be.big'Y'all's noses are big'@guy emerson, travis nguyen@april 7, 2017
+75@author@@@1@agr@ya di sieng nee@@@@1@4@mother 3A rice eat'Mother is eating rice'@guy emerson, travis nguyen@april 7, 2017
+76@author@@@1@agr@no di sieng nee@@@@0@4@1SG 3A rice eat'I am eating rice'@guy emerson, travis nguyen@april 7, 2017
+77@author@@@1@agr@maama moku ha-fanga@@@@1@3@father child 3II.PAT-say'Father orders the child'@guy emerson, travis nguyen@april 7, 2017
+78@author@@@1@agr@maama moku na-fanga@@@@0@3@father child 1SG.PAT-say'Father orders the child'@guy emerson, travis nguyen@april 7, 2017
+79@author@@@1@agr@maama na-fanga@@@@1@2@father 1SG.PAT-say'Father orders me'@guy emerson, travis nguyen@april 7, 2017
+80@a:248@@@1@agr@bataa moku ho-fak@@@@1@3@wood child 3II.REC-fall'A tree breaks on a child'@guy emerson, travis nguyen@april 7, 2017
+81@author@@@1@agr@bataa di moku ho-fak@@@@0@4@wood 3A child 3II.REC-fall'A tree breaks on a child'@guy emerson, travis nguyen@april 7, 2017
+82@a:249@@@1@agr@o-ne-beei@@@@1@1@2SG.REC-1SG.LOC-be.angry'You feel angry with me'@guy emerson, travis nguyen@april 7, 2017
+83@a:244@@@1@@a raha ho-kariang?@@@@1@3@2SG king 3II.REC-work'Do you work for the king?'@guy emerson, travis nguyen@april 7, 2017
+84@author@@@1@@a raha ho-kariang naha?@@@@1@4@2SG king 3II.REC-work NEG'Do you not work for the king?'@guy emerson, travis nguyen@april 7, 2017
+85@author@@@1@@a ho-kariang raha?@@@@0@3@2SG 3II.REC-work king'Do you work for the king?'@guy emerson, travis nguyen@april 7, 2017
+86@author@@@1@@ho-kariang a raha?@@@@0@3@3II.REC-work 2SG king'Do you work for the king?'@guy emerson, travis nguyen@april 7, 2017
+87@author@@@1@@ho-kariang raha a?@@@@0@3@3II.REC-work king 2SG'Do you work for the king?'@guy emerson, travis nguyen@april 7, 2017
+88@author@@@1@@raha a ho-kariang?@@@@0@3@king 2SG 3II.REC-work'Do you work for the king?'@guy emerson, travis nguyen@april 7, 2017
+89@author@@@1@@raha ho-kariang a?@@@@0@3@king 3II.REC-work 2SG'Do you work for the king?'@guy emerson, travis nguyen@april 7, 2017
+90@a:129@@@1@wh@nala e-l-takei?@@@@1@2@what 2SG.LOC-give-bite'What bit you?'@guy emerson, travis nguyen@april 7, 2017
+91@a:129@@@1@wh@maa e-l-takei?@@@@1@2@who 2SG.LOC-give-bite'Who bit you?'@guy emerson, travis nguyen@april 7, 2017
+92@a:129@@@1@wh@a-ne nala?@@@@1@2@2SG.INAL-name what'What is your name?'@guy emerson, travis nguyen@april 7, 2017
+93@a:129@@@1@wh@a-ne maa?@@@@1@2@2SG.INAL-name who'What is your name?'@guy emerson, travis nguyen@april 7, 2017
+94@a:128@@@1@wh@a nala ong?@@@@1@3@2SG what make'What are you doing/making?'@guy emerson, travis nguyen@april 7, 2017
+95@author@@@1@wh,wo@a ong nala?@@@@0@3@2SG make what'What are you doing/making?'@guy emerson, travis nguyen@april 7, 2017
+96@author@@@1@wh,wo@nala a ong?@@@@0@3@what 2SG make'What are you doing/making?'@guy emerson, travis nguyen@april 7, 2017
+97@author@@@1@wh,wo@nala ong a?@@@@0@3@what make 2SG'What are you doing/making?'@guy emerson, travis nguyen@april 7, 2017
+98@author@@@1@wh,wo@ong a nala?@@@@0@3@make 2SG what'What are you doing/making?'@guy emerson, travis nguyen@april 7, 2017
+99@author@@@1@wh,wo@ong nala a?@@@@0@3@make what 2SG'What are you doing/making?'@guy emerson, travis nguyen@april 7, 2017
+100@author@@@1@crd@faling e kawen foka@@@@1@4@axe and machete be.big'axes and swords are big'@guy emerson, travis nguyen@april 7, 2017
+101@author@@@1@crd@faling kawen e tideng foka@@@@1@5@axe machete and whetstone be.big'axes, swords, and whetstones are big'@guy emerson, travis nguyen@april 7, 2017
+102@author@@@1@crd@faling kawen foka@@@@1@3@axe machete be.big'an axe [and] machete are big'@guy emerson, travis nguyen@april 7, 2017
+103@author@@@1@crd@na lol e taa@@@@0@4@1SG walk and sleep'I walk and sleep'@guy emerson, travis nguyen@april 7, 2017
+104@author@@@1@crd@kuya ya yoikoi foka@@@@1@4@bird SEQ turtle be.big'a bird and turtle are big'@guy emerson, travis nguyen@april 7, 2017
+105@author@@@1@crd@na lol ya taa@@@@1@4@1SG walk SEQ sleep'I walk and (then) sleep'@guy emerson, travis nguyen@april 7, 2017
+106@author@@@1@crd@maama re ya foka@@@@1@4@father or mother be.big'father or mother is big'@guy emerson, travis nguyen@april 7, 2017
+107@author@@@1@crd@a taa re a me?@@@@1@5@2SG lie or 2SG come'Are you sleeping or are you coming?'@guy emerson, travis nguyen@april 7, 2017
+108@author@@@1@crd@a taa re me?@@@@1@4@2SG lie or come'Are you sleeping or coming?'@guy emerson, travis nguyen@april 7, 2017
+109@a:@@@1@crd@di tur-i ya mi me@@@@1@5@3A scoop-PFV SEQ take come'She scooped up and brought it (towards DC)'@guy emerson, travis nguyen@april 7, 2017
+110@a:349@@@1@crd@afeida moku me yai paneng@@@@1@5@yesterday kid come song make'Yesterday, the child came to sing'@guy emerson, travis nguyen@april 7, 2017
+111@author@@@1@crd@moku me yai afeida paneng@@@@0@5@kid come yesterday song make'Yesterday, the child came to sing'@guy emerson, travis nguyen@april 7, 2017
+112@author@@@1@crd@moku di kuya he-l-tahai naha@@@@1@5@child 3A bird 3II.LOC-give-search NEG'A child does not look for a bird'@guy emerson, travis nguyen@april 7, 2017
+113@author@@@1@crd@moku di kuya he-l naha tahai@@@@0@6@child 3A bird 3II.LOC-give NEG search'A child does not look for a bird'@guy emerson, travis nguyen@april 7, 2017
+114@a:110@@@1@adj@kaai akan kalieta@@@@1@3@dog black be.old'The black dog is old'@guy emerson, travis nguyen@april 7, 2017
+115@a:110@@@1@adj@kaai foka kalieta@@@@1@3@dog big be.old'The big dog is old'@guy emerson, travis nguyen@april 7, 2017
+116@author@@@1@adj@akan kaai kalieta@@@@0@3@black dog be.old'The black dog is old'@guy emerson, travis nguyen@april 7, 2017
+117@author@@@1@adj@foka kaai kalieta@@@@0@3@big dog be.old'The big dog is old'@guy emerson, travis nguyen@april 7, 2017
+118@author@@@1@adv@na wan taa@@@@1@3@1SG already sleep'I am already sleeping'@guy emerson, travis nguyen@april 7, 2017
+119@author@@@1@adv@na taa wan@@@@1@3@1SG sleep already'I am already sleeping'@guy emerson, travis nguyen@april 7, 2017
+120@a:125@@@1@adv@na el kopi buut-i@@@@1@4@1SG before coffee consume-PFV'I had coffee before'@guy emerson, travis nguyen@april 7, 2017
+121@author@@@1@adv@na kopi el buut-i@@@@0@4@1SG kopi before consume-PFV'I had coffee before'@guy emerson, travis nguyen@april 7, 2017
+122@author@@@1@adv,crd@moku yal di tadei da-yongfi@@@@1@5@child now 3A lie 3I.PAT-forget'The child is now asleep'@guy emerson, travis nguyen@april 7, 2017
+123@author@@@1@adv,crd@moku di yal tadei da-yongfi@@@@1@5@child 3A now lie 3I.PAT-forget'The child is now asleep'@guy emerson, travis nguyen@april 7, 2017
+124@author@@@1@emb-d@kaai taa ama h-ieng-lak-a@@@@1@4@dog sleep person 3II.PAT-see-mark-DUR'People know that the dog is sleeping'@guy emerson, travis nguyen@april 7, 2017
+125@author@@@1@cop@ne-feela mayol@@@@1@2@1SG.AL-friend woman'My friend is a woman'@guy emerson, travis nguyen@april 7, 2017
+126@a:110@@@1@cop@kaai akan-i@@@@1@2@dog black-put'The dog is black'@guy emerson, travis nguyen@april 7, 2017
+127@author@@@1@cop@kaai akan@@@@0@2@dog black'The dog is black'@guy emerson, travis nguyen@april 7, 2017
+128@author@@@1@cop@moku fila@@@@1@2@child be.young'A child is young'@guy emerson, travis nguyen@april 7, 2017
+129@author@@@1@cop@moku fila-i@@@@0@2@child be.young-put'A child is young'@guy emerson, travis nguyen@april 7, 2017
+130@a:105@@@1@cop@di pelang tah-a@@@@1@3@3A canoe put.on-DUR'He is on a canoe'@guy emerson, travis nguyen@april 7, 2017
