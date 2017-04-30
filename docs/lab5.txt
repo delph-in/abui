@@ -141,7 +141,7 @@ Deictic demonstratives indicate horizontal and vertical distance from the speake
 In a previous lab, we decided to treat anaphoric demonstratives as determiners.
 Our grammar currently does not cover the "deictic demonstratives".
 
-Deictic demonstratives appear after nouns:
+Anaphoric demonstratives appear after nouns:
 
 #X Grammatical (noun DEM verb)
 Source: author
@@ -152,7 +152,7 @@ kaai hu taa
 dog SPC sleep
 'A dog (you do not know about) sleeps.'
 
-Deictic demonstratives are ungrammatical before nouns:
+They are ungrammatical before nouns:
 
 #X Ungrammatical (DEM noun verb)
 Source: author
@@ -163,7 +163,7 @@ hu kaai taa
 SPC dog sleep
 'A dog (you do not know about) sleeps.'
 
-Moreover, deictic demonstratives cannot appear after pronouns:
+Moreover, anaphoric demonstratives cannot appear after pronouns:
 
 #X Ungrammatical (pronoun DEM verb)
 Source: author
