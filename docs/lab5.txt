@@ -1,0 +1,369 @@
+Guy Emerson, Travis Nguyen
+Prof. Emily Menon Bender
+LING 567
+April 28, 2017
+
+--------------
+Lab 5 Write-Up
+--------------
+
+----------------------------------
+Adjectival and adverbial modifiers
+----------------------------------
+Adjectives
+----------
+
+In Abui, there are two types of adjectives:
+(1) regular adjectives, which František has labeled as "stative verbs".
+ - they have the same form when used attributively and predicatively.
+ - the analysis from the customization system works correctly on our testsuite
+(2) irregular adjectives, which František has labeled as "adjectives".
+ - there are only six adjectives in this class
+ - they require the suffix `-i` in order to be used as predicative adjectives.
+ - we added a lexical rule in the customization system, but needed to modify this to change the sytactic behaviour
+
+The following is an example of a regular adjective:
+
+#125 Grammatical (predicate; zero copula)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+moku fila
+child be.young
+'A child is young'
+
+The next example is that of an irregular adjective with the suffix `-i` being used as a predicative adjective:
+Note that the `-i` suffix is glossed as "put" in our grammar, but we are taking this to be a semantically empty affix
+
+#123 Grammatical (adjective combines with generic root verb to be used as head of VP)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+kaai akan-i
+dog black-put
+'The dog is black'
+
+However, the irregular adjective cannot be used alone as a predicate:
+
+#124 Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+kaai akan
+dog black
+'The dog is black'
+
+Irregular adjectives can be used attributively without the suffix:
+
+#113 Grammatical (adjective comes after the noun it modifies)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {adj}
+kaai akan kalieta
+dog black be.old
+'The black dog is old'
+
+The output of the customization system produces more types than we need.
+We first refactored the code to make it cleaner, but keeping the same analysis:
+
+adj-lex := basic-intersective-adjective-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
+
+attrib-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                              VAL.SPR cons ] ] > ].
+
+predic-adj-lex := adj-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                                            CAT [ VAL [ SPR < >,
+                                                        COMPS < > ],
+                                                  HEAD noun ] ] ] >,
+                   CONT.HOOK.XARG #xarg ] ].
+
+adj-adj-lex := attrib-adj-lex & predic-adj-lex.
+
+irreg-adj-lex := attrib-adj-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
+
+It was then straightforward to modify the lexical rule to change the syntactic behaviour from attributive to predicative:
+
+irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule & infl-lex-rule & predic-adj-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < >,
+    DTR irreg-adj-lex ].
+
+-------
+Adverbs
+-------
+
+Abui has a small set of adverbs, such as `yal` (now), `el` (before), `ko` (soon), `wan` (already).
+11 such adverbs are documented in the grammar.
+They appear before the verb, and a schema of clause structure is given in the grammar.
+However, slightly different versions of this schema are given (the adverbs are ADV):
+
+p264: ADVERBIALS FOCUS NP_A/U PRO_A ADV NP_U DEICT V
+p240: FOCUS ADVERBIALS NP PRO_A ADV NP_U V NEG/APM DEM
+
+The grammar also states:
+"Optionally, adverbials are extracted to the focus position in the far left of a clause or form a separate adverbial phrase"
+
+Points that need to be clarified are:
+1. If an adverb appears at the beginning of a clause (before an A argument), does this have a change in meaning?
+2. For intransitive verbs, does ADV take a different position depending on whether the verb takes an A or U argument?
+3. For transitive verbs, does ADV take a different position depending on whether the verb takes an A and U, or two U arguments?
+
+For the time being, we can definitely say that:
+ - adverbs appear preverbally
+ - there is some variation in their postion relative to the verbs' arguments
+
+We have analysed adverbs with the following lexical type:
+
+adv-lex := basic-int-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
+                       HEAD.MOD < [ LOCAL.CAT.HEAD verb ] >,
+                       VAL [ COMPS < >,
+                             SUBJ < >,
+                             SPR < >,
+			     SPEC < > ] ] ].
+
+-------------------------------------------
+Agreement between adjectives and head nouns
+-------------------------------------------
+
+Abui does not have agreement between adjectives and head nouns.
+
+---------------------------------------------
+Demonstratives and/or markers of definiteness
+---------------------------------------------
+
+Two types of "demonstrative" are documented in the grammar, "deictic demonstratives" and "anaphoric demonstratives".
+Deictic demonstratives appear at the very beginning of an NP,
+while anaphoric demonstrives appear at the very end.
+Deictic demonstratives indicate horizontal and vertical distance from the speaker or addressee,
+while anaphoric demonstratives indicate definiteness, and "discourse location" (proximate, medial, distal) from the speaker or addressee.
+In a previous lab, we decided to treat anaphoric demonstratives as determiners.
+Our grammar currently does not cover the "deictic demonstratives".
+
+TODO cognitive status
+
+--------------------
+Argument optionality
+--------------------
+
+Although there are examples of argument drop in the grammar, the topic is not covered explicitly.
+As a result, it is difficult to state its information status. We will have to consult with František and Benny.
+
+-----------
+Possessives
+-----------
+
+In Abui, the possessive construction takes the following form, where the possessor NP is optional:
+(possessor) prefix possessum
+
+The prefix must agree with the possessor in person and number,
+and must agree with the possessum in "alienability".
+Inalienable nouns must appear in the possessive construction,
+while for alienable nouns, it is optional.
+
+The following is a possessive construction using an inalienable noun:
+
+#53 1SG
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+na-min foka
+1SG.INAL-nose be.big
+'My nose is big'
+
+#55 Ungrammatical alienable 1SG with inalienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ne-min foka
+1SG.AL-nose be.big
+'My nose is big'
+
+#52 Ungrammatical inalienable noun without possession
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+min foka
+nose be.big
+'The nose is big'
+
+The next example is a possessive construction using an alienable noun:
+
+#39 Ungrammatical 1SG after noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+fala-ne foka
+house-1SG.AL be.big
+'My house is big'
+
+#40 Ungrammatical inalienable 1SG with alienable noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+na-fala foka
+1SG.INAL-house be.big
+'My house is big'
+
+In the third person, the possessor can be optionally expressed with an additional NP:
+
+#64 3.II with noun
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+ya ha-min foka
+mother 3.II.INAL-nose be.big
+'Mother's nose is big'
+
+#65 Ungrammatical 3.II with possessor noun after possessed noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+ha-min ya foka
+3.II.INAL-nose mother be.big
+'Mother's nose is big'
+
+The prefixes used in possession are also used in object agreement.
+So, we first broke up the inflectional rule for agreement into two:
+the first rule adds the prefix, and puts the pernum information into a dummy feature;
+the second rule identifies this feature with the pernum information of the object.
+
+pron-prefix-lex-rule-super := infl-lex-rule &
+  [ SYNSEM #ss,
+    DTR.SYNSEM #ss & [ LOCAL.CAT.HEAD +nv ],
+    INFLECTED prefixed ].
+
+i-1sg-lex-rule := pron-prefix-lex-rule-super &
+  [ INFLECTED [ PRON-PERNUM 1sg,
+                PRON-CLASS class-i ] ].
+
+(and similarly for all other prefixes)
+
+u-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
+  [ INFLECTED infl-satisfied,
+    SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM #pn,
+    DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM #pn ] ].
+
+The prefixes are grouped into one of three classes.
+For possession, only classes i and iii can be used,
+which are for alienable and inalienable nouns, respectively.
+Some are underspecified between classes i and iii.
+The classes also indicate different types of verbal argument.
+We are currently not differentiating the verb semantics,
+but this approach can be extended to do so.
+
+prefixed := inflected &
+  [ PRON-PERNUM pernum,
+    PRON-CLASS pron-class ].
+
+pron-class := *top*.
+class-i-iii := pron-class &
+  [ NOUN-AL bool ].
+class-i := class-i-iii &
+  [ NOUN-AL + ].
+class-iii := class-i-iii &
+  [ NOUN-AL - ].
+class-ii := pron-class.
+
+With the object agreement rule split into two,
+we can now introduce a separate rule for possessives:
+
+pos-lex-rule := const-lex-rule & same-head-lex-rule & subj-change-only-lex-rule
+  [ INFLECTED infl-satisfied,
+    SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #poss & [ PNG.PERNUM #pn ],
+					  CAT [ HEAD noun,
+						VAL [ SPR < >,
+						      SUBJ < >,
+						      SPEC < >,
+						      COMPS < > ] ] ] ] >,
+    C-CONT [ HOOK [ INDEX #index,
+		    LTOP #lbl ],
+	     RELS <! arg12-ev-relation & [ PRED "poss_rel",
+					   LBL #lbl,
+					   ARG1 #index,
+					   ARG2 #poss ] !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    DTR pron-prefix-lex-rule-super & [ INFLECTED [ PRON-PERNUM #pn,
+						   PRON-CLASS.NOUN-AL #al ],
+				       SYNSEM.LOCAL [ CAT.VAL.SUBJ < >,
+						      CONT.HOOK [ INDEX #index & [ COG-ST uniq+fam+act,
+										   PNG.ALIENABLE #al ],
+								  LTOP #lbl ] ] ] ].
+
+This introduces the poss_rel, but not the quantifier -
+firstly, this would make the label of the nominal predicate inaccessible,
+and secondly, the possessive construction can co-occur with "anaphoric demonstratives",
+which we are treating as introducing a quantifier.
+We have emailed František and Benny to ask if there are any restrictions
+on co-occurrence of anaphoric demonstratives and possessives.
+
+In the above rule, the possessor is introduced as the SUBJ of the possessed noun.
+The possessor and possessum combine with the following rule:
+
+pos-phrase := basic-head-subj-phrase & head-final & 
+  [ SYNSEM.LOCAL.CAT.HEAD noun ].
+
+The possessor can also be dropped.
+It is almost enough to use basic-head-opt-subj-phrase,
+but this rule insists introduces the constraint:
+[ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX event ]
+To avoid editing matrix.tdl directly,
+we wrote a rule that is exactly the same,
+but with "event" replaced by "ref-ind".
+
+Finally, to require inalienable nouns to be possessed,
+we have modified the INFLECTED value of the inalienable noun type:
+
+inalienable-noun-noun-lex := noun-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
+    INFLECTED prefixed ].
+
+-------------
+Coverage
+-------------
+
+The current coverage of the grammar over the testsuite, compared to our baseline from last week, is:
+
+          Coverage  Overgeneration
+Baseline     53%          8%
+Current      84%         18%     
+
+The higher coverage is due to the analysis of adverbs and poessessives.
+On closer inspection, it seems that much of the overgeneration is due to asyndeton coordination -
+many of these items may in fact be grammatical, just not with the reading we intended.
+For example:
+
+maama moku na-fanga
+father child 1SG.PAT-say
+*father orders the child
+*father orders me
+father and child order me
+
+We may need to revise the testsuite in light of such cases.
+
+-------------
+Test corpus
+-------------
+
+The test corpus that we have decided to use is `la teitu nikalieta`, or the ancestor story of the Aila clan.
+It is included as supplementary material in the appendix of František Kratochvíl's grammar `A grammar of Abui`, starting on page 419.
+It features 33 sentences, each sentence written in Interlinear Glossed Text (IGT).
+The IGT contains three lines: segmented orthography including prosodic markers, a gloss in Leipzig notation, and an English translation.
+For the purposes of this assignment, we have stripped the prosodic markers and processed some of the text,
+such as inserting periods in between terms that should be treated as one token (e.g., proper names and places).
+We have also edited the corpus, since there were a few typos.

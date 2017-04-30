@@ -1103,6 +1103,15 @@ kaai akan kalieta
 dog black be.old
 'The black dog is old'
 
+#113.1 Grammatical (adjective comes after the noun it modifies)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {adj}
+kaai foka kalieta
+dog big be.old
+'The big dog is old'
+
 #114 Ungrammatical (adjective cannot come before the noun it modifies)
 Source: author
 Vetted: f
@@ -1111,6 +1120,15 @@ Phenomena: {adj}
 akan kaai kalieta
 black dog be.old
 'The black dog is old'
+
+#114.1 Ungrammatical (adjective cannot come before the noun it modifies)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+foka kaai kalieta
+big dog be.old
+'The big dog is old'
 
 ################################################################################
 # Adverbs
@@ -1221,6 +1239,15 @@ Judgment: g
 Phenomena: {cop}
 moku fila
 child be.young
+'A child is young'
+
+#125.1 Ungrammatical (regular adjectives do not require `-i` suffix)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+moku fila-i
+child be.young-put
 'A child is young'
 
 #126 Grammatical (adposition; zero copula)

@@ -1,2 +1,8 @@
 # Do not automatically add tsdb profiles
 tsdb/home/
+
+# Backup files
+**/*.swp
+**/*~
+**/#*#
+**/.#*

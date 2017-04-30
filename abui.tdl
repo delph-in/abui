@@ -76,12 +76,6 @@ phasal_completive := aspect.
 
 ;;; Nouns
 
-case := *top*.
-poss := case.
-non-poss := case.
-
-noun :+ [ CASE case ].
-
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT [ VAL [ SPR < #spr &
 				   [ LOCAL.CAT.HEAD det ] >,
@@ -353,10 +347,11 @@ u-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
 pos-lex-rule := const-lex-rule & same-head-lex-rule & subj-change-only-lex-rule
   [ INFLECTED infl-satisfied,
     SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #poss & [ PNG.PERNUM #pn ],
-					  CAT.VAL [ SPR < >,
-						    SUBJ < >,
-						    SPEC < >,
-						    COMPS < > ] ] ] >,
+					  CAT [ HEAD noun,
+						VAL [ SPR < >,
+						      SUBJ < >,
+						      SPEC < >,
+						      COMPS < > ] ] ] ] >,
     C-CONT [ HOOK [ INDEX #index,
 		    LTOP #lbl ],
 	     RELS <! arg12-ev-relation & [ PRED "poss_rel",
@@ -404,6 +399,8 @@ phasal_inchoative-lex-rule := asp1-lex-rule-super &
 phasal_completive-lex-rule := asp1-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT phasal_completive ].
 
+; Suffix for irregular adjectives
+
 irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule & infl-lex-rule & predic-adj-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.MOD < >,
     DTR irreg-adj-lex ].
@@ -430,6 +427,34 @@ bare-np-phrase := basic-bare-np-phrase &
 
 pos-phrase := basic-head-subj-phrase & head-final & 
   [ SYNSEM.LOCAL.CAT.HEAD noun ].
+
+; (like basic-head-opt-subj-phrase, but with ref-ind, instead of an event)
+pos-opt-subj-phrase := head-valence-phrase & head-only &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+	      [ LOCAL.CAT [ VAL [ SUBJ < >,
+				  COMPS #comps,
+				  SPR #spr,
+				  SPEC #spec ],
+			    POSTHEAD #ph ],
+		MODIFIED #mod ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+	       SYNSEM [ LOCAL [ CAT [ HEAD.MOD olist,
+	       	      	      	      VAL [ SUBJ < unexpressed-reg &
+						   [ OPT +,
+						     LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST in-foc ],
+								       ICONS-KEY #ikey,
+								       CLAUSE-KEY #ckey ] ] >,
+					    COMPS #comps,
+					    SPR #spr,
+					    SPEC #spec ],
+				      POSTHEAD #ph ],
+				CONT.HOOK.INDEX ref-ind ],
+			MODIFIED #mod ] ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     ICONS <! #ikey & non-focus & [ IARG1 #ckey,
+					    IARG2 #index ] !> ] ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
