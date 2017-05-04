@@ -126,7 +126,7 @@ alienable-noun-noun-lex := noun-noun-lex &
 
 inalienable-noun-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
-    INFLECTED prefixed ].
+    INFLECTED.NEEDS-PREFIX + ].
 
 wh-noun-noun-lex := no-spr-noun-lex.
 
@@ -249,9 +249,25 @@ neg-adv-lex := basic-scopal-adverb-lex &
 ; On nouns, they indicate possession
 ; On verbs, they indicate agreement
 
+; These features record if we need or have a prefix
+
+inflected :+
+  [ NEEDS-PREFIX luk,
+    PREFIXED luk ].
+
+infl-satisfied :+
+  [ NEEDS-PREFIX na-or-- ].
+
+; Prefixing is done through two lexical rules
+; The first rule adds information, with the following type
+; The second rule uses the information
+
 prefixed := inflected &
-  [ PRON-PERNUM pernum,
+  [ PREFIXED +,
+    PRON-PERNUM pernum,
     PRON-CLASS pron-class ].
+
+; These are the prefix classes
 
 pron-class := *top*.
 class-i-iii := pron-class &
@@ -264,12 +280,13 @@ class-ii := pron-class.
 
 ;;; Lexical rule types
 
-; These rules add the pernum value to a dummy slot
-; A second rule will use the value appropriately
+; These rules add the pernum and class values
+; A second rule will use the values appropriately
 
 pron-prefix-lex-rule-super := infl-lex-rule &
   [ SYNSEM #ss,
-    DTR.SYNSEM #ss & [ LOCAL.CAT.HEAD +nv ],
+    DTR [ SYNSEM #ss & [ LOCAL.CAT.HEAD +nv ],
+	  INFLECTED.PREFIXED - ],
     INFLECTED prefixed ].
 
 i-1sg-lex-rule := pron-prefix-lex-rule-super &
@@ -359,12 +376,12 @@ iii-distr-lex-rule := pron-prefix-lex-rule-super &
 ; Rules which use the pernum value from the above
 
 u-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
-  [ INFLECTED infl-satisfied,
+  [ INFLECTED.PREFIXED +,
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM #pn,
     DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM #pn ] ].
 
 pos-lex-rule := const-lex-rule & same-head-lex-rule & subj-change-only-lex-rule
-  [ INFLECTED infl-satisfied,
+  [ INFLECTED.PREFIXED +,
     SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #poss & [ PNG.PERNUM #pn ],
 					  CAT [ HEAD noun,
 						VAL [ SPR < >,
