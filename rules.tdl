@@ -13,6 +13,8 @@ pos := pos-phrase.
 
 pos-opt-subj := pos-opt-subj-phrase.
 
+np-predicate := np-predicate-rule.
+
 ; Rule instances for head-modifier structures. Corresponding types
 ; are defined in matrix.tdl.  The matrix customization script did
 ; not need to add any further constraints, so no corresponding types
