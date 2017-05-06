@@ -15,7 +15,7 @@ Source: a:420
 Vetted: t
 Judgment: g
 Phenomena: {}
-la teitu ni-kalieta pa Muna buku naha=te Pantar buku mi-a ba ta-t ta-wal-i
+la teitu ni-kalieta pa Muna buku nahate Pantar buku mi-a ba ta-t ta-wal-i
 be.MD first 1PL.E.AL-old.person go.down.CNT Muna land or Pantar land be.in-DUR LNK DISTR.PAT-lie DISTR.PAT-augment-PFV
 'it was first, our ancestors lived in Muna or in the Pantar area, they married and they procreated'
 
@@ -24,7 +24,7 @@ Source: a:420
 Vetted: t
 Judgment: g
 Phenomena: {}
-raha Muna Seli naha=te raha Pandai ho-mi=ng ta-luol ta-ren-a he-n mi-a ba ama kang ha-d-a beka-d-i ha-d-a yenang-d-i me Muna melang mi-a ba he-n ta-wal-i kalieta loku marang Likwatang buku he-rotang-d-i
+raha Muna Seli nahate raha Pandai ho-mi=ng ta-luol ta-ren-a he-n mi-a ba ama kang ha-d-a beka-d-i ha-d-a yenang-d-i me Muna melang mi-a ba he-n ta-wal-i kalieta loku marang Likwatang buku he-rotang-d-i
 king Muna Seli or king Pandai 3II.REC-be.in=see DISTR.PAT-gain DISTR.PAT-turn.to.CPL-DUR 3II.LOC-see.CPL be.in-DUR LNK person be.good 3II.PAT-hold-DUR be.bad-hold-PFV 3II.PAT-hold-DUR war-hold-PFV come Muna village be.in-DUR LNK 3II.LOC-see.CPL DISTR.PAT-augment-PFV old.person PL come.up.ICP Likwatang land 3II.LOC-land-hold-PFV
 'the king of Muna Seli, and the King of Pandai hated each other and because of it (they) drove people to animosity and drove them to war, till those (that) were in Muna village, split because of it, and the ancestors came up and embarked in the Likwatang area'
 
@@ -33,8 +33,8 @@ Source: a:420
 Vetted: t
 Judgment: g
 Phenomena: {}
-sei Likwatang buku mi-a-d-i ya di mara Tipai Babi buku do he-d-o mi=ng afen-i
-come.down.CNT Likwatang land be.in-be.at-hold-PFV SEQ 3A go.up.CNT place land PRX 3II.LOC-hold-PNCT be.in=see stay.CPL=PFV
+sei Likwatang buku mi-a-d-i ya di mara Tipai_Babi buku do he-d-o mi=ng afen-i
+come.down.CNT Likwatang land be.in-be.at-hold-PFV SEQ 3A go.up.CNT place land PRX 3II.LOC-hold-PNCT be.in=see stay.CPL-PFV
 'they came down getting to the Likwatang area and, went up to the Tipai Babi area, there they stayed'
 
 #4 la teitu nikalieta (sentence 4)
@@ -69,8 +69,8 @@ Source: a:421
 Vetted: t
 Judgment: g
 Phenomena: {}
-di sei pun namei marang+ he-tilipang Loma Lohu Kalang Masang di mara Lalamang buku do di he-afen-i
-3A come.down.CNT field cultivate come.up.ICP 3II.AL-tip Loma Lohu Kalang Masang 3A go.up.CNT Lalamang land PRX 3A 3II.LOC-stay.CPL-PFV
+di sei pun namei marang he-tilipang Loma_Lohu Kalang_Masang di mara Lalamang buku do di he-afen-i
+3A come.down.CNT field cultivate come.up.ICP 3II.AL-tip place place 3A go.up.CNT place land PRX 3A 3II.LOC-stay.CPL-PFV
 'they started to made fields upwards till the tip of Loma Lohu (lit.: Long Slope) and Kalang Masang, they went up to the Lalamang area where they stayed'
 
 #8 la teitu nikalieta (sentence 8)
@@ -78,7 +78,7 @@ Source: a:421
 Vetted: t
 Judgment: g
 Phenomena: {}
-Lalamang buku do he-afen-i he-n mi-a ba di mara abui Kewai buku do he-d-o di=ng yaa-d-i de-lelang lol ama he-n mi-a ba he-pet he-kafuk naha=te he-sora he-sapada ama hie/n-i ya
+Lalamang buku do he-afen-i he-n mi-a ba di mara abui Kewai buku do he-d-o di=ng yaa-d-i de-lelang lol ama he-n mi-a ba he-pet he-kafuk nahate he-sora he-sapada ama h-ie/n-i ya
 place land PRX 3II.LOC-stay.CPL-PFV 3II.LOC-see.CPL be.in-DUR LNK 3A go.up.CNT mountain place land PRX 3II.LOC-hold-PNCT 3A=see go-hold-PFV 3I.AL-family walk person 3II.LOC-see be.in-DUR LNK 3II.AL-bow 3II.AL-arrow or 3II.AL-sword 3II.AL-machete person 3II.PAT-see.CPL-PFV SEQ
 'they lived in Lalamang area, being there they went up to the mountains, to the Kewai area they went to visit their kin, people that were there their bows and arrows, or the swords and machetes, people saw them and said:'
 
@@ -96,7 +96,7 @@ Source: a:422
 Vetted: t
 Judgment: g
 Phenomena: {}
-kalieta Pelang Mai Baruen he-d-o wi-d-a ba he-d-o ni-d-u hu ni kariang ni-d-e he-ong ni-d-e he-paneng ma haba nala ba mi he-do he-kariang he-i\ pa melang it-i
+kalieta Pelang Mai Baruen he-d-o wi-d-a ba he-d-o ni-d-u hu ni kariang ni-d-e he-ong ni-d-e he-paneng ma haba nala ba mi he-d-o he-kariang he-i\ pa melang it-i
 old.person Pelang Mai Baruen 3II.LOC-hold-PNCT be.like.MD.CPL-hold-DUR LNK 3II.LOC-hold-PNCT 1Pl.E.LOC-hold-PRF SPC 1PL.E work 1PL.E.LOC-hold-IPFV 3II.LOC-make 1PL.E.LOC-hold-IPFV 3II.LOC-make be.PRX but what LNK take 3II.LOC-hold-PNCT 3II.LOC-work 3II.LOC-put go.down.CNT village lie.on-PFV
 'the ancestor Pelang Mai Baruen (said): '(weapons) like that those, it was us, we worked, it is us who make them, us, we make them, (this is the case, but), what (tools) (we) need to make them (weapons), it is below in the village''
 
@@ -105,8 +105,8 @@ Source: a:422
 Vetted: t
 Judgment: g
 Phenomena: {}
-he-n mi-a ba sei pol kiding pol foka Yoimang sei tafuda ban-i mara Kafak Beka mia di ma ama he-tipai tuku ameta-ameta di bai+ mi ba ama he-kafuk he-lui he-kawen he-l
-3II.LOC.see.CPL be.in-DUR LNK come.down.CNT hammer be.little hammer be.big place come.down.CNT be.all carry.on.shoulder.CPL-PFV go.up.CNT area be.in-DUR 3A be.PRX person 3II.AL-iron piece RED[be.small] 3A as.well take LNK person 3II.AL-arrow 3II.AL-knife 3II.AL-machete 3II.LOC-give
+he-n mi-a ba sei pol kiding pol foka Yoimang sei tafuda ban-i mara Kafak_Beka mi-a di ma ama he-tipai tuku ameta-ameta di bai mi ba ama he-kafuk he-lui he-kawen he-l
+3II.LOC-see.CPL be.in-DUR LNK come.down.CNT hammer be.little hammer be.big place come.down.CNT be.all carry.on.shoulder.CPL-PFV go.up.CNT area be.in-DUR 3A be.PRX person 3II.AL-iron piece be.small-be.small 3A as.well take LNK person 3II.AL-arrow 3II.AL-knife 3II.AL-machete 3II.LOC-give
 'because of it they came down, small hammer, big hammers, they came down to Yoimang, carried everything up to Kafak Beka, he was here, people's small pieces of iron, they also took them to make arrows for people knifes and machetes'
 
 #12 la teitu nikalieta (sentence 12)
@@ -159,8 +159,7 @@ Source: a:424
 Vetted: t
 Judgment: g
 Phenomena: {}
-di fotong kalol ba na-l-a pesing tading ha-tol tadielang tai i\-a he-ni-l ma-i
-ye ko di mi-a kang tapi kawen naha=te sora sapada wok ma-i ye he-n-u sama naha
+di fotong kalol ba na-l-a pesing tading ha-tol tadielang tai i\-a he-ni-l ma-i ye ko di mi-a kang tapi kawen nahate sora sapada wok ma-i ye he-n-u sama naha
 3A seer foretell LNK be.like.PRX.CNT-give-DUR bamboo splinter 3II.PAT-reach stipel put.on put-DUR 3II.LOC-be.like.PRX.CPL-give be.PRX-PFV SEQ soon 3A take-DUR be.good but machete or sword machete throw be.PRX-PFV LNK 3II.LOC-be.like.PRX-PRF be.with NEG
 'they were considering that, (they would) stick out bamboo splinters and put sharp stipels on the top of it, and when done so then they could get them but the machetes or swords, if they would use them, then it would not succeed'
 
@@ -187,7 +186,7 @@ Source: a:425
 Vetted: t
 Judgment: g
 Phenomena: {}
-yaa foka afenga loku ama tafuda+ karang i\ ama tafuda he-mit-d-i ya he-d-o do-ahiling-d-i
+yaa foka afenga loku ama tafuda karang i\ ama tafuda he-mit-d-i ya he-d-o do-ahiling-d-i
 road be.big be.other PL person be.all barrier put person be.all 3II.LOC-sit.CPL-hold-PFV SEQ 3II.LOC-hold-PNCT 3I.REC-broad-hold-PFV
 'people put barriers on all the other big paths, people watched them all and there (in the middle of the slope) they made space'
 
@@ -206,7 +205,7 @@ Vetted: t
 Judgment: g
 Phenomena: {}
 he-n mi-a-d-i=se kang ta ama he-n ma kalieta do fen-i Luruen kalieta do-na kal furai sei Yoimang buku mi-a-d-i
-3II.LOC-see.CPL be.in-be.at-hold-PFV=INCP.I be.PRX.AD Luruen 3II.LOC-see.CPL be.PRX old.person PRX injure.CPL-PFV name old.person 3I.REC-be.like.PRX.CNT set.away run.CNT come.down.CNT Yoimang land be.in-be.at-hold-PFV
+3II.LOC-see.CPL be.in-be.at-hold-PFV=INCP.I be.good be.PRX.AD Luruen 3II.LOC-see.CPL be.PRX old.person PRX injure.CPL-PFV name old.person 3I.REC-be.like.PRX.CNT set.away run.CNT come.down.CNT Yoimang land be.in-be.at-hold-PFV
 'he got there and it was finished, people were nearby him and the ancestor got killed, the ancestor Luruen remained alone, he ran downwards and got to the Yoimang area'
 
 #23 la teitu nikalieta (sentence 23)
@@ -215,7 +214,7 @@ Vetted: t
 Judgment: g
 Phenomena: {}
 sei Yoimang mi-a ama da-ra la he-ha-liol ruwol kiek=ti ama sei ho-buok ruwol kiek=ti sei ba na-l-a mi kolmalei-kukalei ha-liel ba he-ta\n-i
-come.down.CNT place be.in-DUR person 3I.PAT-reach.CNT be.MD 3II.LOC-3II.PAT-gain chicken cackle=PHSL.C person come.down.CNT 3II.REC-ambush chicken cackle=PHSL.C come.down.CNT LNK be.like.PRX.CNT-give-DUR CONJ k.o.drum 3II.PAT-lift LNK he-ta\n-i:#
+come.down.CNT place be.in-DUR person 3I.PAT-reach.CNT be.MD 3II.LOC-3II.PAT-gain chicken cackle=PHSL.C person come.down.CNT 3II.REC-ambush chicken cackle=PHSL.C come.down.CNT LNK be.like.PRX.CNT-give-DUR CONJ k.o.drum-cockadoodledoo 3II.PAT-lift LNK he-ta\n-i:#
 'coming down to Yoimang, people kept following him there, after the chicken cackled (around midnight), people came down to ambush him, after the chicken cackled, they came down like this he took a kolmalei-kukalei drum and gave it to them'
 
 #24 la teitu nikalieta (sentence 24)
@@ -224,7 +223,7 @@ Vetted: t
 Judgment: g
 Phenomena: {}
 ri sei-sei do beka hare ri tafaa it-i do bang ba la\k-e
-2PL RED[come.down.CNT] PRX be.bad so 2PL drum lie.on-PFV PRX carry.on.shoulder LNK leave.for-IPFV
+2PL come.down.CNT-come.down.CNT PRX be.bad so 2PL drum lie.on-PFV PRX carry.on.shoulder LNK leave.for-IPFV
 'that you keep coming down is bad, so you take this drum (lying here) and leave'
 
 #25 la teitu nikalieta (sentence 25)
@@ -242,7 +241,7 @@ Vetted: t
 Judgment: g
 Phenomena: {}
 he-n mi-a ba kalieta loku de-nala kar-nuku=ng binen-r-i-a di he-n beka hare ko pi la po-taki-a sampai ama sei melang afeng mi-a ba ama kang do neng mayol ama fen-i to-ha-loi to-ha-siei ya ne-kalieta neng nuku mayol nuku di sei taki ba sei Likwotang mi-a-d-i ya mayol afung mi-a he-n la sei pe hare ha-d-o ba la\k-la\k-i ba sei tut ha-luol he-d-o mi-a ba ma ahel-i\
-3II.LOC-see.CPL be.in-DUR LNK old.person PL 3I.AL-what ten-one=see ready-reach-PFV-DUR 3A 3II.LOC-see.CPL be.bad so soon 1PL.I be.MD 1PL.I.REC-flee-DUR till person come.down.CNT village hamlet be.in-DUR LNK person be.good PRX man woman person injure.CPL-PFV DISTR.REC-3II.PAT-put.far DISTR.REC-3II.PAT-come.down.ICP SEQ 1SG.AL-old.person man one woman one 3A come.down.CNT flee LNK come.down.CNT Likwotang be.in-be.at-hold-PFV SEQ woman pregnant be.in-DUR 3II.LOC-see.CPL be.MD come.down.CNT be.near so 3II.PAT-hold-PNCT LNK RED[leave.for]-PFV LNK come.down.CNT shore 3II.PAT-gain 3II.LOC-hold-PNCT be.in-DUR LNK be.PRX breathe-put
+3II.LOC-see.CPL be.in-DUR LNK old.person PL 3I.AL-what ten-one=see ready-reach-PFV-DUR 3A 3II.LOC-see.CPL be.bad so soon 1PL.I be.MD 1PL.I.REC-flee-DUR till person come.down.CNT village hamlet be.in-DUR LNK person be.good PRX man woman person injure.CPL-PFV DISTR.REC-3II.PAT-put.far DISTR.REC-3II.PAT-come.down.ICP SEQ 1SG.AL-old.person man one woman one 3A come.down.CNT flee LNK come.down.CNT Likwotang be.in-be.at-hold-PFV SEQ woman pregnant be.in-DUR 3II.LOC-see.CPL be.MD come.down.CNT be.near so 3II.PAT-hold-PNCT LNK leave.for-leave.for-PFV LNK come.down.CNT shore 3II.PAT-gain 3II.LOC-hold-PNCT be.in-DUR LNK be.PRX breathe-put
 'and because of it the ancestors were preparing all their possessions and they (were saying) 'it is bad, we have to flee soon!' till people came down, the people that were in the village men and women, people harmed (killed) them, chased them and pushed them down, and my ancestors, one man and one woman they managed to flee and come down and got to Likwotang and the woman was pregnant about to give birth, so he went away with her and came down, followed the shore, and being there here they rested'
 
 #27 la teitu nikalieta (sentence 27)
@@ -259,7 +258,7 @@ Source: a:428
 Vetted: t
 Judgment: g
 Phenomena: {}
-ta-man=te he-n mi-a ba mara melang do mi-a ba he-kalieta loku saai ya sei ne-kalieta ha-d-o ba mara mi ba Lu Melang naha=te Kafiel Melang he-d-o di he-afen-i
+ta-man=te he-n mi-a ba mara melang do mi-a ba he-kalieta loku saai ya sei ne-kalieta ha-d-o ba mara mi ba Lu Melang nahate Kafiel Melang he-d-o di he-afen-i
 DISTR.PAT-bear.CPL=INCP.C 3II.LOC-see.CPL be.in-DUR LNK go.up.CNT village PRX be.in-DUR LNK 3II.AL-old.person PL come.down.CPL SEQ come.down.CNT 1SG.AL-old.person 3II.PAT-hold-PNCT LNK go.up.CNT take LNK Lu Melang or Kafiel Melang 3II.LOC-hold-PNCT 3A 3II.LOC-stay.CPL-PFV
 'she gave birth and (for that reason) he went up to the village so that her parents (elders, family) came down and coming down, they took my (female) ancestor up to Lu Melang or Kafiel Melang village, there she stayed'
 
@@ -268,7 +267,8 @@ Source: a:428
 Vetted: t
 Judgment: g
 Phenomena: {}
-he-n mi-a ba mara melang mi-a-d-i melang mi-a parenta agama de-i\ do-ma wa ha-luol ba na-l-a yo yal-a tafuda ni sei fui naha=te Kamen-Taha buku ba he-afen do he-d-o he-di
+he-n mi-a ba mara melang mi-a-d-i melang mi-a parenta agama de-i\ do-ma wa ha-luol ba na-l-a yo yal-a tafuda ni sei fui nahate Kamen_Taha buku ba he-afen do he-d-o he-d-i
+3II.LOC-see.CPL be.in-DUR LNK go.up.CNT village be.in-be.at-hold-PFV village be.in-DUR government religion 3I.LOC-put 3I.REC-be.PRX be.like.MD.CNT 3II.PAT-gain LNK be.like.PRX.CNT-give-DUR MD.AD now-DUR be.all 1PL.E come.down.CNT flat or place and LNK 3II.LOC-stay.CPL PRX 3II.LOC-hold-PNCT 3II.LOC-hold-PFV
 'from there they went up and got to the village in the village, whatever is the will of government and religion is accepted and while doing so now all of us came down to the coast or to Kamen Taha area and we settled in it, and cultivated it'
 
 #30 la teitu nikalieta (sentence 30)
@@ -294,8 +294,8 @@ Source: a:430
 Vetted: t
 Judgment: g
 Phenomena: {}
-ma hare parenta naha=te agama kul ma-d-a ho-mi kang yal-a pi ko la ta-ra-ta-ra ma haba pi sei melang nuku afeng nuku ho-mi mi-a=ti pi ma-d-a muknehi wil kalieta kokda fing yai aremang ho-mi mi-a
-be.PRX so government or religion must be.PRX-hold-DUR 3II.REC-be.in be.good now-DUR 1PL.I soon be.MD RED[DISTR.PAT-reach.CNT] be.PRX but 1PL.I come.down.CNT village one hamlet one 3II.REC-be.in be.in-DUR=PHSL.C 1PL.I be.PRX-hold-DUR sibling.SS child old.person younger oldest folk clan 3II.REC-be.in be.in-DUR
+ma hare parenta nahate agama kul ma-d-a ho-mi kang yal-a pi ko la ta-ra-ta-ra ma haba pi sei melang nuku afeng nuku ho-mi mi-a=ti pi ma-d-a muknehi wil kalieta kokda fing yai aremang ho-mi mi-a
+be.PRX so government or religion must be.PRX-hold-DUR 3II.REC-be.in be.good now-DUR 1PL.I soon be.MD DISTR.PAT-reach.CNT-DISTR.PAT-reach.CNT be.PRX but 1PL.I come.down.CNT village one hamlet one 3II.REC-be.in be.in-DUR=PHSL.C 1PL.I be.PRX-hold-DUR sibling.SS child old.person younger oldest folk clan 3II.REC-be.in be.in-DUR
 'and so the government or religion really have a good intention, so now all of us, we dwell each in his own place but we come down to one village, into one hamlet and dwell here as siblings, children parents, brothers and sisters inside a single clan'
 
 #33 la teitu nikalieta (sentence 33)
@@ -303,6 +303,6 @@ Source: a:430
 Vetted: t
 Judgment: g
 Phenomena: {}
-tanga ananra ya he-nu mi-a ba do kan-i
+tanga ananra ya he-n-u mi-a ba do kan-i
 speech tell.CNT SEQ 3II.LOC-be.like.PRX-PRF be.in-DUR LNK PRX be.good.CPL-PFV
 'speaking and telling and so it is to here and finished'
