@@ -393,6 +393,11 @@ so we have decided not to cover this construction.
 Testsuite results
 -----------------
 
-Coverage: TODO
-Overgeneration: TODO
-Comparison with baseline: TODO
+Coverage: 85.2%
+Overgeneration: 46.2%
+Comparison with baseline: Generation for the previous lab is 81.5%, 
+and generation for the current lab is 85.2%. In addition, overgeneration for 
+the previous lab is 17.3%, and overgeneration for the current lab is 46.2%.
+
+The reason for the high overgeneration is a combination of zero-coordination 
+and nominal predicates.
