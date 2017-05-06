@@ -144,6 +144,15 @@ which is evidence that they are actually embedded:
 This example also demonstrates double negation,
 which is beyond the scope of this lab.
 
+If the complement clause precedes the matrix clause,
+it must be interpreted as a factive.
+This suggests that this is actually parataxis, rather than embedding,
+since Abui allows coordination with no overt conjunction.
+
+ ama    kafaak  buuk    naha,   na  no-     kaleng
+[person tobacco consume not]CC [1SG 1SG.REC-avoid]MC
+"people don’t smoke, I don’t want it"
+
 TODO analysis
 
 ----------------------
