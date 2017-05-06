@@ -474,6 +474,8 @@ irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule 
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
 
+;;; Verbal phrases
+
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
 
@@ -486,11 +488,39 @@ head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
+;;; Nominal phrases
+
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+
+; Nominal predicates
+
+np-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+		       VAL [ COMPS < >,
+			     SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					      CAT [ HEAD noun,
+						    VAL.SPR < > ] ] ] >,
+			     SPR < > ] ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ] !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
+				  VAL [ SPR < >,
+					COMPS < >,
+					SUBJ < > ] ],
+			    CONT.HOOK.INDEX #arg2 ] ] > ].
 
 ; Possessives
 
@@ -498,7 +528,7 @@ pos-phrase := basic-head-subj-phrase & head-final &
   [ SYNSEM.LOCAL.CAT.HEAD noun ].
 
 ; (like basic-head-opt-subj-phrase, but with ref-ind, instead of an event)
-pos-opt-subj-phrase := head-valence-phrase & head-only &
+pos-opt-subj-phrase := head-valence-phrase & head-only & head-compositional &
   [ INFLECTED #infl,
     SYNSEM canonical-synsem &
 	      [ LOCAL.CAT [ VAL [ SUBJ < >,

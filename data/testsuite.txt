@@ -1222,7 +1222,7 @@ person 3II.PAT-see-mark-DUR LNK dog sleep
 #121.4 Ungrammatical (CC ba MC)
 Source: author
 Vetted: f
-Judgment: g
+Judgment: u
 Phenomena: {emb-d}
 kaai taa ba ama h-ieng-lak-a
 dog sleep LNK person 3II.PAT-see-mark-DUR

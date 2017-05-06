@@ -1,0 +1,339 @@
+---------------
+Polar questions
+---------------
+
+Polar questions in Abui are not marked by any additional elements,
+nor does the word order change, as can be seen in the examples below.
+There might be a change of intonation, but this is not indicated in the orthography.
+
+#82 Grammatical (yes-no question; word order remains the same)
+Source: a:244
+Vetted: t
+Judgment: g
+Phenomena: {}
+a raha ho-kariang?
+2SG king 3II.REC-work
+'Do you work for the king?'
+
+#83 Grammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {}
+a raha ho-kariang naha?
+2SG king 3II.REC-work NEG
+'Do you not work for the king?'
+
+#84 Ungrammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+a ho-kariang raha?
+2SG 3II.REC-work king
+'Do you work for the king?'
+
+#85 Ungrammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+ho-kariang a raha?
+3II.REC-work 2SG king
+'Do you work for the king?'
+
+#86 Ungrammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+ho-kariang raha a?
+3II.REC-work king 2SG
+'Do you work for the king?'
+
+#87 Ungrammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+raha a ho-kariang?
+king 2SG 3II.REC-work
+'Do you work for the king?'
+
+#88 Ungrammatical (yes-no question; word order should not change)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {}
+raha ho-kariang a?
+king 3II.REC-work 2SG
+'Do you work for the king?'
+
+As a result, all sentences are underspecified as to whether
+they are questions or declaratives.
+The grammar produced by the customization system already produces
+sentences with [ ..SF: prop-or-ques ], as we want.
+
+The only thing we had to make sure was that the tokenizer stripped question marks,
+which is done with the following line in repp/vanilla.rpp:
+
+:[ \t!",\.:;?]
+
+----------------------
+Sentential complements
+----------------------
+
+In a draft paper, František has documented embedded clauses.
+Ignoring quotative uses, there appear to be two constructions:
+
+MC (ba) CC
+CC MC
+
+If the complement clause follows the matrix clause,
+there is an optional complementizer `ba`.
+If the complement clause precedes the matrix clause,
+there does not appear to be an overt complementizer.
+We have expanded the testsuite with the following examples.
+Note that `ieng-lak` is written with a space in the documentation,
+but this appears to be an idiomatic phrase,
+so we are treating it as a single token in our grammar.
+
+#121.1 Grammatical (MC CC)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+ama h-ieng-lak-a kaai taa
+person 3II.PAT-see-mark-DUR dog sleep
+'People know that the dog is sleeping'
+
+#121.2 Grammatical (CC MC)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+kaai taa ama h-ieng-lak-a
+dog sleep person 3II.PAT-see-mark-DUR
+'People know that the dog is sleeping'
+
+#121.3 Grammatical (MC ba CC)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+ama h-ieng-lak-a ba kaai taa
+person 3II.PAT-see-mark-DUR LNK dog sleep
+'People know that the dog is sleeping'
+
+#121.4 Ungrammatical (CC ba MC)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d}
+kaai taa ba ama h-ieng-lak-a
+dog sleep LNK person 3II.PAT-see-mark-DUR
+'People know that the dog is sleeping'
+
+There are examples in the paper where the embedded clause is non-factive,
+which is evidence that they are actually embedded:
+
+ na  no-     kaleng,   ama    kafaak  buuk    naha
+[1SG 1SG.REC-avoid]MC [person tobacco consume not]CC
+"I don't want that people smoke"
+
+This example also demonstrates double negation,
+which is beyond the scope of this lab.
+
+If the complement clause precedes the matrix clause,
+it must be interpreted as a factive.
+This suggests that this is actually parataxis, rather than embedding,
+since Abui allows coordination with no overt conjunction.
+
+ ama    kafaak  buuk    naha,   na  no-     kaleng
+[person tobacco consume not]CC [1SG 1SG.REC-avoid]MC
+"people don’t smoke, I don’t want it"
+
+TODO analysis
+
+----------------------
+Predicative adjectives
+----------------------
+
+As a result of the "quick" tdl fix from the last lab,
+we are already modelling predicative adjectives.
+The following is repeated from the previous writeup.
+
+Regular adjectives do not use any inflection to be used predicatively:
+
+#125 Grammatical (predicate; zero copula)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+moku fila
+child be.young
+'A child is young'
+
+The next example is that of an irregular adjective with the suffix `-i` being used as a predicative adjective:
+
+(Note that the `-i` suffix is glossed as "put" in our grammar, but we are taking this to be a semantically empty affix.)
+
+#123 Grammatical (adjective combines with generic root verb to be used as head of VP)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+kaai akan-i
+dog black-put
+'The dog is black'
+
+However, the irregular adjective cannot be used alone as a predicate:
+
+#124 Ungrammatical (adjective needs to combine with generic root verb to used as head of VP)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+kaai akan
+dog black
+'The dog is black'
+
+Irregular adjectives can be used attributively without the suffix:
+
+#113 Grammatical (irregular adjective used attributively)
+Source: a:110
+Vetted: t
+Judgment: g
+Phenomena: {adj}
+kaai akan kalieta
+dog black be.old
+'The black dog is old'
+
+The output of the customization system produces more types than we need.
+We first refactored the code to make it cleaner, but keeping the same analysis:
+
+adj-lex := basic-intersective-adjective-lex &
+  [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
+
+attrib-adj-lex := adj-lex & intersective-mod-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                              VAL.SPR cons ] ] > ].
+
+predic-adj-lex := adj-lex &
+  [ SYNSEM.LOCAL [ CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                                            CAT [ VAL [ SPR < >,
+                                                        COMPS < > ],
+                                                  HEAD noun ] ] ] >,
+                   CONT.HOOK.XARG #xarg ] ].
+
+adj-adj-lex := attrib-adj-lex & predic-adj-lex.
+
+irreg-adj-lex := attrib-adj-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
+
+It was then straightforward to modify the lexical rule to change the syntactic behavior from attributive to predicative:
+
+irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule & infl-lex-rule & predic-adj-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.MOD < >,
+    DTR irreg-adj-lex ].
+
+---------------
+Predicative PPs
+---------------
+
+There does not appear to be a separate class of adpositions in Abui.
+To express spatial relationships, there are a small number of "positional verbs", e.g.:
+
+#126 Grammatical (adposition; zero copula)
+Source: a:105
+Vetted: t
+Judgment: g
+Phenomena: {cop}
+di pelang tah-a
+3A canoe put.on-DUR
+'He is on a canoe'
+
+We have modelled these as transitive verbs,
+and have not made any changes in this lab.
+
+---------------
+Predicative NPs
+---------------
+
+Nouns can function as predicates, without any additional morphology.
+The same word order is used as for verbs:
+the predicative noun follows the subject NP.
+
+#122 Grammatical (NP as a predicate)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+ne-feela mayol
+1SG.AL-friend woman
+'My friend is a woman'
+
+There are also examples where the predicate is a name,
+which suggests that this construction requires
+the predicate to be an NP, not an N-bar
+(although we have not found attested examples with a determiner):
+
+na-      ne   Fani
+1SG.INAL-name Fani
+"My name is Fani"
+
+We modelled this by adding a rule that converts an NP to a VP:
+
+np-predicate-rule := unary-phrase & nocoord &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+		       VAL [ COMPS < >,
+			     SUBJ < [ LOCAL [ CONT.HOOK.INDEX #arg1,
+					      CAT [ HEAD noun,
+						    VAL.SPR < > ] ] ] >,
+			     SPR < > ] ],
+    C-CONT [ HOOK [ LTOP #ltop,
+		    INDEX #index,
+		    XARG #arg1 ],
+	     RELS <! arg12-ev-relation &
+		   [ PRED "_be_v_id_rel",
+		     LBL #ltop,
+		     ARG0 #index,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ] !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
+				  VAL [ SPR < >,
+					COMPS < >,
+					SUBJ < > ] ],
+			    CONT.HOOK.INDEX #arg2 ] ] > ].
+
+Compared to the rule given in the instructions,
+this requires the daughter to be an NP, not an N-bar
+(it has an empty SPR list), so it does not introduce a quantifier,
+and the parent has an empty SPEC list, to prevent overgeneration.
+
+Since the previous lab, we have also found a class of verbs,
+called "index verbs", which may be copula-like, e.g.:
+
+Simon ayoku he-     n      -u   muknehi
+Simon two   3II.LOC-be.like-PRF sibling
+"The two Simons are like siblings"
+
+(It's not clear if PRF is the right gloss,
+as this does not seem to have a perfect meaning.)
+
+It is interesting that this clause has a different word order --
+the second argument follows the verb.
+However, the section of the grammar on index verbs
+makes it clear that they have uses beyond the copula-like use,
+and there is not enough information about this use,
+so we have decided not to cover this construction.
+
+-----------------
+Testsuite results
+-----------------
+
+Coverage: TODO
+Overgeneration: TODO
+Comparison with baseline: TODO
