@@ -153,7 +153,66 @@ since Abui allows coordination with no overt conjunction.
 [person tobacco consume not]CC [1SG 1SG.REC-avoid]MC
 "people don’t smoke, I don’t want it"
 
-TODO analysis
+To account for embedded clauses, we included a few changes in abui.tdl, lexicon.tdl, and rules.tdl.
+
+In abui.tdl, we introduced a few changes:
+
+In "Matrix Type Addenda", we added two new rules:
+
+basic-head-opt-comp-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD +vj ].
+
+individual :+ [ COG-ST cog-st ].
+
+In addition, we introduced a few new lexical rules for clause-embedding verbs, including proposition and question clause-embedding verbs, and a complementizer lexical rule:
+
+clause-embedding-verb-lex := verb-lex & clausal-second-arg-trans-lex-item & 
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp >,
+    ARG-ST.REST.FIRST #comp & 
+                      [ LOCAL [ CAT [ HEAD +vc,
+                                      VAL [ COMPS < >,
+                                            SPR < >,
+                                            SUBJ < > ] ],
+                                CONT.HOOK.INDEX.SF prop-or-ques ] ] ].
+
+prop-embedding-verb-lex := clause-embedding-verb-lex &
+  [ ARG-ST.REST.FIRST.LOCAL.CONT.HOOK.INDEX.SF prop ].
+
+ques-embedding-verb-lex := clause-embedding-verb-lex & 
+  [ ARG-ST.REST.FIRST.LOCAL.CONT.HOOK.INDEX.SF ques ].
+
+comp-lex := raise-sem-lex-item & basic-one-arg & 
+  [ ARG-ST.FIRST #comp & [ LOCAL.CAT [ HEAD verb,
+                                       VAL [ COMPS < >,
+                                             SPR < >,
+                                             SUBJ < > ] ] ],
+    SYNSEM.LOCAL [ CAT [ VAL [ COMPS < #comp >,
+                               SPR < >,
+                               SUBJ < >,
+                               SPEC < > ],
+                         HEAD comp & [ MOD < > ] ],
+                   CONT.HOOK.INDEX.SF prop ] ].
+
+We also included a new phrasal rule:
+
+head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD +vc ].
+
+Moreover, we included an embedded agreement lexical rule:
+
+embed-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
+  [ INFLECTED.PREFIXED +,
+    SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD +vc,
+    DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM 3rd ] ].
+
+In lexicon.tdl, we included a lexical entry for `ba`:
+
+ba := comp-lex & 
+  [ STEM < "ba" > ].
+
+In rules.tdl, we included a new rule, head-comp:
+
+head-comp := head-comp-phrase.
 
 ----------------------
 Predicative adjectives
