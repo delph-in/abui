@@ -229,7 +229,7 @@ yongfi := trans-verb-verb-lex &
   [ STEM < "yongfi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_forget_v_rel" ].
 
-ieng-lak := trans-verb-verb-lex &
+ieng-lak := clause-embedding-verb-lex &
   [ STEM < "ieng-lak" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
@@ -299,3 +299,8 @@ el := adv-lex &
 yal := adv-lex &
   [ STEM < "yal" >,
     SYNSEM.LKEYS.KEYREL.PRED "_now_a_rel" ].
+
+;;; Complementizers
+
+ba := comp-lex & 
+  [ STEM < "ba" > ].

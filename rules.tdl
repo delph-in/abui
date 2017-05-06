@@ -22,6 +22,8 @@ head-adj-scop := head-adj-scop-phrase.
 
 comp-head := comp-head-phrase.
 
+head-comp := head-comp-phrase.
+
 subj-head := subj-head-phrase.
 
 head-spec := head-spec-phrase.
