@@ -2,4 +2,6 @@
 
 u-agr-lex := u-agr-lex-rule.
 
+embed-agr-lex := embed-agr-lex-rule.
+
 pos-lex := pos-lex-rule.

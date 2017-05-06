@@ -409,6 +409,11 @@ u-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
     SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM #pn,
     DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM #pn ] ].
 
+embed-agr-lex-rule := add-only-no-ccont-rule & const-lex-rule &
+  [ INFLECTED.PREFIXED +,
+    SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD +vc,
+    DTR pron-prefix-lex-rule-super & [ INFLECTED.PRON-PERNUM 3rd ] ].
+
 pos-lex-rule := const-lex-rule & same-head-lex-rule & subj-change-only-lex-rule
   [ INFLECTED.PREFIXED +,
     SYNSEM.LOCAL.CAT.VAL.SUBJ < [ LOCAL [ CONT.HOOK.INDEX #poss & [ PNG.PERNUM #pn ],
