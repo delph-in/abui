@@ -103,7 +103,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {emb-d}
-ama h-ieng-lak-a kaai taa
+ama ha-ieng-lak-a kaai taa
 person 3II.PAT-see-mark-DUR dog sleep
 'People know that the dog is sleeping'
 
@@ -112,7 +112,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {emb-d}
-kaai taa ama h-ieng-lak-a
+kaai taa ama ha-ieng-lak-a
 dog sleep person 3II.PAT-see-mark-DUR
 'People know that the dog is sleeping'
 
@@ -121,7 +121,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {emb-d}
-ama h-ieng-lak-a ba kaai taa
+ama ha-ieng-lak-a ba kaai taa
 person 3II.PAT-see-mark-DUR LNK dog sleep
 'People know that the dog is sleeping'
 
@@ -130,7 +130,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {emb-d}
-kaai taa ba ama h-ieng-lak-a
+kaai taa ba ama ha-ieng-lak-a
 dog sleep LNK person 3II.PAT-see-mark-DUR
 'People know that the dog is sleeping'
 
