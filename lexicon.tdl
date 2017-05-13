@@ -109,6 +109,14 @@ min := inalienable-noun-noun-lex &
   [ STEM < "min" >,
     SYNSEM.LKEYS.KEYREL.PRED "_nose_n_rel" ].
 
+sora := alienable-noun-noun-lex &
+  [ STEM < "sora" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sword_n_rel" ].
+
+sapada := alienable-noun-noun-lex &
+  [ STEM < "sapada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_machete_n_rel" ].
+
 nala := wh-noun-noun-lex &
   [ STEM < "nala" >,
     SYNSEM.LKEYS.KEYREL.PRED "_what_n_rel" ].
@@ -154,6 +162,10 @@ san := irreg-adj-lex &
 dakun := irreg-adj-lex &
   [ STEM < "dakun" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dirty_a_rel" ].
+
+masena := adj-adj-lex &
+  [ STEM < "masena" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nice_a_rel" ].
 
 ;;; Verbs
 
@@ -286,7 +298,7 @@ re3 := conj-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "3" ].
 
-;;; Adverbs
+;;; Adverbs of time
 
 wan := adv-lex &
   [ STEM < "wan" >,
@@ -304,3 +316,19 @@ yal := adv-lex &
 
 ba := comp-lex & 
   [ STEM < "ba" > ].
+
+;;; Wh words
+
+nala := wh-pronoun-noun-lex &
+  [ STEM < "nala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+maa := wh-pronoun-noun-lex &
+  [ STEM < "maa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+;;; Adverbs of degree
+
+lakang := adv-lex &
+  [ STEM < "lakang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_really_a_rel" ].

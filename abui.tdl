@@ -217,7 +217,7 @@ irreg-adj-lex := attrib-adj-lex &
 
 adv-lex := basic-int-adverb-lex &
   [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
-                       HEAD.MOD < [ LOCAL.CAT.HEAD verb ] >,
+                       HEAD.MOD < [ LOCAL.CAT.HEAD +vj ] >,
                        VAL [ COMPS < >,
                              SUBJ < >,
                              SPR < >,
@@ -492,6 +492,8 @@ head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+;;; to be safe, may need to remove everything after COMPS .FIRST.LOCAL.CAT.HEAD +nv
+
 
 ;;; Nominal phrases
 
@@ -624,3 +626,21 @@ vp4-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
 vp4-bottom-coord-rule := unary-bottom-coord-rule & vp-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "4",
                    COORD-REL.PRED "_and_coord_rel" ] ].
+
+;;; Wh words
+
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ],
+		     CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
+	                    RELS <! [ LBL #larg,
+				       ARG0 #ind & ref-ind ],
+				  [ PRED "wh_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+			    HCONS <! [ HARG #harg,
+				        LARG #larg ] !> ] ],
+	     NON-LOCAL.QUE <! #ind !> ] ].

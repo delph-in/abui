@@ -1,0 +1,191 @@
+Guy Emerson, Travis Nguyen
+Prof. Emily Menon Bender
+LING 567
+May 12, 2017
+
+Lab 7 Write-Up
+
+In our write-up, we discuss a few phenomena that we covered in this week's lab,
+including negation, those found in a test sentence from our corpus, and
+wh-questions.
+
+--------
+Negation
+--------
+
+In Abui, negation is indicated by the word `naha`, which occurs after a verb.
+
+For example:
+
+#35 Negation after verb
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {neg}
+na lol naha
+1SG walk NEG
+'I do not walk'
+
+The following is an example of an ungrammatical usage of `naha`, as it comes
+before the verb as well as the subject:
+
+#37 Ungrammatical negation before verb
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+naha na lol
+NEG 1SG walk
+'I do not walk'
+
+In lexicon.tdl, we have included the following lexical entry for `naha`:
+
+naha := neg-adv-lex &
+  [ STEM < "naha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+The following lexical rule, which can be found in abui.tdl, takes care of
+negative adverbs:
+
+neg-adv-lex := basic-scopal-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                             COMPS < >,
+                             SUBJ < > ],
+                       POSTHEAD +,
+                       HEAD.MOD < [ LOCAL.CAT [ HEAD verb,
+                                                VAL [ SUBJ cons,
+                                                      COMPS null ] ] ] > ] ].
+
+The resource grammar we are using also lists `naha` to have the gloss "not.be".
+However, we are ignoring the polysemy of `naha` for the time being.
+
+---------------------------------
+One sentence from the test corpus
+---------------------------------
+
+We are using the following sentence from the test corpus:
+
+#127 Grammatical (one sentence from the test corpus)
+Corpus: a:422
+Vetted: t
+Judgment: g
+Phenomena: {}
+'e-sora 'e-sapada do lakang masena do
+2SG.AL-sword 2SG.AL-machete PRX really be.nice PRX
+'your swords and machetes are really nice!'
+
+There are two phenomena that the sentence contains that our grammar does not
+yet cover: (1) degree specifiers of adjectives, to account for the usage of
+`lakang` ("really") and (2) anaphoric demonstratives, which can be modeled as
+sentential adverbs, to account for the usage of the second `do` (PRX).
+
+There is also the addition that `'e` is a phonologically reduced form of the
+second person singular alienable object marker `he`. Since phonological
+reduction is out of the scope of our assignment, we will be treating `'e` as
+`he` for the time being.
+
+To account for (1), we changed the adverb lexical rule so that it can modify
+both verbs and adjectives:
+
+adv-lex := basic-int-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
+                       HEAD.MOD < [ LOCAL.CAT.HEAD +vj ] >,
+                       VAL [ COMPS < >,
+                             SUBJ < >,
+                             SPR < >,
+			     SPEC < > ] ] ].
+
+Unfortunately, (2) has not been successfully implemented.
+
+In addition, we added lexical entries for words that did not exist in our
+lexicon.tdl file previously:
+
+sora := alienable-noun-noun-lex &
+  [ STEM < "sora" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sword_n_rel" ].
+
+sapada := alienable-noun-noun-lex &
+  [ STEM < "sapada" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_machete_n_rel" ].
+
+lakang := adv-lex &
+  [ STEM < "lakang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_really_a_rel" ].
+
+masena := adj-adj-lex &
+  [ STEM < "masena" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nice_a_rel" ].
+
+------------
+Wh-questions
+------------
+
+Abui is a wh-in-situ language. In our test suite, we have covered two: `nala`
+("what") and `maa` ("who"). The following examples illustrate their
+usage in Abui:
+
+#89 Grammatical (wh question using what; wh-in-situ; subject)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+nala e-l-takei?
+what 2SG.LOC-give-bite
+'What bit you?'
+
+#90 Grammatical (wh question using who; wh-in-situ; subject)
+Source: a:129
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+maa e-l-takei?
+who 2SG.LOC-give-bite
+'Who bit you?'
+
+#93 Grammatical (wh question using what; wh-in-situ; object; transitive verb)
+Source: a:128
+Vetted: t
+Judgment: g
+Phenomena: {wh}
+a nala ong?
+2SG what make
+'What are you doing/making?'
+
+In the abui.tdl file, we added the following lexical rule that was provided in
+the Lab 7 prompt; however, we changed "PER" to "PERNUM", as Abui does not
+distinguish between 3rd person singular and 3rd person plural:
+
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ] ],
+		     CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
+	                    RELS <! [ LBL #larg,
+				       ARG0 #ind & ref-ind ],
+				  [ PRED "wh_q_rel",
+				    ARG0 #ind,
+				    RSTR #harg ] !>,
+			    HCONS <! [ HARG #harg,
+				        LARG #larg ] !> ] ],
+	     NON-LOCAL.QUE <! #ind !> ] ].
+
+In addition, in the lexicon.tdl file, we added the two lexical entries,
+corresponding to the words for "what" and "who" in Abui:
+
+nala := wh-pronoun-noun-lex &
+  [ STEM < "nala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+maa := wh-pronoun-noun-lex &
+  [ STEM < "maa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+------
+Metrics
+-------
+
+The generation of Lab 6 is 90%, and its overgeneration is 45.3%. Similarly,
+the overgeneration of Lab 7 is 90%, and its overgeneration is 45.3%. Comparing
+the two, they are exactly the same.
