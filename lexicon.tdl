@@ -328,6 +328,7 @@ maa := wh-pronoun-noun-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
 
 ;;; Adverbs of degree
+; TODO different distribution from other adverbs?
 
 lakang := adv-lex &
   [ STEM < "lakang" >,

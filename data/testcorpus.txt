@@ -63,7 +63,7 @@ Phenomena: {}
 di kang he-n mi-a ba di da-pong mi ba war sei ha-reng
 3A be.good 3II.LOC-see.CPL be.in-DUR LNK 3A 3I.INAL-face take LNK sun come.down.CNT 3II.PAT-turn.to
 'and because they were there (cleared everything), they turned towards the west'
-
+     
 #7 la teitu nikalieta (sentence 7)
 Source: a:421
 Vetted: t
@@ -87,7 +87,7 @@ Source: a:422
 Vetted: t
 Judgment: g
 Phenomena: {}
-'e-sora e-sapada do lakang masena do te wi-r panen=te he-d-u wi-d-a do a pun-a
+e-sora e-sapada do lakang masena do te wi-r panen=te he-d-u wi-d-a do a pun-a
 2SG.AL-sword 2SG.AL-machete PRX really be.nice PRX where be.like.MD.CPL-reach make.CPL=INCP.C 3II.LOC-hold-PRF be.like.MD.CPL-hold-DUR PRX 2SG grab.CPL-DUR
 'your swords and machetes are really nice! how did you make them, that you got (weapons) like that you are holding?'
 
@@ -195,7 +195,7 @@ Source: a:425
 Vetted: t
 Judgment: g
 Phenomena: {}
-kalieta sei loma tama mi-a tadielang tai la\k-i 'suak' ba-i ba ya pesing tading he-toku he-karia h-ai do ha-fel-r-a he-n mi-a ba kalieta ma he-n da-mit-i
+kalieta sei loma tama mi-a tadielang tai la\k-i suak ba-i ba ya pesing tading he-toku he-karia h-ai do ha-fel-r-a he-n mi-a ba kalieta ma he-n da-mit-i
 old.person come.down.CNT hill middle be.in-DUR stipel put.on leave.for-PFV sound.of.slipping say-PFV LNK SEQ bamboo splinter 3II.AL-leg 3II.LOC-be.narrow 3II.INAL-side PRX 3II.PAT-bleed-reach-DUR 3II.LOC-see.CPL be.in-DUR LNK old.person be.PRX 3II.LOC-see.CPL 3I.PAT-sit.CPL-PFV
 'the ancestor was coming down and in the middle of the slope, he stepped on a stipel and slipped out and so a bamboo splinter wounded his leg in between the toes and there (it was) that the ancestor got to sit immediately'
 

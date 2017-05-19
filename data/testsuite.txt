@@ -1291,10 +1291,10 @@ di pelang tah-a
 ################################################################################
 
 #127 Grammatical (one sentence from the test corpus)
-Corpus: a:422
+Source: a:422
 Vetted: t
 Judgment: g
-Phenomena: {}
-'e-sora 'e-sapada do lakang masena do
+Phenomena: {corpus}
+e-sora e-sapada do lakang masena do
 2SG.AL-sword 2SG.AL-machete PRX really be.nice PRX
 'your swords and machetes are really nice!'

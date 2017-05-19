@@ -18,7 +18,7 @@ i-2sg-prefix :=
 i-2sg-lex-rule.
 
 ii-2sg-prefix :=
-%prefix (* -o)
+%prefix (* o-)
 ii-2sg-lex-rule.
 
 iii-2sg-prefix :=

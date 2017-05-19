@@ -224,6 +224,7 @@ adv-lex := basic-int-adverb-lex &
 			     SPEC < > ] ] ].
 
 ; TODO position of adverb relative to arguments
+; TODO adverbs can modifiy attributive adjectives?
 
 ;;; Others
 
@@ -481,9 +482,6 @@ irreg-adj-predicative-lex-rule := subj-change-only-lex-rule & no-ccont-lex-rule 
 
 ;;; Verbal phrases
 
-;Constraint on MC used to be part of matrix.tdl
-;;it applies to all wo implementations, except for v2
-
 comp-head-phrase := basic-head-1st-comp-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD noun ].
 
@@ -492,18 +490,17 @@ head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
-;;; to be safe, may need to remove everything after COMPS .FIRST.LOCAL.CAT.HEAD +nv
-
 
 ;;; Nominal phrases
 
-; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
-; introduced to match the semantic effect of bare NPs in your language.
+; Bare NP phrase.
+; We may consider modifying the PRED value of the quantifier relation
+; introduced to match the semantic effect of bare NPs in Abui.
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
 
-; Nominal predicates
+; Nominal predicates (zero copula)
 
 np-predicate-rule := unary-phrase & nocoord &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
