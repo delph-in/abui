@@ -563,6 +563,11 @@ pos-opt-subj-phrase := head-valence-phrase & head-only & head-compositional &
 ;;; Coordination
 ;;;;;;;;;;;;;;;;;;
 
+; To avoid spurious ambiguity in coordinated possessed nouns.
+n-coord-phrase :+
+  [ LCOORD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < >,
+    RCOORD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
+
 ;;; Coordination Strategy 1
 
 n1-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule &
@@ -634,10 +639,10 @@ wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item &
 				 SPEC < > ] ],
 		     CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
 	                    RELS <! [ LBL #larg,
-				       ARG0 #ind & ref-ind ],
-				  [ PRED "wh_q_rel",
-				    ARG0 #ind,
-				    RSTR #harg ] !>,
+				      ARG0 #ind & ref-ind ],
+				    [ PRED "wh_q_rel",
+				      ARG0 #ind,
+				      RSTR #harg ] !>,
 			    HCONS <! [ HARG #harg,
-				        LARG #larg ] !> ] ],
+				       LARG #larg ] !> ] ],
 	     NON-LOCAL.QUE <! #ind !> ] ].
