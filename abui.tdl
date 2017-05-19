@@ -35,8 +35,11 @@ basic-head-comp-phrase :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 
-basic-head-opt-subj-phrase :+
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+head-opt-subj-phrase := basic-head-opt-subj-phrase & head-compositional &
+  [ HEAD-DTR.SYNSEM.LOCAL [ CAT.VAL.COMPS < >,
+                            CONT.HOOK [ INDEX #index & [ SF prop-or-ques ],
+                                        ICONS-KEY.IARG1 #index,
+                                        CLAUSE-KEY #index ]]].
 
 basic-head-opt-comp-phrase :+
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD +vj ].
@@ -66,6 +69,7 @@ pl := pernum.
 
 ;;; Aspect
 
+no-aspect := aspect.
 perfective := aspect.
 imperfective := aspect.
 durative := aspect.
@@ -486,8 +490,26 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final &
 head-comp-phrase := basic-head-1st-comp-phrase & head-initial &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD +vc ].
 
-subj-head-phrase := decl-head-subj-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+subj-head-phrase := head-final & head-valence-phrase & head-compositional &
+  [ SYNSEM phr-synsem &
+           [ LOCAL.CAT [ POSTHEAD +,
+                 HC-LIGHT -,
+                 VAL [ SUBJ < >,
+                       COMPS #comps,
+                       SPR #spr ] ] ],
+    C-CONT [ HOOK.INDEX.SF prop-or-ques,
+         RELS <! !>,
+         HCONS <! !>,
+         ICONS <! !> ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [ SUBJ < #synsem >,
+                    COMPS #comps & < >,
+                    SPR #spr ],
+    NON-HEAD-DTR.SYNSEM #synsem & canonical-synsem &
+       [ LOCAL [ CAT [ VAL [ SUBJ olist,
+                 COMPS olist,
+                 SPR olist ] ] ],
+         NON-LOCAL [ SLASH 0-dlist & [ LIST < > ],
+             REL 0-dlist ] ]].
 
 ;;; Nominal phrases
 
@@ -657,3 +679,18 @@ wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item &
 			    HCONS <! [ HARG #harg,
 				       LARG #larg ] !> ] ],
 	     NON-LOCAL.QUE <! #ind !> ] ].
+
+wh-int-cl-rule := clause & head-compositional & head-only &
+  [ SYNSEM [ LOCAL.CAT [ VAL #val,
+			 MC bool ],
+	     NON-LOCAL non-local-none ],
+    C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     HOOK.INDEX.SF ques ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD verb,
+				  VAL #val & 
+				    [ SUBJ < >,
+				      COMPS < > ] ],
+		      NON-LOCAL [ SLASH <! !>,
+				  REL <! !>,
+				  QUE <! ref-ind !> ] ] ].

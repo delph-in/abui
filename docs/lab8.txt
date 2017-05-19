@@ -1,0 +1,73 @@
+Guy Emerson, Travis Nguyen
+Prof. Emily Menon Bender
+LING 567
+19 May 2017
+
+---------------
+Lab #8 Write-Up
+---------------
+
+This write-up documents the work done for Lab #8. It includes working on
+phenomena found in one sentence from the test corpus as well as working on
+translating the sentence "Dogs sleep" from English to Abui via machine
+translation, including a fix for variable property mapping for unspecified
+aspect.
+
+---------------------------------
+One sentence from the test corpus
+---------------------------------
+
+TO-DO
+
+--------------------------------------
+Variable Property Mapping and First MT
+--------------------------------------
+
+The first time that we tried to translate the sentence "Dogs sleep" from
+English to Abui, the generator output was unconstrained for aspect. As a
+result, the generator produced the correct translation `kaai taa' (lit. "dog
+sleep") as well as translations that included every aspect marker on the verb
+`taa` (e.g., `kaai taa-i`, `kaai taa-o`, etc.).
+
+In order to remedy this, we added two changes: one to abui.tdl and the other
+to semi.vpm.
+
+In abui.tdl, we included the following line to declare a "no-aspect" aspect:
+
+no-aspect := aspect.
+
+In semi.vpm, we replaced the following line under "E.ASPECT : E.ASPECT"
+
+  * <> *
+
+with the following line
+
+  * >> no-aspect
+  no-aspect << [e]
+
+.
+
+After saving the changes, reloading the grammar, and attempting to translate
+the English sentence "Dogs sleep" again, the generator correctly produced
+the only translation `kaai taa`.
+
+In addition, the internal MRS of the translation `kaai taa` and the internal
+MRS of the correct parse of `kaai taa` from the target LKB are the same,
+indicating that semantics of the translation is correct.*
+
+* We are getting overgeneration of the phrase `kaai taa` in the target LKB.
+Namely, the readings of the two parses being produced by the target LKB are
+listed below:
+
+(1) There exists dogs and the dogs sleep.
+(2) There exists dogs and (something; may or may not be the dogs) sleep(s).
+
+(1) is the expected parse. The reason for (2) is that Abui is a zero-copula
+language and has argument drop. For the time being, we are disregarding this
+because we have not been able to devise a solution for the issue.
+
+--------
+Coverage
+--------
+
+TO-DO
