@@ -69,7 +69,8 @@ E.ASPECT : E.ASPECT
   inceptive_completive <> inceptive_completive
   phasal_inchoative <> phasal_inchoative
   phasal_completive <> phasal_completive
-  * <> *
+  * >> no-aspect
+  no-aspect << [e]
 
 E.MOOD : E.MOOD
   * <> *

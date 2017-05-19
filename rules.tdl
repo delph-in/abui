@@ -1,9 +1,9 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-head-adj-int := head-adj-int-phrase.
+headd--adj-int := head-adj-int-phrase.
 
 adj-head-int := adj-head-int-phrase.
 
-decl-head-opt-subj := decl-head-opt-subj-phrase.
+head-opt-subj := head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
@@ -63,3 +63,7 @@ n4-bottom-coord := n4-bottom-coord-rule.
 vp4-top-coord := vp4-top-coord-rule.
 
 vp4-bottom-coord := vp4-bottom-coord-rule.
+
+; Wh in situ
+
+wh-int-cl := wh-int-cl-rule.
