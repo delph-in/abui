@@ -134,8 +134,6 @@ inalienable-noun-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
     INFLECTED.NEEDS-PREFIX + ].
 
-wh-noun-noun-lex := no-spr-noun-lex.
-
 ;;; Verbs
 
 ; verb-lex is HC-LIGHT - to allow us to pick out
@@ -242,7 +240,7 @@ addrs-dem-lex := determiner-lex.
 ; TODO give these some semantics
 
 prx-dem-lex := determiner-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST in-foc ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST activ-or-more ].
 
 med-dem-lex := determiner-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
@@ -559,14 +557,27 @@ pos-opt-subj-phrase := head-valence-phrase & head-only & head-compositional &
 	     ICONS <! #ikey & non-focus & [ IARG1 #ckey,
 					    IARG2 #index ] !> ] ].
 
-;;;;;;;;;;;;;;;;;;
-;;; Coordination
-;;;;;;;;;;;;;;;;;;
+; To avoid spurious ambiguity with possessed nouns (require empty SUBJ),
+; and to block adjectives combining first predicatively then attributively (PRD value):
 
-; To avoid spurious ambiguity in coordinated possessed nouns.
+head-adj-int-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < >,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.PRD - ].
+
 n-coord-phrase :+
   [ LCOORD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < >,
     RCOORD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
+
+head-spec-phrase :+
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < > ].
+
+subj-head-phrase :+
+  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ < >,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.PRD + ].
+
+;;;;;;;;;;;;;;;;;;
+;;; Coordination
+;;;;;;;;;;;;;;;;;;
 
 ;;; Coordination Strategy 1
 

@@ -117,14 +117,6 @@ sapada := alienable-noun-noun-lex &
   [ STEM < "sapada" >,
     SYNSEM.LKEYS.KEYREL.PRED "_machete_n_rel" ].
 
-nala := wh-noun-noun-lex &
-  [ STEM < "nala" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_what_n_rel" ].
-
-maa := wh-noun-noun-lex &
-  [ STEM < "maa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
-
 ;;; Adjectives
 
 foka := adj-adj-lex &
