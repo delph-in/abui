@@ -8,11 +8,10 @@ Lab #8 Write-Up
 ---------------
 
 This write-up documents the work done for Lab #8. It includes working on
-phenomenon found in one sentence from the test corpus as well as the first
-... of machine translation, including variable property mapping for unspecified
+phenomena found in one sentence from the test corpus as well as working on
+translating the sentence "Dogs sleep" from English to Abui via machine
+translation, including a fix for variable property mapping for unspecified
 aspect.
-
-
 
 ---------------------------------
 One sentence from the test corpus
