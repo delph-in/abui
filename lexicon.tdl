@@ -241,6 +241,10 @@ tah := trans-verb-verb-lex &
   [ STEM < "tah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-on_v_rel" ].
 
+ning := quant-verb-verb-lex & 
+  [ STEM < "ning" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be-quant_v_rel" ].
+
 ;;; Determiners / "anaphoric demonstratives"
 
 do := prx-sp-dem-lex &
@@ -319,3 +323,9 @@ maa := wh-pronoun-noun-lex &
 lakang := adv-lex &
   [ STEM < "lakang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_really_a_rel" ].
+
+;;; Numbers
+
+ayoku := num-lex &
+  [ STEM < "ayoku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_two_num_rel" ].

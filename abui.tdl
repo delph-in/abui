@@ -168,6 +168,14 @@ trans-verb-verb-lex := verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
+quant-verb-verb-lex := verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+             #comps &
+             [ LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun ] ] > ].
+
 clause-embedding-verb-lex := verb-lex & clausal-second-arg-trans-lex-item & 
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comp >,
     ARG-ST.REST.FIRST #comp & 
@@ -228,6 +236,16 @@ adv-lex := basic-int-adverb-lex &
 
 ; TODO position of adverb relative to arguments
 ; TODO adverbs can modifiy attributive adjectives?
+
+;;; Numbers
+
+num-lex := basic-int-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ POSTHEAD +,
+                       HEAD.MOD < [ LOCAL.CAT.HEAD verb ] >,
+                       VAL [ COMPS < >,
+                             SUBJ < >,
+                             SPR < >,
+                             SPEC < > ] ] ].
 
 ;;; "Anaphoric demonstratives"
 ;;; SPEC is non-empty, and already specified by basic-determiner-lex.
