@@ -306,3 +306,12 @@ Phenomena: {}
 tanga ananra ya he-n-u mi-a ba do kan-i
 speech tell.CNT SEQ 3II.LOC-be.like.PRX-PRF be.in-DUR LNK PRX be.good.CPL-PFV
 'speaking and telling and so it is to here and finished'
+
+#35 snippet of example (35) from Abui grammar
+Source: a:431
+Vetted: t
+Judgment: g
+Phenomena: {}
+pi ning ayoku yaa mi-a yo
+1PL.I be.QNT two go take-DUR MD.AD
+'(the two of us) let's go steal!'
