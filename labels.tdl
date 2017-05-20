@@ -16,6 +16,10 @@
 ;;; the more specific one must appear first in this list, or
 ;;; it will never get used.
 
+x-label := label &
+  [ INFLECTED raw,
+    LABEL-NAME "X" ].
+
 n-mid-label := label &
             [ SYNSEM.LOCAL [ CAT [ HEAD noun,
                                    VAL.SPR < [ ] > ],

@@ -1,7 +1,15 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 
+; Prefixing
+
 u-agr-lex := u-agr-lex-rule.
 
 embed-agr-lex := embed-agr-lex-rule.
 
 pos-lex := pos-lex-rule.
+
+; Anaphoric demonstratives
+
+determiner-lex := determiner-lex-rule.
+
+clause-final-dem-lex := clause-final-dem-lex-rule.

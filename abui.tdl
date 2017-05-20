@@ -44,6 +44,7 @@ head-opt-subj-phrase := basic-head-opt-subj-phrase & head-compositional &
 basic-head-opt-comp-phrase :+
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD +vj ].
 
+; Allow events to have COG-ST
 individual :+ [ COG-ST cog-st ].
 
 ;;;;;;;;;;;;;;
@@ -132,7 +133,8 @@ pron-noun-lex := no-spr-noun-lex.
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 3rd ].
 
 alienable-noun-noun-lex := noun-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE + ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE +,
+    INFLECTED infl-satisfied ].
 
 inalienable-noun-noun-lex := noun-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
@@ -141,8 +143,7 @@ inalienable-noun-noun-lex := noun-noun-lex &
 ;;; Verbs
 
 ; verb-lex is HC-LIGHT - to allow us to pick out
-; 
-;   lexical Vs for V-level attachment of negative adverbs.
+; lexical Vs for V-level attachment of negative adverbs.
 
 verb-lex := basic-verb-lex & non-mod-lex-item &
   [ ARG-ST.FIRST #subj &
@@ -228,36 +229,60 @@ adv-lex := basic-int-adverb-lex &
 ; TODO position of adverb relative to arguments
 ; TODO adverbs can modifiy attributive adjectives?
 
-;;; Others
-
-;;; Determiners
+;;; "Anaphoric demonstratives"
 ;;; SPEC is non-empty, and already specified by basic-determiner-lex.
 
-determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item & no-icons-lex-item &
-  [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
-			     COMPS < >,
-			     SUBJ < > ],
-		   CONT.HOOK.INDEX.SPECI + ] ].
+raw := inflected.
 
-speak-dem-lex := determiner-lex.
-addrs-dem-lex := determiner-lex.
-; TODO give these some semantics
+dem-lex := lex-item &
+  [ DEM-COG-ST cog-st,
+    ADDRS-VIEWPOINT bool,
+    INFLECTED raw ].
 
-prx-dem-lex := determiner-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST activ-or-more ].
+speak-dem-lex := dem-lex &
+  [ ADDRS-VIEWPOINT - ].
+addrs-dem-lex := dem-lex &
+  [ ADDRS-VIEWPOINT + ].
 
-med-dem-lex := determiner-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
-
-spc-dem-lex := determiner-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+prx-dem-lex := dem-lex &
+  [ DEM-COG-ST activ-or-more ].
+med-dem-lex := dem-lex &
+  [ DEM-COG-ST activ+fam ].
 
 prx-sp-dem-lex := prx-dem-lex & speak-dem-lex.
 prx-ad-dem-lex := prx-dem-lex & addrs-dem-lex.
 med-sp-dem-lex := med-dem-lex & speak-dem-lex.
 med-ad-dem-lex := med-dem-lex & addrs-dem-lex.
-spc-sp-dem-lex := spc-dem-lex & speak-dem-lex.
-spc-ad-dem-lex := spc-dem-lex & addrs-dem-lex.
+
+uniq-id-dem-lex := dem-lex &
+  [ DEM-COG-ST uniq-id ].
+type-id-dem-lex := dem-lex &
+  [ DEM-COG-ST type-id ].
+
+determiner-lex-rule := basic-determiner-lex & norm-zero-arg & non-mod-lex-item & no-icons-lex-item & const-lex-rule &
+  [ SYNSEM [ LKEYS.KEYREL.PRED "exist_q_rel",
+	     LOCAL [ CAT.VAL [ SPR < >,
+			       COMPS < >,
+			       SUBJ < > ],
+		     CONT.HOOK.INDEX [ SPECI +,
+				       COG-ST #cog-st ] ] ],
+    DTR dem-lex & [ DEM-COG-ST #cog-st ] ].
+; TODO do something with ADDRS-VIEWPOINT
+
+clause-final-dem-lex-rule := no-rels-hcons-icons-lex-item & const-lex-rule &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adv &
+			      [ MOD < [ LOCAL intersective-mod &
+					      [ CONT.HOOK.INDEX.COG-ST #cog-st,
+						CAT [ HEAD +vj,
+						      VAL [ SUBJ < >,
+							    COMPS < > ] ] ],
+					MODIFIED notmod ] > ],
+			 VAL [ SPR < >,
+			       COMPS < >,
+			       SUBJ < >,
+			       SPEC < > ],
+			 POSTHEAD + ] ],
+    DTR dem-lex & [ DEM-COG-ST #cog-st ] ].
 
 ; Type for negative adverbs.
 ; 

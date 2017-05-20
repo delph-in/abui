@@ -1,5 +1,5 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-headd--adj-int := head-adj-int-phrase.
+head-adj-int := head-adj-int-phrase.
 
 adj-head-int := adj-head-int-phrase.
 

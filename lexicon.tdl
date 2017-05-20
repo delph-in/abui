@@ -241,31 +241,25 @@ tah := trans-verb-verb-lex &
   [ STEM < "tah" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-on_v_rel" ].
 
-;;; Determiners
+;;; Determiners / "anaphoric demonstratives"
 
 do := prx-sp-dem-lex &
-  [ STEM < "do" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do_q_rel" ].
+  [ STEM < "do" > ].
 
 to := prx-ad-dem-lex &
-  [ STEM < "to" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_to_q_rel" ].
+  [ STEM < "to" > ].
 
 o := med-sp-dem-lex &
-  [ STEM < "o" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_o_q_rel" ].
+  [ STEM < "o" > ].
 
 yo := med-ad-dem-lex &
-  [ STEM < "yo" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_yo_q_rel" ].
+  [ STEM < "yo" > ].
 
-hu := spc-sp-dem-lex &
-  [ STEM < "hu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hu_q_rel" ].
+hu := uniq-id-dem-lex &
+  [ STEM < "hu" > ].
 
-nu := spc-ad-dem-lex &
-  [ STEM < "nu" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_nu_q_rel" ].
+nu := type-id-dem-lex &
+  [ STEM < "nu" > ].
 
 ;;; Verbal particles
 
