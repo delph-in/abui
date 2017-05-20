@@ -17,6 +17,29 @@ aspect.
 One sentence from the test corpus
 ---------------------------------
 
+The phenomena that we cover for this lab comes from the following sentence
+found in the test corpus:
+
+#35 snippet of example (35) from Abui grammar
+Source: a:431
+Vetted: t
+Judgment: g
+Phenomena: {}
+pi ning ayoku yaa mi-a yo
+1PL.I be.QNT two go take-DUR MD.AD
+'(the two of us) let's go steal!'
+
+There are a few phenomena that the aforementioned sentence features that were
+not previously covered in our grammar:
+(1) the imperative form
+(2) quantifying verbs (i.e., `ning`) 
+
+Quantifying verbs in Abui quantify the number of participants. The author has
+analyzed them as verbs because they can combine with pronomial prefixes.
+
+To account for the two phenomena that we listed, we have included the
+following changes in our grammar:
+
 TO-DO
 
 --------------------------------------
