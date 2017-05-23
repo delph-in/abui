@@ -252,6 +252,8 @@ num-lex := basic-int-adverb-lex &
 
 raw := inflected.
 
+nohead := head.
+
 dem-lex := lex-item &
   [ DEM-COG-ST cog-st,
     ADDRS-VIEWPOINT bool,

@@ -142,3 +142,7 @@
 ; output all complete generated results
 ; (setf *bypass-equality-check* t)
 
+
+;;; Translation
+
+(setf *translate-grid* '(:abz :eng :shu))
