@@ -18,7 +18,7 @@
 
 x-label := label &
   [ INFLECTED raw,
-    SYNSEM.LOCAL.CAT.HEAD nohead,
+    SYNSEM.LOCAL.CAT.HEAD +rd,
     LABEL-NAME "X" ].
 
 n-mid-label := label &
