@@ -1171,6 +1171,7 @@ na kopi el buut-i
 'I had coffee before'
 
 #119 Grammatical (transitive verb; adverb occurs between A and U arguments, A = U)
+# Unclear if this is actually grammatical
 Source: author
 Vetted: f
 Judgment: g

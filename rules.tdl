@@ -7,6 +7,8 @@ head-opt-subj := head-opt-subj-phrase.
 
 basic-head-opt-comp := basic-head-opt-comp-phrase.
 
+agent-opt-np := agent-opt-np-phrase.
+
 adj-head-scop := adj-head-scop-phrase.
 
 pos := pos-phrase.
