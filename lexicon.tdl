@@ -117,6 +117,18 @@ sapada := alienable-noun-lex &
   [ STEM < "sapada" >,
     SYNSEM.LKEYS.KEYREL.PRED "_machete_n_rel" ].
 
+oto := alienable-noun-lex &
+  [ STEM < "oto" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+ut := alienable-noun-lex &
+  [ STEM < "ut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].  ; garden
+
+kamai := alienable-noun-lex &
+  [ STEM < "kamai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
 ;;; Adjectives
 
 foka := adj-adj-lex &
@@ -158,6 +170,14 @@ dakun := irreg-adj-lex &
 masena := adj-adj-lex &
   [ STEM < "masena" >,
     SYNSEM.LKEYS.KEYREL.PRED "_nice_a_rel" ].
+
+aleka := adj-adj-lex &
+  [ STEM < "aleka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quick_a_rel" ].
+
+marai := adj-adj-lex &
+  [ STEM < "marai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
 
 ;;; Verbs
 
@@ -213,6 +233,10 @@ mi := trans-verb-lex &
   [ STEM < "mi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
 
+mi2 := trans-verb-lex &
+  [ STEM < "mi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_in_p_rel" ].
+
 paneng := trans-verb-lex &
   [ STEM < "paneng" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
@@ -244,6 +268,10 @@ tah := trans-verb-lex &
 ning := quant-verb-lex & 
   [ STEM < "ning" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be-quant_v_rel" ].
+
+loi := trans-verb-lex &
+  [ STEM < "loi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 ;;; Determiners / "anaphoric demonstratives"
 
