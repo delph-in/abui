@@ -57,41 +57,41 @@ ii-2pl-prefix2 :=
 %prefix (* ro-)
 ii-2pl-lex-rule.
 
-i-3i-prefix :=
-%prefix (* de-)
-i-3i-lex-rule.
+; i-3i-prefix :=
+; %prefix (* de-)
+; i-3i-lex-rule.
 
-ii-3i-prefix :=
-%prefix (* do-)
-ii-3i-lex-rule.
+; ii-3i-prefix :=
+; %prefix (* do-)
+; ii-3i-lex-rule.
 
-iii-3i-prefix :=
-%prefix (* da-)
-iii-3i-lex-rule.
+; iii-3i-prefix :=
+; %prefix (* da-)
+; iii-3i-lex-rule.
 
 i-3ii-prefix :=
 %prefix (* he-)
 i-3ii-lex-rule.
 
-ii-3ii-prefix :=
-%prefix (* ho-)
-ii-3ii-lex-rule.
+; ii-3ii-prefix :=
+; %prefix (* ho-)
+; ii-3ii-lex-rule.
 
 iii-3ii-prefix :=
 %prefix (* ha-)
 iii-3ii-lex-rule.
 
-i-distr-prefix :=
-%prefix (* te-)
-i-distr-lex-rule.
+; i-distr-prefix :=
+; %prefix (* te-)
+; i-distr-lex-rule.
 
-ii-distr-prefix :=
-%prefix (* to-)
-ii-distr-lex-rule.
+; ii-distr-prefix :=
+; %prefix (* to-)
+; ii-distr-lex-rule.
 
-iii-distr-prefix :=
-%prefix (* ta-)
-iii-distr-lex-rule.
+; iii-distr-prefix :=
+; %prefix (* ta-)
+; iii-distr-lex-rule.
 
 perfective-suffix :=
 %suffix (* -i)

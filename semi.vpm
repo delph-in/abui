@@ -34,32 +34,26 @@ COG-ST : COG-ST
   fam-or-less <> fam-or-less
   uniq-or-more <> uniq-or-more
   activ-or-less <> activ-or-less
-  * <> *
+  no-cog-st << [x]
+  no-cog-st << [e]
 
+PNG.PERNUM : PER NUM
+  3rd <> third !
+  3rd << third *
+  2pl <> second pl
+  1pl_excl >> first pl
+  1pl_incl >> first pl
+  1pl << first pl
+  2sg <> second sg
+  1sg <> first sg
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
+  * >> ! !
+  ! << * *
 
-PNG.PERNUM : PNG.PERNUM
-  3pl <> 3pl
-  2pl <> 2pl
-  1pl_excl <> 1pl_excl
-  1pl_incl <> 1pl_incl
-  1pl <> 1pl
-  3sg <> 3sg
-  2sg <> 2sg
-  1sg <> 1sg
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
-  pl <> pl
-  sg <> sg
-  * <> *
-
-PNG.GEND : PNG.GEND
-  * <> *
-
-E.TENSE : E.TENSE
-  * <> *
-
-E.ASPECT : E.ASPECT
+E.ASPECT : ASPECT
   perfective <> perfective
   imperfective <> imperfective
   durative <> durative
@@ -71,6 +65,3 @@ E.ASPECT : E.ASPECT
   phasal_completive <> phasal_completive
   * >> no-aspect
   no-aspect << [e]
-
-E.MOOD : E.MOOD
-  * <> *

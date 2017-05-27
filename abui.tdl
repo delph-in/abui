@@ -47,6 +47,8 @@ basic-head-opt-comp-phrase :+
 ; Allow events to have COG-ST
 individual :+ [ COG-ST cog-st ].
 
+no-cog-st := cog-st.
+
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
