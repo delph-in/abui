@@ -292,23 +292,23 @@ num-lex := basic-int-adverb-lex &
 ;;; "Anaphoric demonstratives"
 ;;; SPEC is non-empty, and already specified by basic-determiner-lex.
 
-raw := inflected.
-
-dem-lex := lex-item &
+raw-dem := inflected &
   [ DEM-COG-ST cog-st,
-    ADDRS-VIEWPOINT bool,
-    SYNSEM.LOCAL.CAT.HEAD +rd,
-    INFLECTED raw ].
+    ADDRS-VIEWPOINT bool ].
+
+dem-lex := no-rels-hcons-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD +rd,
+    INFLECTED raw-dem ].
 
 speak-dem-lex := dem-lex &
-  [ ADDRS-VIEWPOINT - ].
+  [ INFLECTED.ADDRS-VIEWPOINT - ].
 addrs-dem-lex := dem-lex &
-  [ ADDRS-VIEWPOINT + ].
+  [ INFLECTED.ADDRS-VIEWPOINT + ].
 
 prx-dem-lex := dem-lex &
-  [ DEM-COG-ST activ-or-more ].
+  [ INFLECTED.DEM-COG-ST activ-or-more ].
 med-dem-lex := dem-lex &
-  [ DEM-COG-ST activ+fam ].
+  [ INFLECTED.DEM-COG-ST activ+fam ].
 
 prx-sp-dem-lex := prx-dem-lex & speak-dem-lex.
 prx-ad-dem-lex := prx-dem-lex & addrs-dem-lex.
@@ -316,9 +316,9 @@ med-sp-dem-lex := med-dem-lex & speak-dem-lex.
 med-ad-dem-lex := med-dem-lex & addrs-dem-lex.
 
 uniq-id-dem-lex := dem-lex &
-  [ DEM-COG-ST uniq-id ].
+  [ INFLECTED.DEM-COG-ST uniq-id ].
 type-id-dem-lex := dem-lex &
-  [ DEM-COG-ST type-id ].
+  [ INFLECTED.DEM-COG-ST type-id ].
 
 determiner-lex-rule := basic-determiner-lex & norm-zero-arg & non-mod-lex-item & no-icons-lex-item & const-lex-rule &
   [ SYNSEM [ LKEYS.KEYREL.PRED "exist_q_rel",
@@ -327,7 +327,7 @@ determiner-lex-rule := basic-determiner-lex & norm-zero-arg & non-mod-lex-item &
                                SUBJ < > ],
                      CONT.HOOK.INDEX [ SPECI +,
                                        COG-ST #cog-st ] ] ],
-    DTR dem-lex & [ DEM-COG-ST #cog-st ] ].
+    DTR dem-lex & [ INFLECTED.DEM-COG-ST #cog-st ] ].
 ; TODO do something with ADDRS-VIEWPOINT
 
 clause-final-dem-lex-rule := no-rels-hcons-icons-lex-item & const-lex-rule &
@@ -343,7 +343,7 @@ clause-final-dem-lex-rule := no-rels-hcons-icons-lex-item & const-lex-rule &
                                SUBJ < >,
                                SPEC < > ],
                          POSTHEAD + ] ],
-    DTR dem-lex & [ DEM-COG-ST #cog-st ] ].
+    DTR dem-lex & [ INFLECTED.DEM-COG-ST #cog-st ] ].
 
 ; Type for negative adverbs.
 ; 
@@ -689,21 +689,22 @@ subj-head-phrase :+
 
 ;;; Coordination Strategy 1
 
-n1-top-coord-rule := basic-n-top-coord-rule & monopoly-top-coord-rule &
+n1-top-coord-rule := basic-np-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd ] ].
+
+n1-mid-coord-rule := basic-np-mid-coord-rule & monopoly-mid-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
-n1-mid-coord-rule := basic-n-mid-coord-rule & monopoly-mid-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
-
-n1-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
+n1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "1" ].
 
 ;;; Coordination Strategy 2
 
-n2-top-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
+n2-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "2" ].
 
-n2-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
+n2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "2" ].
 
 ;;; Coordination Strategy 2
@@ -716,10 +717,10 @@ vp2-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
 
 ;;; Coordination Strategy 3
 
-n3-top-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
+n3-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "3" ].
 
-n3-bottom-coord-rule := conj-first-bottom-coord-rule & n-bottom-coord-phrase &
+n3-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL.COORD-STRAT "3" ].
 
 ;;; Coordination Strategy 3
@@ -732,10 +733,10 @@ vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
 
 ;;; Coordination Strategy 4
 
-n4-top-coord-rule := basic-n-top-coord-rule & apoly-top-coord-rule &
+n4-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM.LOCAL.COORD-STRAT "4" ].
 
-n4-bottom-coord-rule := unary-bottom-coord-rule & n-bottom-coord-phrase &
+n4-bottom-coord-rule := unary-bottom-coord-rule & np-bottom-coord-phrase &
   [ SYNSEM.LOCAL [ COORD-STRAT "4",
                    COORD-REL.PRED "_and_coord_rel" ] ].
 

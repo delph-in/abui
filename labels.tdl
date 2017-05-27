@@ -17,7 +17,7 @@
 ;;; it will never get used.
 
 x-label := label &
-  [ INFLECTED raw,
+  [ INFLECTED raw-dem,
     SYNSEM.LOCAL.CAT.HEAD +rd,
     LABEL-NAME "X" ].
 

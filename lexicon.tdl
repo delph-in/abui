@@ -308,12 +308,12 @@ e1 := conj-lex &
 
 ya2 := conj-lex &
   [ STEM < "ya" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    SYNSEM.LKEYS.KEYREL.PRED "_seq_coord_rel",
     CFORM "2" ].
 
 re3 := conj-lex &
   [ STEM < "re" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    SYNSEM.LKEYS.KEYREL.PRED "_or_coord_rel",
     CFORM "3" ].
 
 ;;; Adverbs of time

@@ -34,6 +34,7 @@ COG-ST : COG-ST
   fam-or-less <> fam-or-less
   uniq-or-more <> uniq-or-more
   activ-or-less <> activ-or-less
+  no-cog-st << *
   no-cog-st << [x]
   no-cog-st << [e]
 
