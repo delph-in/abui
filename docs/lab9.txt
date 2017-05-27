@@ -1,0 +1,267 @@
+Guy Emerson, Travis Nguyen
+Prof. Emily Menon Bender
+LING 567
+May 26, 2017
+
+---------------
+Lab #9 Write-Up
+---------------
+
+For this assignment, we have included a few changes in our grammar of Abui to
+accommodate machine translation between the aforementioned language and English
+and Chadian Arabic. Such changes include a few bug changes, new lexical
+entries, and the inclusion of new transfer rules.
+
+-----------------------------------
+Preparation for machine translation
+-----------------------------------
+
+To prepare English and Chadian Arabic for machine translation, the following
+line has been included in the lkb/globals.lsp file of both the English and
+Chadian Arabic grammars:
+
+(setf *translate-grid* '(:eng :shu :abz))
+
+Likewise, the following line has been included in the lkb/globals.lsp file of
+the Abui grammar:
+
+(setf *translate-grid* '(:abz :eng :shu))
+
+We have also included the files abz.txt, eng.txt, and shu.txt, which list the
+test sentences needed to be translated for Abui, English, and Chadian Arabic,
+respectively.
+
+---------
+Bug fixes
+---------
+
+A few changes have been included to account for bugs in the previous lab work.
+
+For example, the following have been changed so that their HEAD value can only
+unify with adverbs and demonstratives. This resolves one of the issues with
+overgeneration that we encountered during machine translation:
+
+dem-lex := lex-item &
+    [ DEM-COG-ST cog-st,
+      ADDRS-VIEWPOINT bool,
+      SYNSEM.LOCAL.CAT.HEAD +rd,
+      INFLECTED raw ].
+
+x-label := label &
+    [ INFLECTED raw,
+      SYNSEM.LOCAL.CAT.HEAD +rd,
+      LABEL-NAME "X" ].
+
+----------------------------------------------------------
+Re-analysis of agent pronouns as case-marking prepositions
+----------------------------------------------------------
+
+In Abui, verbs include object marking that can occur stacked and
+prepositionally on verbs. In addition, the pronouns agree with the nouns that 
+they refer to in terms of several features, including person, number, and
+alienability. These pronouns have been re-analyzed as case-marking
+prepositions in our grammar.
+
+Some of the new code that we have included to the Abui grammar are as follows:
+
+In abui.tdl:
+
+The inclusion of case:
+
+;;; Case
+
+case := *top*.
+agentive := case.
+non-agentive := case.
+
+ref-ind :+
+  [ CASE case ].
+
+Marking nouns as third person:
+
+  [ SYNSEM.LOCAL [ CAT [ VAL [ SPR < #spr &
+                                     [ LOCAL.CAT.HEAD det ] >,
+                               COMPS < >,
+                               SUBJ < >,
+                               SPEC < > ],
+                         HEAD noun ],
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd ],
+    ARG-ST < #spr > ].
+
+Including alienability and non-alienability:
+
+alienable-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE +,
+    INFLECTED infl-satisfied ].
+
+inalienable-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
+    INFLECTED.NEEDS-PREFIX + ].
+
+Agentive markers:
+
+;;; Agent markers
+
+agent-lex := raise-sem-lex-item & basic-one-arg & 
+  [ ARG-ST.FIRST #comp & [ LOCAL.CAT [ HEAD noun,
+                                       VAL [ COMPS < >,
+                                             SPR < >,
+                                             SUBJ < > ] ] ],
+    SYNSEM.LOCAL [ CAT [ VAL [ COMPS < #comp >,
+                               SPR < >,
+                               SUBJ < >,
+                               SPEC < > ],
+                         HEAD adp & [ MOD < > ] ],
+                   CONT.HOOK.INDEX.CASE agentive ] ].
+
+; (like basic-head-opt-comp-phrase, but with ref-ind, instead of an event)
+agent-opt-np-phrase := head-valence-phrase & head-only & head-compositional &
+  [ INFLECTED #infl,
+    SYNSEM canonical-synsem &
+              [ LOCAL.CAT [ VAL [ SUBJ #subj,
+                                  COMPS #comps,
+                                  SPR #spr,
+                                  SPEC #spec ],
+                            MC #mc,
+                            POSTHEAD #ph ],
+                MODIFIED #mod ],
+    HEAD-DTR [ INFLECTED #infl & infl-satisfied,
+               SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+                                            COMPS < unexpressed &
+                                                    [ OPT +,
+                                                      OPT-CS #def,
+                                                      LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST #def ],
+                                                                        ICONS-KEY #ikey,
+                                                                        CLAUSE-KEY #ckey ] ] . #comps >,
+                                            SPR #spr,
+                                            SPEC #spec ],
+                                      MC #mc,
+                                      POSTHEAD #ph ],
+                                CONT.HOOK.INDEX ref-ind ],
+                        MODIFIED #mod ] ],
+    C-CONT [ RELS <! !>,
+             HCONS <! !>,
+             ICONS <! #ikey & non-focus & [ IARG1 #ckey,
+                                            IARG2 #index ] !> ] ].
+
+Changes in what the pronouns in the lexicon inherit from:
+
+From:
+
+1sg-noun-lex := pron-noun-lex &
+
+To:
+
+1sg-agent-lex := agent-lex &
+    [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+
+(Note: The rest of the pronoun paradigm has been changed in a similar
+manner, and the pronouns listed in lexicon.tdl have been changed to inherit
+from the -agent-lex series rather than -noun-lex ones.)
+
+There have also been changes to several of the demonstrative and verb lexical
+rules to account for the agentive case. To view all of the changes, please
+refer to the abui.tdl file in the repository that was submitted as part of
+Lab #9.
+
+-------------------
+New lexical entries
+-------------------
+
+To account for the lexical gaps in Abui that we needed to cover to perform
+machine translation using the test sentences in English and Chadian Arabic,
+we have included a few new lexical entries.
+
+The following entries are examples of what we have included in the lexicon.tdl
+file:
+
+kamai := alienable-noun-lex &
+  [ STEM < "kamai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+loi := trans-verb-lex &
+  [ STEM < "loi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+marai := adj-adj-lex &
+  [ STEM < "marai" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
+For a few cases, some words could not be found in our Abui resource grammar.
+As a result, we have performed a few substitutions, such as using the Abui
+word for field (`ut`) in place of "park".
+
+----------------------------
+Changes to the semi.vpm file
+----------------------------
+
+The following two blocks reflect the current status of cognitive status and
+person/number transfer rules for our Abui grammar:
+
+Constraining cognitive status helped to reduce overgeneration in
+translations:
+
+COG-ST : COG-ST
+  type-id <> type-id
+  uniq-id <> uniq-id
+  familiar <> familiar
+  activated <> activated
+  in-foc <> in-foc
+  activ+fam <> activ+fam
+  uniq+fam <> uniq+fam
+  activ-or-more <> activ-or-more
+  uniq-or-less <> uniq-or-less
+  uniq+fam+act <> uniq+fam+act
+  fam-or-more <> fam-or-more
+  fam-or-less <> fam-or-less
+  uniq-or-more <> uniq-or-more
+  activ-or-less <> activ-or-less
+  no-cog-st << *
+  no-cog-st << [x]
+  no-cog-st << [e]
+
+In addition, splitting person and number aided in the automatic translation
+of Abui and English:
+
+PNG.PERNUM : PER NUM
+  3rd <> third !
+  3rd << third *
+  2pl <> second pl
+  1pl_excl >> first pl
+  1pl_incl >> first pl
+  1pl << first pl
+  2sg <> second sg
+  1sg <> first sg
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
+  * >> ! !
+  ! << * *
+
+-------------------
+Machine translation
+-------------------
+
+Including the transfer rules that were commented out in the English and
+Chadian Arabic grammars to consider pronoun-drop helped to cover most of the
+test sentences. However, there were a few cases that did not parse during
+machine translation. We will not cover these, as we fulfilled the requirement
+for the minimum number of sentences that needed to parse for this lab:
+
+(1) test sentences that include "know" and "think"
+These verbs were not included in our Abui grammar.
+
+(2) coordination
+Our resource grammar does not provide a satisfying description of coordination.
+As a result, we have not fully implemented coordination in our Abui grammar,
+and we expect that it will not work when translating between Abui and one of
+the other languages.
+
+----------
+Generation
+----------
+
+In our Lab #8 baseline, we had 90.1% coverage and 45.3% overgeneration. For
+Lab #9, our results changed: We had 77.8% coverage and 18.9% overgeneration.
+In terms of competence, Lab #8 was 45.3% and Lab #9 was 18.9%.

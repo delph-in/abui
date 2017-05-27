@@ -44,6 +44,8 @@ head-opt-subj-phrase := basic-head-opt-subj-phrase & head-compositional &
 basic-head-opt-comp-phrase :+
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD +vj ].
 
+;;; Cognitive Status
+
 ; Allow events to have COG-ST
 individual :+ [ COG-ST cog-st ].
 
