@@ -632,6 +632,7 @@ np-predicate-rule := unary-phrase & nocoord &
                                   VAL [ SPR < >,
                                         COMPS < >,
                                         SUBJ < > ] ],
+			    COORD -,
                             CONT.HOOK.INDEX #arg2 ] ] > ].
 
 ; Possessives

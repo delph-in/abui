@@ -27,9 +27,9 @@ the Abui grammar:
 
 (setf *translate-grid* '(:abz :eng :shu))
 
-We have also included the files abz.txt, eng.txt, and shu.txt, which list the
-test sentences needed to be translated for Abui, English, and Chadian Arabic,
-respectively.
+We have also included the files abz.txt, eng.txt, and shu.txt,
+which list the MMT sentences for Abui, English, and Chadian Arabic, respectively.
+We did not translate the sentences containing "ask" and "think".
 
 ---------
 Bug fixes
@@ -37,38 +37,61 @@ Bug fixes
 
 A few changes have been included to account for bugs in the previous lab work.
 
-For example, the following have been changed so that their HEAD value can only
-unify with adverbs and demonstratives. This resolves one of the issues with
-overgeneration that we encountered during machine translation:
+The dem-lex type now specifies a head value --
+this is to prevent the person-marking prefix rules from applying,
+which led to a spinning rule (pos-opt-subj) in generation.
 
-dem-lex := lex-item &
-    [ DEM-COG-ST cog-st,
-      ADDRS-VIEWPOINT bool,
-      SYNSEM.LOCAL.CAT.HEAD +rd,
-      INFLECTED raw ].
+dem-lex now also inherits from no-rels-hcons-icons-lex-item rather than lex-item --
+this is to make sure that the difference lists are empty,
+so that the sentence-level lists are fully specified,
+which fixes a problem in generation.
 
-x-label := label &
-    [ INFLECTED raw,
-      SYNSEM.LOCAL.CAT.HEAD +rd,
-      LABEL-NAME "X" ].
+We also moved the DEM-COG-ST and ADDRS-VIEWPOINT features
+to be inside INFLECTED, rather than at the root level.
+
+raw-dem := inflected &
+  [ DEM-COG-ST cog-st,
+    ADDRS-VIEWPOINT bool ].
+
+dem-lex := no-rels-hcons-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT.HEAD +rd,
+    INFLECTED raw-dem ].
+
+Our analysis of N-coordination, taken from the Matrix,
+does not introduce enough quantifiers,
+which means that the MRSs do not match the eng/shu outputs.
+As a quick and dirty fix,
+we switched from N-coordination to NP-coordination,
+which introduces more quantifiers.
+We also added a constraint to say that coordinated NPs are 3rd person.
+(It's not clear how the agent markers interact with coordination.)
+
+n1-top-coord-rule := basic-np-top-coord-rule & monopoly-top-coord-rule &
+  [ SYNSEM.LOCAL [ COORD-STRAT "1",
+                   CONT.HOOK.INDEX.PNG.PERNUM 3rd ] ].
+
+Switching to NP-coordination did however expose a bug in
+the rule for predicative NPs, which could apply to half a coordinate phrase.
+It would seem reasonable for all non-coordiation rules
+to inherit from a type that blocks this.
+As a quick fix, we added the following constraint to np-predicate-rule:
+  ARGS.FIRST.SYNSEM.LOCAL.COORD -
+
+Possessive constructions were not working correctly in wh-clauses.
+This was due to the non-local values not being passed up,
+and was fixed by pos-lex-rule inheriting from same-non-local-lex-rule.
 
 ----------------------------------------------------------
-Re-analysis of agent pronouns as case-marking prepositions
+Re-analysis of agent markers as case-marking postpositions
 ----------------------------------------------------------
 
-In Abui, verbs include object marking that can occur stacked and
-prepositionally on verbs. In addition, the pronouns agree with the nouns that 
-they refer to in terms of several features, including person, number, and
-alienability. These pronouns have been re-analyzed as case-marking
-prepositions in our grammar.
+We initially analysed agent markers as pronouns,
+but we have since realised that these markers can co-occur with an NP.
+(At least for the 3rd person agent marker)
+As it appears that an agent marker cannot be separated from the NP,
+we have analysed them as case-marking postpositions.
 
-Some of the new code that we have included to the Abui grammar are as follows:
-
-In abui.tdl:
-
-The inclusion of case:
-
-;;; Case
+We added a CASE feature, and specified that nouns are 3rd person:
 
 case := *top*.
 agentive := case.
@@ -77,8 +100,7 @@ non-agentive := case.
 ref-ind :+
   [ CASE case ].
 
-Marking nouns as third person:
-
+noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
   [ SYNSEM.LOCAL [ CAT [ VAL [ SPR < #spr &
                                      [ LOCAL.CAT.HEAD det ] >,
                                COMPS < >,
@@ -88,19 +110,11 @@ Marking nouns as third person:
                    CONT.HOOK.INDEX.PNG.PERNUM 3rd ],
     ARG-ST < #spr > ].
 
-Including alienability and non-alienability:
-
-alienable-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE +,
-    INFLECTED infl-satisfied ].
-
-inalienable-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABLE -,
-    INFLECTED.NEEDS-PREFIX + ].
-
-Agentive markers:
-
-;;; Agent markers
+The agentive markers inherit from agent-lex,
+which is semantically empty (it inherits from raise-sem-lex-item),
+takes a single NP complement,
+and specifies agentive case.
+One of the six agent markers is given below.
 
 agent-lex := raise-sem-lex-item & basic-one-arg & 
   [ ARG-ST.FIRST #comp & [ LOCAL.CAT [ HEAD noun,
@@ -114,7 +128,13 @@ agent-lex := raise-sem-lex-item & basic-one-arg &
                          HEAD adp & [ MOD < > ] ],
                    CONT.HOOK.INDEX.CASE agentive ] ].
 
-; (like basic-head-opt-comp-phrase, but with ref-ind, instead of an event)
+1sg-agent-lex := agent-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
+
+As the agent markers do not require a co-occurring NP,
+we have also added a rule that discharges the complement.
+It is identical to basic-head-opt-comp-phrase, but with ref-ind, instead of an event.
+
 agent-opt-np-phrase := head-valence-phrase & head-only & head-compositional &
   [ INFLECTED #infl,
     SYNSEM canonical-synsem &
@@ -144,25 +164,29 @@ agent-opt-np-phrase := head-valence-phrase & head-only & head-compositional &
              ICONS <! #ikey & non-focus & [ IARG1 #ckey,
                                             IARG2 #index ] !> ] ].
 
-Changes in what the pronouns in the lexicon inherit from:
+Finally, verbs now specify agentive case on the subject,
+and specify it must be a noun or adposition.
+This is not true for all verb classes, but this is beyond the scope of this lab.
+(We also refactored the verb types to reduce redundancy.)
 
-From:
+verb-lex := basic-verb-lex & non-mod-lex-item &
+  [ ARG-ST < #subj & [ LOCAL [ CAT [ VAL [ SPR < >,
+                                           COMPS < > ],
+                                     HEAD +np ],
+                               CONT.HOOK.INDEX #xarg & [ CASE agentive ] ] ]
+             . #comps >,
+    SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
+                   CAT [ VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj >,
+                               COMPS #comps ],
+                         HC-LIGHT - ] ] ].
 
-1sg-noun-lex := pron-noun-lex &
-
-To:
-
-1sg-agent-lex := agent-lex &
-    [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
-
-(Note: The rest of the pronoun paradigm has been changed in a similar
-manner, and the pronouns listed in lexicon.tdl have been changed to inherit
-from the -agent-lex series rather than -noun-lex ones.)
-
-There have also been changes to several of the demonstrative and verb lexical
-rules to account for the agentive case. To view all of the changes, please
-refer to the abui.tdl file in the repository that was submitted as part of
-Lab #9.
+Verbal objects and subjects of predicative adjectives did not need to be changed --
+as they must combine with NPs, rather than PPs,
+they cannot combine with the case-marked phrases.
+So, in fact, the CASE feature may not be necessary,
+as we could just use the head type alone.
 
 -------------------
 New lexical entries
@@ -189,17 +213,21 @@ marai := adj-adj-lex &
 
 For a few cases, some words could not be found in our Abui resource grammar.
 As a result, we have performed a few substitutions, such as using the Abui
-word for field (`ut`) in place of "park".
+word for field/garden (`ut`) in place of "park".
+
+We have chosen the part of speech of the predicate
+to match the English predicate name.
+For the verb `mi`, we have used _in_p_rel, rather than _in_v_rel.
 
 ----------------------------
 Changes to the semi.vpm file
 ----------------------------
 
-The following two blocks reflect the current status of cognitive status and
-person/number transfer rules for our Abui grammar:
+We introduce a no-cog-st type, similarly to no-aspect,
+and mapped fully underspecified cognitive status to this type,
+to reduce generation outputs.
 
-Constraining cognitive status helped to reduce overgeneration in
-translations:
+no-cog-st := cog-st.
 
 COG-ST : COG-ST
   type-id <> type-id
@@ -220,8 +248,9 @@ COG-ST : COG-ST
   no-cog-st << [x]
   no-cog-st << [e]
 
-In addition, splitting person and number aided in the automatic translation
-of Abui and English:
+We have also split pernum into two features.
+As English and Chadian Arabic do not have an inclusive/exclusive distinction,
+we have dropped this in the output.
 
 PNG.PERNUM : PER NUM
   3rd <> third !
@@ -239,29 +268,88 @@ PNG.PERNUM : PER NUM
   * >> ! !
   ! << * *
 
+We removed MOOD and TENSE mappings, as we aren't using these,
+as we changed
+E.ASPECT : E.ASPECT
+to
+E.ASPECT : ASPECT
+
+---------------
+Object prefixes
+---------------
+
+Abui has three series of object prefixes documented in the grammar
+(and an additional two documented elsewhere),
+but we have not implemented an analysis which distinguishes them.
+Abui also uses different prefixes in the third person,
+to indicate coreference with the agent, and distributive readings.
+Currently, all of the third person prefixes are treated identically
+(although we have implemented the distinction in their use as possessive markers).
+To prevent a large number of outputs,
+we have simply commented out the prefixes not necessary for the MMT sentences.
+
 -------------------
 Machine translation
 -------------------
 
-Including the transfer rules that were commented out in the English and
-Chadian Arabic grammars to consider pronoun-drop helped to cover most of the
-test sentences. However, there were a few cases that did not parse during
-machine translation. We will not cover these, as we fulfilled the requirement
-for the minimum number of sentences that needed to parse for this lab:
+For both of the English and Chadian Arabic grammars,
+we included the pro-drop rule in acm.mtr:
 
-(1) test sentences that include "know" and "think"
-These verbs were not included in our Abui grammar.
+pro-drop := pronoun-delete-mtr.
 
-(2) coordination
-Our resource grammar does not provide a satisfying description of coordination.
-As a result, we have not fully implemented coordination in our Abui grammar,
-and we expect that it will not work when translating between Abui and one of
-the other languages.
+We made no other changes.
 
-----------
-Generation
-----------
+Apart from the sentences with embedded questions,
+which we did not translate into Abui,
+a few phenomena are not currently covered by our grammar:
 
-In our Lab #8 baseline, we had 90.1% coverage and 45.3% overgeneration. For
-Lab #9, our results changed: We had 77.8% coverage and 18.9% overgeneration.
-In terms of competence, Lab #8 was 45.3% and Lab #9 was 18.9%.
+(1) Adjectives being used as adverbs
+
+The grammar gives a small number of adverbs as a closed class,
+which we previously implemented.
+However, when searching for translations of "quickly",
+it appears that an adjective meaning "quick" can also be used as an adverb,
+without any additional marking:
+
+di aleka firai
+3  quick runs
+"He runs fast"
+
+Semantically, it appears that `aleka` is modifying `firai`,
+rather than being coordinated with it.
+
+It seems likely this construction would apply to other adjectives,
+but this is not documented in the grammar,
+and we have not had time to implement it.
+
+(2) S-level coordination
+
+Our grammar currently models VP-coordination but not S-coordination.
+We have not had time to add an analysis of S-coordination.
+
+(3) Durative suffix for translating "are in"
+
+Our translation of "are in" includes the durative suffix.
+However, since we are suppressing aspect unless it is in the input,
+this does not appear in the output of translation.
+We have not had time to implement a transfer rule
+that would add durative aspect for _in_p_rel.
+
+---------
+Testsuite
+---------
+
+                Coverage       Overgeneration
+Lab 8 baseline   90.1%              45.3%
+Lab 9            77.8%              18.9%
+
+The drop in coverage is due to the commenting out of lexical items.
+If we don't comment them out, this becomes:
+
+Lab 9 uncomment  87.7%              24.5%
+
+The drop in coverage and overgeneration are both due to
+the new analysis of agent markers,
+which can no longer be coordinated or act as predicative NPs.
+For the two grammatical sentences that are no longer parsed,
+neither was being given a correct analysis.
