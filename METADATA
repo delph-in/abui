@@ -25,15 +25,15 @@
 ## Grammar maintainers and contributors
 
 MAINTAINER=""
-CONTRIBUTORS=""
+CONTRIBUTORS="Guy Emerson, Travis Nguyen"
 CONTACT_EMAIL=""
 
 ## Grammar name and web presence
 ## Note: if SHORT_GRAMMAR_NAME is not defined, the directory name is used.
 
-GRAMMAR_NAME=""
-SHORT_GRAMMAR_NAME=""
-WEBSITE=""
+GRAMMAR_NAME="Abui"
+SHORT_GRAMMAR_NAME="abui"
+WEBSITE="https://github.com/delph-in/abui"
 DEMO_WEBSITE=""
 DOCUMENTATION_URL=""
 ISSUE_TRACKER=""
@@ -55,7 +55,7 @@ CITE=""
 ## If this is not provided, it is automatically extracted from the
 ## local version control info. You only need to modify this if the
 ## version control URL you use locally is not the one you want published
-VCS=""
+VCS="https://github.com/delph-in/abui.git"
 
 ## Semi-colon separated list of required external resources 
 ## e.g.
@@ -90,11 +90,12 @@ ASSOCIATED_RESOURCES=""
 ## Language identification
 ## Iso-codes can be looked up at http://www.sil.org/iso639-3/codes.asp
 
-LANGUAGE_NAME=""
-ISO_CODE=""
+LANGUAGE_NAME="Abui"
+ISO_CODE="abz"
 
 ## File locations of LKB script file and .grm file read by cheap
 ## Paths relative to top of grammar directory
 
 LKB_SCRIPT_FILE=""
 CHEAP_GRM_FILE_NAME=""
+ACE_CONFIG_FILE="ace/config.tdl"
