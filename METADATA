@@ -99,3 +99,4 @@ ISO_CODE="abz"
 LKB_SCRIPT_FILE=""
 CHEAP_GRM_FILE_NAME=""
 ACE_CONFIG_FILE="ace/config.tdl"
+EXAMPLES = ["Na taa.", "Na nala nee.", "Nala taa?", "Di taa naha." ]
